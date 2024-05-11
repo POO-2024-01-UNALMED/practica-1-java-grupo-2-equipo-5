@@ -25,7 +25,7 @@ public class Inventario {
     }
 
     public void agregarObjeto(ArrayList<Producto>){
-
+        productos.add()
     }
 }
 
