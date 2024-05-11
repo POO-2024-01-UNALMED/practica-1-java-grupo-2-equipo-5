@@ -1,5 +1,6 @@
 package Proyecto;
 import java.util.ArrayList;
+
 public class Inventario {
     private String tipoInventario;
     private ArrayList<Producto> productos;
@@ -14,7 +15,7 @@ public class Inventario {
         this.stock = stock;
     }
 
-    //Metodos
+    //Métodos:
 
     public int getStock() {
         return stock;
@@ -24,8 +25,12 @@ public class Inventario {
         this.stock = stock;
     }
 
-    public void agregarObjeto(ArrayList<Producto>){
-        productos.add()
+    public void descontarStock() {
+        stock -= 1;
+    }
+
+    public void agregarObjeto(Producto producto){
+        productos.add(producto);
     }
 }
 
