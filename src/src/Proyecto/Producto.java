@@ -1,3 +1,5 @@
+package Proyecto;
+
 import java.util.ArrayList;
 
 public class Producto {
@@ -8,15 +10,14 @@ public class Producto {
     private String descripcion;
     private String categoria;
     private int calificacion;
-
-    //crear el ArrayList de la lista de reseña//
     private int getcantidadProducto() {
         return cantidadProducto;
     }
-
     private void setCalificacion(int calificacion) {
         this.calificacion = calificacion;
     }
+
+
 
     
 
