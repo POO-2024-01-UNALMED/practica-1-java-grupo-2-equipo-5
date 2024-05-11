@@ -1,23 +1,35 @@
 package Proyecto;
 
-import java.util.ArrayList;
-
 public class Producto {
-    private int idProducto;
+
+    private Inventario inventario;
+
+    private int idProducto; //Utilizar Random para generar un ID aleatorio
     private String nombre;
     private int precio;
     private int cantidadProducto;
     private String descripcion;
     private String categoria;
-    private int calificacion;
-    private int getcantidadProducto() {
+    private float calificacion;
+
+    //Constructor:
+
+    public Producto(int id , String nombre, int precio, int cantidad, String descripcion, String categoria, float calificacion) {
+
+    }
+
+    //Metodos:
+
+    public int getcantidadProducto() {
+        
         return cantidadProducto;
     }
-    private void setCalificacion(int calificacion) {
-        this.calificacion = calificacion;
+    public void setCalificacion(int calificacion) {
+        this.calificacion = (calificacion + this.calificacion) / 2;
+
     }
 
-
+    public void setInventario()
 
     
 
