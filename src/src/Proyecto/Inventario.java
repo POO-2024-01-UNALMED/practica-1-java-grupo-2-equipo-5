@@ -1,9 +1,11 @@
 package Proyecto;
+
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class Inventario {
     private String tipoInventario;
-    private ArrayList<Producto> productos;
+    private ArrayList<Producto> productos = new ArrayList<>();
     private int stock;
     private ArrayList<String> categorias;
     private ArrayList<String> tallas;
@@ -29,8 +31,10 @@ public class Inventario {
         stock -= 1;
     }
 
-    public void agregarObjeto(Producto producto){
-        productos.add(producto);
+
+    public void agregarObjeto(){
+
+
     }
 }
 
