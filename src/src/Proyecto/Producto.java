@@ -27,12 +27,10 @@ public class Producto {
     //Metodos:
 
     public int getcantidadProducto() {
-
         return cantidadProducto;
     }
     public void setCalificacion(int calificacion) {
         this.calificacion = (calificacion + this.calificacion) / 2;
-
     }
     public String toString(){ //Esto sirve para cuando vamos a imprimir el objeto, dependiendo de los parametros que nosotros queremos mostrar
         return "Producto = " + this.nombre + "Cantidad = " + this.cantidadProducto;

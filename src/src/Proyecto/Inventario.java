@@ -32,5 +32,9 @@ public class Inventario {
     public void agregarObjeto(Producto producto){
         productos.add(producto);
     }
+
+    public void agregarCategoria(String categoria) {
+        categorias.add(categoria)
+    }
 }
 
