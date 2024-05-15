@@ -9,12 +9,12 @@ public class Producto {
 
 
     //public int idProducto; //Utilizar Random para generar un ID aleatorio
-    public String nombre;
-    public int precio;
-    public int cantidadProducto;
-    public String descripcion;
-    public String categoria;
-    public float calificacion = 0;
+    private String nombre;
+    private int precio;
+    private int cantidadProducto;
+    private String descripcion;
+    private String categoria;
+    private float calificacion = 0;
 
 
     //Constructor:
