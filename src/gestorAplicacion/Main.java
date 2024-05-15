@@ -12,17 +12,22 @@ public class Main {
         Producto producto1 = new Producto( "Jean", 30000, 2, "Pantalon Jean Azul", "Pantalon",0);
         Producto producto2 = new Producto( "Camisa", 30000, 1, "Pantalon Jean Verde", "Pantalon",0);
 
-        System.out.println(producto1);
-        System.out.println("--------------------");
-        System.out.println(producto2);
+        //System.out.println(producto1);
+        //System.out.println("--------------------");
+        //System.out.println(producto2);
 
         //CLASE INVENTARIO PRUEBAS:
-
-        System.out.println("--------------------");
-        System.out.println("Inventario: ");
+        
         Inventario inv1 = new Inventario("Primer Inventario", 0);
-        System.out.println(inv1);
+        //System.out.println(inv1);
 
+
+        //Añadiendo productos al inventario con el método agregarProductos:
+
+        inv1.agregarProducto(producto1);
+        inv1.agregarProducto(producto2);
+        System.out.println("Listado de productos:");
+        inv1.mostrarProductos();
 
     }
 }
