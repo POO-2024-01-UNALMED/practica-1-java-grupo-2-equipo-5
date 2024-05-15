@@ -1,5 +1,6 @@
-import Proyecto.Inventario;
-import Proyecto.Producto;
+package src;
+import src.Proyecto.Inventario;
+import src.Proyecto.Producto;
 
 public class Main {
     public static void main(String[] args) {

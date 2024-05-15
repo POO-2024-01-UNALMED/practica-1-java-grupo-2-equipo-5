@@ -1,4 +1,4 @@
-package Proyecto;
+package src.Proyecto;
 
 public class Categoria {
     private String categoria;

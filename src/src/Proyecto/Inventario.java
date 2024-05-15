@@ -1,4 +1,4 @@
-package Proyecto;
+package src.Proyecto;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ public class Inventario {
     }
 
     public void agregarCategoria(String categoria) {
-        categorias.add(categoria)
+        categorias.add(categoria);
     }
 }
 

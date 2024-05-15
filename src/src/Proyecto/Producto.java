@@ -1,4 +1,4 @@
-package Proyecto;
+package src.Proyecto;
 
 import javax.swing.*;
 
