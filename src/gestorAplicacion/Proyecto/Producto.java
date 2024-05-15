@@ -1,4 +1,4 @@
-package src.Proyecto;
+package gestorAplicacion.Proyecto;
 
 import javax.swing.*;
 
