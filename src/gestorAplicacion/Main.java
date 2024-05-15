@@ -17,7 +17,7 @@ public class Main {
         //System.out.println(producto2);
 
         //CLASE INVENTARIO PRUEBAS:
-        
+
         Inventario inv1 = new Inventario("Primer Inventario", 0);
         //System.out.println(inv1);
 
