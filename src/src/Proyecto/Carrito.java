@@ -1,4 +1,5 @@
 package src.Proyecto;
+import java.util.ArrayList;
 
 public class Carrito {
 
@@ -19,12 +20,12 @@ public class Carrito {
         productos.remove(indice);
     }
 
-    public void actualizarCantidad(int indice, int cantidad) {
-        productos.set(indice, cantidad);
+    public void actualizarCantidad(int indice, Producto producto) {
+        productos.set(indice, producto);
     }
 
     public double calcularSubtotal(ArrayList<Producto> productos) {
-        suma = 0;
+        int suma = 0;
         return suma;
     }
 
@@ -32,11 +33,12 @@ public class Carrito {
         cantidadProducto = 0;
     }
 
-    public void realizarPago() {
-        comprar = true;
+    public boolean realizarPago() {
+        boolean comprar = true;
+        return comprar;
     }
 
-    public void verCarrito() {
-        return "Cantidad productos: " + cantidadProductos + "Total: " + total;
+    public String verCarrito() {
+        return "Cantidad productos: " + cantidadProducto + "Total: " + total;
     }
 }

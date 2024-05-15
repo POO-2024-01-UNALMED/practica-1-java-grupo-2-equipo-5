@@ -59,7 +59,7 @@ public class Producto {
     }
 
     public String toString() { //Esto sirve para cuando vamos a imprimir el objeto, dependiendo de los parametros que nosotros queremos mostrar
-        return "Producto = " + this.nombre + "Cantidad = " + this.cantidadProducto;
+        return "Producto = " + this.nombre + ", " + "Cantidad = " + this.cantidadProducto;
 
     }
     public String getNombre() {

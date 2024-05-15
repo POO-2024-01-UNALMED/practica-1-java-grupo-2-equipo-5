@@ -34,7 +34,6 @@ public class Inventario {
 
     public void agregarObjeto(){
 
-
     }
 
     public void agregarCategoria(String categoria) {
