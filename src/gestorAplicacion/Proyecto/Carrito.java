@@ -7,11 +7,11 @@ public class Carrito {
 
     private int cantidadProductos;
     private double subtotal;
-    private ArrayList<Producto> productos = new ArrayList<Producto>();
+    private ArrayList<Producto> productos = new ArrayList<>();
 
     //Métodos:
 
-    //Agragar productos al carrito:
+    //Agragar productos al carrito (Mejorar):
     public void agregarProducto(Producto producto, int cantidad) {
         for (int a = 0; a < cantidad; a++) {
             productos.add(producto);
@@ -21,7 +21,7 @@ public class Carrito {
     }
 
     //Eliminar productos del carrito (Por corregir):
-    public void removerProducto(int indice) {
+    public void removerProducto(int indice){
         productos.remove(indice);
     }
 
@@ -38,9 +38,10 @@ public class Carrito {
         return subtotal;
     }
 
-    //Vaciar el carrito por completo (Por corregir)
+    //Vaciar el carrito por completo.
     public void vaciarCarrito() {
-        cantidadProductos = 0;
+        productos.clear();
+        System.out.println("Se vació el carrito de compras!");
     }
 
     //Método que nos redirija a la opción de pagar (Continuar con la compra):
@@ -49,12 +50,19 @@ public class Carrito {
         return comprar;
     }
 
-    //Ver que productos ha escogido el cliente:
+    // Ver que productos ha escogido el cliente.
+    // Primero se verifica si el carrito está vacio. Si no lo está,
+    // calculamos el total de productos y el costo total.
     public void verCarrito() {
-        for (Producto producto : productos) {
-            System.out.println(producto.getNombre());
+        if (productos.size() == 0) { // Cambiar por: productos.isEmpty()?
+            System.out.println("El carrito está vacío. Por favor, seleccione un producto del catálogo para continuar.");
+        } else {
+            for (Producto producto : productos) {
+                System.out.println(producto.getNombre());
+            }
+            System.out.println("Cantidad total de productos: " + cantidadProductos);
+            System.out.println("Subtotal: $" + calcularSubtotal());
         }
-        System.out.println("Cantidad total: " + cantidadProductos);
-        System.out.println("Subtotal: $" + calcularSubtotal());
     }
+
 }

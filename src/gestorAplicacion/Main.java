@@ -2,6 +2,7 @@ package gestorAplicacion;
 import gestorAplicacion.Proyecto.Inventario;
 import gestorAplicacion.Proyecto.Producto;
 import gestorAplicacion.Proyecto.Carrito;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -42,5 +43,9 @@ public class Main {
         
         //Los mostramos por consola y calculamos el subtotal:
         carrito1.verCarrito();
+
+        //Eliminar producto:
+
+
     }
 }
