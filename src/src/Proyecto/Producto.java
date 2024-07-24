@@ -1,26 +1,27 @@
 package Proyecto;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class Producto {
 
-    //private Inventario inventario;
-
-
+    ArrayList<Producto> listaInventario = new ArrayList<Producto>(); //ArrayList de la lista de inventario para mostrar
 
     //public int idProducto; //Utilizar Random para generar un ID aleatorio
     public String nombre;
-    public int precio;
+    public int precio; //El precio Lo podemos mandar a Categoria
     public int cantidadProducto;
     public String descripcion;
-    public String categoria;
-    public float calificacion = 0;
+    public Categoria categoria;
+    public float calificacion = 0; //
+
+    public int  calidad = 5;
 
 
     //Constructor:
     //public Producto() //CONSTRUCTOR VACIO
 
-    public Producto(String nombre, int precio, int cantidad, String descripcion, String categoria, float calificacion) { //RECORDAR: volver a poner el int id
+    public Producto(String nombre, int precio, int cantidad, String descripcion, Categoria categoria, float calificacion) { //RECORDAR: volver a poner el int id
         //this.idProducto = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -112,5 +113,8 @@ public class Producto {
         this.calificacion = calificacion;
     }
 
+    public void setCalidad(int calidad){
+        this.calidad = calidad;
+    }
 }
 
