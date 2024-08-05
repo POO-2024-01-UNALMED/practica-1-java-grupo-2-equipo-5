@@ -62,6 +62,7 @@ public class Carrito {
             }
             System.out.println("Cantidad total de productos: " + cantidadProductos);
             System.out.println("Subtotal: $" + calcularSubtotal());
+            System.out.println("Proceder con al compra? ...");
         }
     }
 
