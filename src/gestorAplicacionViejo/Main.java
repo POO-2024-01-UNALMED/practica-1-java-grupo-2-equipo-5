@@ -1,6 +1,6 @@
-package gestorAplicacion;
+package gestorAplicacionViejo;
 import gestorAplicacion.Proyecto.Inventario;
-import gestorAplicacion.Proyecto.Producto;
+//import gestorAplicacion.Proyecto.Producto;
 import gestorAplicacion.Proyecto.Carrito;
 import java.util.Scanner;
 
@@ -11,8 +11,8 @@ public class Main {
 
         // CLASE PRODUCTO PRUEBAS:
 
-        Producto producto1 = new Producto( "Jean", 30000, 2, "Pantalon Jean Azul", "Pantalon",0);
-        Producto producto2 = new Producto( "Camisa", 30000, 1, "Pantalon Jean Verde", "Pantalon",0);
+        //Producto producto1 = new Producto( "Jean", 30000, 2, "Pantalon Jean Azul", "Pantalon",0);
+        //Producto producto2 = new Producto( "Camisa", 30000, 1, "Pantalon Jean Verde", "Pantalon",0);
 
         //System.out.println(producto1);
         //System.out.println(producto2);
@@ -25,8 +25,8 @@ public class Main {
 
         //Añadiendo productos al inventario con el método agregarProductos (Test):
 
-        inv1.agregarProducto(producto1);
-        inv1.agregarProducto(producto2);
+        //inv1.agregarProducto(producto1);
+        //inv1.agregarProducto(producto2);
         System.out.println("Listado de productos:");
         inv1.mostrarProductos();
 
@@ -38,8 +38,8 @@ public class Main {
         Carrito carrito1 = new Carrito();
         
         //Le añadimos productos:
-        carrito1.agregarProducto(producto1, 3);
-        carrito1.agregarProducto(producto2, 2);
+        //carrito1.agregarProducto(producto1, 3);
+        //carrito1.agregarProducto(producto2, 2);
         
         //Los mostramos por consola y calculamos el subtotal:
         carrito1.verCarrito();

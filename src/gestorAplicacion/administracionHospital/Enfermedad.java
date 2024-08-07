@@ -1,4 +1,4 @@
-package gestorAplicacion.AdministracionHospital;
+package gestorAplicacion.administracionHospital;
 
 //Imports serializable
 
