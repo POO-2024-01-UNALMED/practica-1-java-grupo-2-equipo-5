@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/src/gestorAplicacion/Producto.java
 package gestorAplicacion;
+========
+package gestorAplicacion.Proyecto;
+>>>>>>>> 7c7155f221b15e549fdeac0a738089f13163e2bb:src/gestorAplicacion/Proyecto/Producto.java
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -8,6 +12,7 @@ public class Producto {
     ArrayList<Producto> listaInventario = new ArrayList<Producto>(); //ArrayList de la lista de inventario para mostrar
 
     //public int idProducto; //Utilizar Random para generar un ID aleatorio
+<<<<<<<< HEAD:src/src/gestorAplicacion/Producto.java
     public String nombre;
     public int precio; //El precio Lo podemos mandar a Categoria
     public int cantidadProducto;
@@ -16,6 +21,14 @@ public class Producto {
     public float calificacion = 0; //
 
     public int  calidad = 5;
+========
+    private String nombre;
+    private int precio;
+    private int cantidadProducto;
+    private String descripcion;
+    private String categoria;
+    private float calificacion = 0;
+>>>>>>>> 7c7155f221b15e549fdeac0a738089f13163e2bb:src/gestorAplicacion/Proyecto/Producto.java
 
 
     //Constructor:
@@ -52,17 +65,15 @@ public class Producto {
     }
 
     public int getcantidadProducto() {
-
         return cantidadProducto;
     }
 
     public void setCalificacion(int calificacion) {
         this.calificacion = (calificacion + this.calificacion) / 2;
-
     }
 
     public String toString() { //Esto sirve para cuando vamos a imprimir el objeto, dependiendo de los parametros que nosotros queremos mostrar
-        return "Producto = " + this.nombre + "Cantidad = " + this.cantidadProducto;
+        return "Producto: " + this.nombre + " - " + "Cantidad: " + this.cantidadProducto;
 
     }
     public String getNombre() {
