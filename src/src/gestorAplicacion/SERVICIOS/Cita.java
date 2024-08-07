@@ -12,6 +12,17 @@ public class Cita extends Servicio {
         this.doctor = doctor;
         this.fecha = fecha;
     }
+    #Constructor
+
+    @Override
+    public void validarPago(Paciente paciente, long idServicio){
+        for (Cita cita:  paciente.getHistoriaClinica().getHistorialCitas()){
+            if(cita.getIdServicio() == idServicio){
+                cita.getEstadoPago(true);
+            }
+        }
+    }
+    
 
     
 
