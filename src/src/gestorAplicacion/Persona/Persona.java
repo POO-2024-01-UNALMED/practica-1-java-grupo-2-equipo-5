@@ -39,8 +39,4 @@ public class Persona {
     }
     #gets y sets
 
-
-
-
-
 }
