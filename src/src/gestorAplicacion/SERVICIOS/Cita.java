@@ -22,8 +22,29 @@ public class Cita extends Servicio {
             }
         }
     }
-    
+    @Override
+    public String descripcionServicio() {
+        return idServicio + " - Cita medica con " + doctor.getNombre() + " (" + fecha + ")";
+    }
+    #metodos
 
+    public Doctor getDoctor() {
+        return doctor;
+    }
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+    public String mensaje(){
+        return "del servicio cita médica!";
+    }
+    #gets y sets
     
 
 }
