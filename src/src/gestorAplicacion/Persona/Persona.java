@@ -1,10 +1,15 @@
 package gestorAplicacion.Persona;
 
+
 public class Persona {
+
+    //Atributos
+
     private int cedula;
     private String nombre;
     private String tipoEps;
-    #Atributos
+
+    //Constructor
 
     public Persona(int cedula, String nombre, String tipoEps){
         this.cedula = cedula;
@@ -12,7 +17,10 @@ public class Persona {
         this.tipoEps = tipoEps;
 
     }
-    #Constructor
+
+        //GETS Y SETS
+
+
     public int getCedula(){
         return cedula;
     }
@@ -37,6 +45,6 @@ public class Persona {
     public String Bienvenida(){
         return "bienvenido usuario"+nombre;
     }
-    #gets y sets
+
 
 }
