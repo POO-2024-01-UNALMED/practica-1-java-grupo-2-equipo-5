@@ -1,4 +1,4 @@
-package Proyecto;
+package gestorAplicacion;
 
 import javax.swing.*;
 import java.util.ArrayList;

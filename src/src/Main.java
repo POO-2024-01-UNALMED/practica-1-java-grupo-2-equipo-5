@@ -1,10 +1,10 @@
-import Proyecto.Inventario;
-import Proyecto.Producto;
+import gestorAplicacion.Inventario;
+import gestorAplicacion.Producto;
 
 public class Main {
     public static void main(String[] args) {
         // CLASE PRODUCTO PRUEBAS
-        Producto producto1 = new Producto( "jean", 30000, 2, "Pantalon Jean Azul", "Pantalon",0);
+        Producto producto1 = new Producto( "jean", 30000, 2, "Pantalon Jean Azul", UYTR-¿Q  3}"Pantalon",0);
         Producto producto2 = new Producto( "jean", 30000, 1, "Pantalon Jean Verde", "Pantalon",0);
 
         System.out.println(producto2);
