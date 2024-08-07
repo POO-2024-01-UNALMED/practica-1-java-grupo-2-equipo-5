@@ -1,7 +1,7 @@
 package gestorAplicacion.administracion;
 
 public enum CategoriaHabitacion {
-    //Enum para clasificar los tipos de habitaciones disponibles.
+    //Esta misma clase está en el paquete AdministracionHospital, porque me confundí
     CAMILLA(50000),
     INDIVIDUAL(150000),
     DOBLE(320000),
