@@ -1,4 +1,4 @@
-package gestorAplicacion.Persona;
+package gestorAplicacion.personas;
 
 public class Paciente {// extends Persona implements Pago
 

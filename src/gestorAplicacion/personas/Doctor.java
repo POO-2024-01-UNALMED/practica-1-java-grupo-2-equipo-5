@@ -1,4 +1,4 @@
-package gestorAplicacion.Persona;
+package gestorAplicacion.personas;
 
 import java.util.ArrayList;
 

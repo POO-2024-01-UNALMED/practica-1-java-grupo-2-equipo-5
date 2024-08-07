@@ -1,4 +1,4 @@
-package gestorAplicacion.SERVICIOS;
+package gestorAplicacion.servicios;
 import gestorAplicacion.Persona.Doctor;
 import gestorAplicacion.Persona.Paciente;
 
