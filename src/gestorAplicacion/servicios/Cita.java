@@ -1,18 +1,18 @@
-package gestorAplicacion.SERVICIOS;
-import gestorAplicacion.Persona.Doctor;
-import gestorAplicacion.Persona.Paciente;
+package gestorAplicacion.servicios;
+import gestorAplicacion.personas.Doctor;
+import gestorAplicacion.personas.Paciente;
 
 public class Cita extends Servicio {
     private Doctor doctor;
     protected String fecha;
-    #Atributos
+    //Atributos
 
     public Cita(Doctor doctor, String fecha, Paciente paciente){
         super(paciente)
         this.doctor = doctor;
         this.fecha = fecha;
     }
-    #Constructor
+    //Constructor
 
     @Override
     public void validarPago(Paciente paciente, long idServicio){
@@ -26,7 +26,7 @@ public class Cita extends Servicio {
     public String descripcionServicio() {
         return idServicio + " - Cita medica con " + doctor.getNombre() + " (" + fecha + ")";
     }
-    #metodos
+    //metodos
 
     public Doctor getDoctor() {
         return doctor;
@@ -44,7 +44,8 @@ public class Cita extends Servicio {
     public String mensaje(){
         return "del servicio cita médica!";
     }
-    #gets y sets
+    //gets y sets
+
     
 
 }

@@ -1,8 +1,8 @@
-package gestorAplicacion.Persona;
+package gestorAplicacion.personas;
 
 import java.util.ArrayList;
 
-public class Doctor { //Falta el extends de persona
+public class Doctor extends Persona{ //Falta el extends de persona
 
     //Atributos de la Clase Doctor
     private String especialidad;
@@ -10,7 +10,7 @@ public class Doctor { //Falta el extends de persona
     private ArrayList<Cita> agendaDoctor = new ArrayList<Cita>();
 
     //Constructor clase Doctor
-    public Doctor(int cedula, String nombre, String tipoEps, String especialidad){
+    public Doctor(int cedula, String nombre, String tipoEps){
     //Falta crear la clase Cita
     }
 

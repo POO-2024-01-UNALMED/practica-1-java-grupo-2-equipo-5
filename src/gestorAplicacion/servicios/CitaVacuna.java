@@ -1,16 +1,16 @@
-package gestorAplicacion.SERVICIOS;
-import gestorAplicacion.AdministracionHospital.Vacuna;
-import gestorAplicacion.Persona.Paciente;
+package gestorAplicacion.servicios;
+import gestorAplicacion.administracionHospital.Vacuna;
+import gestorAplicacion.personas.Paciente;
 
 public class CitaVacuna extends Cita {
     private Vacuna vacuna;
-    #Atributos
+    //Atributos
 
     public CitaVacuna( Vacuna vacuna, String fecha, Paciente paciente){
         super(null, fecha, paciente)
         this.vacuna=vacuna;
     }
-    #Constructor
+    //Constructor
 
     @Override
     public void validarPago(Paciente paciente, long idServicio){
@@ -24,7 +24,7 @@ public class CitaVacuna extends Cita {
     public String descripcionServicio() {
         return idServicio + " - Vacuna " + vacuna.getNombre() + " (" + fecha + ")";
     }
-    #metodos
+    //metodos
 
     public Vacuna getVacuna() {
         return vacuna;
@@ -36,7 +36,7 @@ public class CitaVacuna extends Cita {
     public String mensaje(){
         return "del servicio de vacunas";
     }
-    #gets y sets
+    //gets y sets
     
 
 }

@@ -1,4 +1,4 @@
-package gestorAplicacion.administracion;
+package gestorAplicacion.administracionHospital;
 
 public enum CategoriaHabitacion {
     //Enum para clasificar los tipos de habitaciones disponibles.
@@ -8,13 +8,10 @@ public enum CategoriaHabitacion {
     OBSERVACION(500000),
     UCI(1300000),
     UCC(1500000);
+
     private final int valor;
 
     private CategoriaHabitacion(int valor) {
         this.valor = valor;
-    }
-
-    public int getValor() {
-        return valor;
     }
 }

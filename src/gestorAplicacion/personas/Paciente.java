@@ -1,6 +1,6 @@
-package gestorAplicacion.Persona;
+package gestorAplicacion.personas;
 
-public class Paciente {// extends Persona implements Pago
+public class Paciente{// extends Persona implements Pago
 
     //Atributos
     private final HistoriaClinica hostoriaClinica; //Realizar clase HistoriaClinica
