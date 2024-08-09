@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import gestorAplicacion.personas.Doctor;
 import gestorAplicacion.personas.Paciente;
+
+import javax.print.Doc;
 //import gestorAplicacion.servicios.Habitacion;
 
 //Importar el serializable y lo que falte.
@@ -32,4 +34,28 @@ public class Hospital { //implementar de serializable
         }
         return null;
     }
+
+    //Sobrecarga de métodos buscarDoctor: Uno con la cédula y otro con la especialidad (luego)
+
+    public Doctor buscarDoctor(int cedula) {
+        for (Doctor doctor : listaDoctores) {
+            if (doctor.getCedula() == cedula) {
+                return doctor;
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<Doctor> buscarDoctor(String especialidad) {
+        ArrayList<Doctor> doctores = new ArrayList<>();
+        for (Doctor doctor : listaDoctores) {
+            if (doctor.getEspecialidad().equals(especialidad)) {
+                doctores.add(doctor);
+            }
+        }
+        return doctores;
+    }
+
+    //Faltan métodos para vacunas, setters y getters
+
 }

@@ -10,7 +10,7 @@ public class Paciente{// extends Persona implements Pago
 
     //Constructor
 
-    public Paciente(int cedula, String nombre, String tipoEps, CategoriaHabitacion null){
+    public Paciente(int cedula, String nombre, String tipoEps){
 
     }
 
