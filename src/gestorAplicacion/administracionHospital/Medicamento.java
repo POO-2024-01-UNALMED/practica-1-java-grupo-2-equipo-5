@@ -10,14 +10,14 @@ public class Medicamento implements Serializable {
     private Enfermedad enfermedad;
     private String descripcion;
     private int cantidad;
-    private float precio;
+    private float valor;
 
-    public Medicamento(String nombre, Enfermedad enfermedad, String descripcion, int cantidad, float precio){
+    public Medicamento(String nombre, Enfermedad enfermedad, String descripcion, int cantidad, float valor){
         this.nombre = nombre;
         this.enfermedad = enfermedad;
         this.descripcion = descripcion;
         this.cantidad=cantidad;
-        this.precio=precio;
+        this.valor=valor;
     }
 
     public void eliminarCantidad(){
@@ -58,12 +58,12 @@ public class Medicamento implements Serializable {
         this.cantidad = cantidad;
     }
 
-    public float getPrecio(){
-        return precio;
+    public float getValor(){
+        return valor;
     }
 
-    public void setPrecio(float precio){
-        this.precio = precio;
+    public void setValor(float precio){
+        this.valor = valor;
     }
 
     public String toString(){
