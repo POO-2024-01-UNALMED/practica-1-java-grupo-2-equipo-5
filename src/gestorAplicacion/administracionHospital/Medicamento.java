@@ -1,4 +1,4 @@
-package gestorAplicacion.administracion;
+package gestorAplicacion.administracionHospital;
 
 import java.io.Serializable;
 
@@ -25,7 +25,7 @@ public class Medicamento implements Serializable {
     }
 
     public String getNombre(){
-        return nombre
+        return nombre;
     }
 
     public void setNombre(String nombre){
