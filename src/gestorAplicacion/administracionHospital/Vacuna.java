@@ -55,5 +55,21 @@ public class Vacuna implements Serializable{
     }
 
 
-    
+    public String getTipo(){
+        return tipo;
+    }
+    public String getNombre(){
+        return nombre;
+    }
+    public ArrayList<String> getTipoEps(){
+        return tipoEps;
+    }
+    public double getValor(){
+        return valor;
+    }
+
+    public ArrayList<CitaVacuna> getAgenda(){
+        return agenda;
+    }
+
 }
