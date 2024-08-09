@@ -18,4 +18,18 @@ public class Hospital { //implementar de serializable
     private ArrayList<Vacuna> listaVacunas = new ArrayList<>();
     //Atributo estático que cumple con el requerimiento del proyecto:
     //private static ArrayList<Habitacion> listaHabitaciones = new ArrayList<Habitacion>();
+
+    //Implementar constructor aqui...
+
+    //Métodos
+
+    //Buscar un paciente en la base de datos usando su numero de cédula
+    public Paciente buscarPaciente(int cedula) {
+        for (Paciente paciente : listaPacientes) {
+            //if (paciente.getCedula() == cedula) {
+            //    return paciente;
+            //} --> Implementar método getCedula Paciente!
+        }
+        return null;
+    }
 }
