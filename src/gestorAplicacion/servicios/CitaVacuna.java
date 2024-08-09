@@ -7,7 +7,7 @@ public class CitaVacuna extends Cita {
     //Atributos
 
     public CitaVacuna( Vacuna vacuna, String fecha, Paciente paciente){
-        super(null, fecha, paciente)
+        super(null, fecha, paciente);
         this.vacuna=vacuna;
     }
     //Constructor
