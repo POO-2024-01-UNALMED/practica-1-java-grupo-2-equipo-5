@@ -2,7 +2,6 @@ package gestorAplicacion.servicios;
 
 import java.util.ArrayList;
 
-import gestorAplicacion.administracion.categoriaHabitacion;
 import gestorAplicacion.administracionHospital.CategoriaHabitacion;
 import gestorAplicacion.personas.Paciente;
 

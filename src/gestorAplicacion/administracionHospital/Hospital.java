@@ -35,7 +35,7 @@ public class Hospital { //implementar de serializable
         return null;
     }
 
-    //Sobrecarga de métodos buscarDoctor: Uno con la cédula y otro con la especialidad (luego)
+    //Sobrecarga de métodos buscarDoctor: Uno con la cédula y otro con la especialidad
 
     public Doctor buscarDoctor(int cedula) {
         for (Doctor doctor : listaDoctores) {
@@ -56,6 +56,39 @@ public class Hospital { //implementar de serializable
         return doctores;
     }
 
-    //Faltan métodos para vacunas, setters y getters
+    //Faltan métodos para vacunas
+
+    //Getters y setters
+    public ArrayList<Doctor> getListaDoctores() {
+        return listaDoctores;
+    }
+
+    public void setListaDoctores(ArrayList<Doctor> listaDoctores) {
+        this.listaDoctores = listaDoctores;
+    }
+
+    public ArrayList<Paciente> getListaPacientes() {
+        return listaPacientes;
+    }
+
+    public void setListaPacientes(ArrayList<Paciente> listaPacientes) {
+        this.listaPacientes = listaPacientes;
+    }
+
+    public ArrayList<Medicamento> getListaMedicamentos() {
+        return listaMedicamentos;
+    }
+
+    public void setListaMedicamentos(ArrayList<Medicamento> listaMedicamentos) {
+        this.listaMedicamentos = listaMedicamentos;
+    }
+
+    public ArrayList<Vacuna> getListaVacunas() {
+        return listaVacunas;
+    }
+
+    public void setListaVacunas(ArrayList<Vacuna> listaVacunas) {
+        this.listaVacunas = listaVacunas;
+    }
 
 }
