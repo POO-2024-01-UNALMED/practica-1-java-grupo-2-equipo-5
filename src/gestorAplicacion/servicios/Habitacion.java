@@ -68,5 +68,55 @@ public class Habitacion extends Servicio{
         }
     }
 
-    
+    public Paciente getPaciente(){
+        
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente){
+
+        this.paciente=paciente;
+
+    }
+
+    public CategoriaHabitacion getCategoria(){
+
+        return categoria;
+    }
+
+    public void setCategoria(CategoriaHabitacion categoria){
+
+        this.categoria=categoria;
+
+    }
+
+    public boolean isOcupada(boolean ocupada){
+
+        return ocupada;
+    }
+
+    public void setOcupada(boolean ocupada){
+
+        this.ocupada=ocupada;
+    }
+
+    public int getDias(){
+        
+        return dias;
+    }
+
+    public void setDias(int dias){
+
+        this.dias=dias;
+    }
+
+    public void validarPago(Paciente paciente, long idServicio){
+        if (paciente.getHabitacionAsignada().getIdServicio()==idServicio)
+            paciente.getHabitacionAsignada().setEstadoPago(true);
+
+    }
+
+    public String descripcionServicio(){
+        return "No.: "idServicio + "- Habitacion"+ idHabitacion + " ocupada "+ dias + " dias";
+    }
 }
