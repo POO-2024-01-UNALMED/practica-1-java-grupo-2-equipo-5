@@ -1,36 +1,49 @@
 package gestorAplicacion.administracionHospital;
 
-import java.util.ArrayList;
+//TODO:import baseDatos.Desearializador;
 
 import gestorAplicacion.personas.Doctor;
 import gestorAplicacion.personas.Paciente;
+import gestorAplicacion.servicios.Habitacion;
 
-import javax.print.Doc;
-//import gestorAplicacion.servicios.Habitacion;
+//TODO: import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Objects;
 
-//Importar el serializable y lo que falte.
 
-//En esta clase va todo lo más general relacionado con el hospital
-public class Hospital { //implementar de serializable
+//En esta clase va la estructura general del Hospital
+public class Hospital {
 
     //Atributos
     private ArrayList<Doctor> listaDoctores = new ArrayList<>();
     private ArrayList<Paciente> listaPacientes = new ArrayList<>();
     private ArrayList<Medicamento> listaMedicamentos = new ArrayList<Medicamento>();
     private ArrayList<Vacuna> listaVacunas = new ArrayList<>();
-    //Atributo estático que cumple con el requerimiento del proyecto:
-    //private static ArrayList<Habitacion> listaHabitaciones = new ArrayList<Habitacion>();
+    public static ArrayList<Habitacion> habitaciones= new ArrayList<>();
 
-    //Implementar constructor aqui...
+    //Constructor
+
+    public Hospital(){
+        //Deserializador.deserializar(this); //TODO: REALIZAR EL SERIALIZADOR
+    }
 
     //Métodos
+    public ArrayList<Doctor> buscarTipoDoctor(String especialidad) {
+        ArrayList<Doctor> doctoresDisponibles = new ArrayList<Doctor>();
+        for(int i=1; i<=listaDoctores.size(); i++) {
+            if (Objects.equals(listaDoctores.get(i-1).getEspecialidad(), especialidad)) {
+                doctoresDisponibles.add(listaDoctores.get(i-1));
+            }
+        }
+        return doctoresDisponibles;
 
     //Buscar un paciente en la base de datos usando su numero de cédula
+
     public Paciente buscarPaciente(int cedula) {
         for (Paciente paciente : listaPacientes) {
-            //if (paciente.getCedula() == cedula) {
-            //    return paciente;
-            //} --> Implementar método getCedula Paciente!
+            if (paciente.getCedula() == cedula) {
+                return paciente;
+            }
         }
         return null;
     }

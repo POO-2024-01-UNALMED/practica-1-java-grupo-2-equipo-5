@@ -2,6 +2,8 @@ package gestorAplicacion.administracionHospital;
 
 import gestorAplicacion.servicios.Cita;
 import gestorAplicacion.servicios.CitaVacuna;
+import gestorAplicacion.servicios.Formula;
+import gestorAplicacion.servicios.Habitacion;
 
 public interface Pago {
 

@@ -9,14 +9,15 @@ import gestorAplicacion.servicios.CitaVacuna;
 
 public class Vacuna implements Serializable{
 
+    //Atributos
+
     private String tipo;
     private double valor;
     private String nombre;
-
     private ArrayList<CitaVacuna> agenda =  new ArrayList<CitaVacuna>();
     private ArrayList<String> tipoEps = new ArrayList<String>();
     
-
+    //Constructor
 
     public Vacuna(String tipo, String nombre, ArrayList<String> tipoEps, double valor){
         this.tipo = tipo;
@@ -31,6 +32,7 @@ public class Vacuna implements Serializable{
         agenda.add(new CitaVacuna("29 de Agosto de 2024. Hora 12:30 m", null, this));
         agenda.add(new CitaVacuna("30 de Agosto de 2024. Hora 10:00 am", null, this));
     }
+    //Metodos
 
     public ArrayList<CitaVacuna> mostrarAgendaDisponible(){
         ArrayList<CitaVacuna> agendaDisponible=new ArrayList<CitaVacuna>();
@@ -53,7 +55,7 @@ public class Vacuna implements Serializable{
         }
         return citaAsignada;
     }
-
+    //SETS Y GETS
 
     public String getTipo(){
         return tipo;

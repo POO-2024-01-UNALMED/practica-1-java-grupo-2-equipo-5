@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import gestorAplicacion.administracionHospital.CategoriaHabitacion;
 import gestorAplicacion.personas.Paciente;
+import gestorAplicacion.administracionHospital.Hospital;
 
 
 public class Habitacion extends Servicio{

@@ -1,11 +1,9 @@
 package gestorAplicacion.administracionHospital;
 
-import java.util.ArrayList;
+import gestorAplicacion.personas.*;
+import gestorAplicacion.servicios.*;
 
-import gestorAplicacion.personas.Doctor;
-import gestorAplicacion.personas.Paciente;
-import gestorAplicacion.servicios.Cita;
-import gestorAplicacion.servicios.CitaVacuna;
+import java.util.ArrayList;
 //Importar las clases faltantes aquí....
 
 //Clase para crear las historias clinicas de los pacientes.

@@ -2,8 +2,6 @@ package gestorAplicacion.administracionHospital;
 
 import java.io.Serializable;
 
-import gestorAplicacion.personas.Enfermedad;
-
 public class Medicamento implements Serializable {
 
     private String nombre;
