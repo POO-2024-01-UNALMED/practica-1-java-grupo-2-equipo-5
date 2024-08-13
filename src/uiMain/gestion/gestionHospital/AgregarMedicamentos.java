@@ -18,6 +18,27 @@ public class AgregarMedicamentos {
             ArrayList<Medicamento> listaMedicamentos = hospital.getListaMedicamentos();
             int opcion = sc.nextInt();
             sc.nextLine();
+            switch (opcion) {
+                case 1:
+                    while (true) {
+                        //VerMedicamentos.verMedicamentos(Hospital); //Quitar comentario
+                        byte opcionMed = sc.nextByte();
+                        if (opcionMed <= 0 || opcionMed > listaMedicamentos.size()) {
+                            System.out.println("Opción no válida. Intente de nuevo");
+                        } else {
+                            Medicamento escogido = listaMedicamentos.get(opcionMed - 1);
+                            System.out.println("Ingrese la nueva cantidad del medicamento:");
+                            int cantidad = sc.nextInt();
+                            escogido.setCantidad(cantidad);
+                            System.out.println("Se ha actualizado el medicamento:");
+                            System.out.println(escogido);
+                            break;
+                        }
+                    }
+                    break;
+                case 2:
+                    while (true) {}
+            }
         }
     }
 }
