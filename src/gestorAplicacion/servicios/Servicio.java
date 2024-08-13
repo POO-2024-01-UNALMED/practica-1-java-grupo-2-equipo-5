@@ -1,12 +1,10 @@
 package gestorAplicacion.servicios;
 
-import java.util.ArrayList;
-
-import gestorAplicacion.administracionHospital.HistoriaClinica;
 import gestorAplicacion.personas.Paciente;
+//import java.io.Serializable;
 
 //La idea de esta clase es que los diferentes servicios hereden de ella
-public abstract class Servicio { //--> Implementar la interface Serializable
+public abstract class Servicio { //TODO: IMPLEMENTAR SERIALIZABLE
 
     //Atributos
     protected Paciente paciente;

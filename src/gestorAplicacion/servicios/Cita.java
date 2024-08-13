@@ -8,7 +8,7 @@ public class Cita extends Servicio {
     //Atributos
 
     public Cita(Doctor doctor, String fecha, Paciente paciente){
-        super();
+        super(paciente);
         this.doctor = doctor;
         this.fecha = fecha;
     }

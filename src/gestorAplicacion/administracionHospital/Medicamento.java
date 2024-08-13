@@ -49,7 +49,7 @@ public class Medicamento implements Serializable {
 
     public void setDescripcion(){this.descripcion = descripcion;}
 
-    public int getcantidad(){
+    public int getCantidad(){
         return cantidad;
     }
 

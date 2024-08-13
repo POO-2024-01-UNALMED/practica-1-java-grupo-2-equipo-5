@@ -21,9 +21,9 @@ public class CitaVacuna extends Cita {
 
     @Override
     public void validarPago(Paciente paciente, long idServicio){
-        for (CitaVacuna citaVacuna:  paciente.getHistoriaClinica().getHistorialCitas()){
+        for (CitaVacuna citaVacuna:  paciente.getHistoriaClinica().getHistorialVacunas()){
             if(citaVacuna.getIdServicio() == idServicio){
-                citaVacuna.getEstadoPago(true);
+                citaVacuna.setEstadoPago(true);
             }
         }
     }
