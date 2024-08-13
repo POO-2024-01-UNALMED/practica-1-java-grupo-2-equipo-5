@@ -59,6 +59,14 @@ public class HistoriaClinica { // -> Implementar interface Serializable.
         this.historialCitas = historialcitas;
     }
 
+    public ArrayList<Formula> getListaFormulas() {
+        return listaFormulas;
+    }
+
+    public void setListaFormulas(ArrayList<Formula> listaFormulas) {
+        this.listaFormulas = listaFormulas;
+    }
+
     public ArrayList<CitaVacuna> getHistorialVacunas() {
         return historialVacunas;
     }
@@ -68,7 +76,7 @@ public class HistoriaClinica { // -> Implementar interface Serializable.
 
     public void setHistorialCitas(ArrayList<Cita> historialcitas) {
         this.historialCitas = historialcitas;}
-    
+
     public void setHistorialVacunas(ArrayList<CitaVacuna> historialVacunas) {
         this.historialVacunas = historialVacunas;}
 

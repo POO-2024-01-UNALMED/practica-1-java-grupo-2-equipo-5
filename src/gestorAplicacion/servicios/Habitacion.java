@@ -5,12 +5,11 @@ import java.util.ArrayList;
 import gestorAplicacion.administracionHospital.CategoriaHabitacion;
 import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.personas.Paciente;
-import gestorAplicacion.administracionHospital.Hospital;
 
 
 public class Habitacion extends Servicio{
     
-    private int idHabitacion;
+    private int numero;
     private CategoriaHabitacion categoria;
     private boolean ocupada;
     private int dias;
@@ -18,7 +17,7 @@ public class Habitacion extends Servicio{
     public Habitacion(int idHabitacion, CategoriaHabitacion categoria, boolean ocupada, Paciente paciente, int dias){
         
         super(paciente);
-        this.idHabitacion= idHabitacion;
+        this.numero= idHabitacion;
         this.categoria = categoria;
         this.ocupada = ocupada;
         this.dias=dias;
@@ -26,13 +25,9 @@ public class Habitacion extends Servicio{
     }
 
     public static ArrayList<Habitacion> BuscarHabitacionDisponible(CategoriaHabitacion categoria){
-
         ArrayList<Habitacion>habitacionesDisponibles=new ArrayList<>();
-
         for (Habitacion habitacion: Hospital.getListaHabitaciones()){
-
             if (!habitacion.isOcupada() && habitacion.getCategoria()==categoria){
-
                 habitacionesDisponibles.add(habitacion);;
             }
         }
@@ -118,6 +113,6 @@ public class Habitacion extends Servicio{
     }
 
     public String descripcionServicio(){
-        return "No.: "idServicio + "- Habitacion"+ idHabitacion + " ocupada "+ dias + " dias";
+        return idServicio + "- Habitacion"+ numero + " ocupada "+ dias + " dias";
     }
 }
