@@ -7,7 +7,7 @@ import gestorAplicacion.servicios.Habitacion;
 
 public interface Pago {
 
-    double Iva = 0.19;
+    double IVA = 0.19;
 
     double calcularValor(Formula formula);
     double calcularValor(Cita cita);
