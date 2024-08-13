@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 import gestorAplicacion.personas.Doctor;
 import gestorAplicacion.personas.Paciente;
-
+import gestorAplicacion.servicios.Habitacion;
 import javax.print.Doc;
-//import gestorAplicacion.servicios.Habitacion;
+
 
 //Importar el serializable y lo que falte.
 
@@ -19,9 +19,12 @@ public class Hospital { //implementar de serializable
     private ArrayList<Medicamento> listaMedicamentos = new ArrayList<Medicamento>();
     private ArrayList<Vacuna> listaVacunas = new ArrayList<>();
     //Atributo estático que cumple con el requerimiento del proyecto:
-    //private static ArrayList<Habitacion> listaHabitaciones = new ArrayList<Habitacion>();
+    private static ArrayList<Habitacion> listaHabitaciones = new ArrayList<Habitacion>();
 
     //Implementar constructor aqui...
+    //public Hospital() {
+        //Deserializador.deserializar(this);
+    //}
 
     //Métodos
 
@@ -91,4 +94,11 @@ public class Hospital { //implementar de serializable
         this.listaVacunas = listaVacunas;
     }
 
+    public static ArrayList<Habitacion> getListaHabitaciones() {
+        return listaHabitaciones;
+    }
+
+    public static void setListaHabitaciones(ArrayList<Habitacion> listaHabitaciones) {
+        Hospital.listaHabitaciones = listaHabitaciones;
+    }
 }
