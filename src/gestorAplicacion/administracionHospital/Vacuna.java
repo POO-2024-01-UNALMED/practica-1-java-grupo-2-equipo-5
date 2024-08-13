@@ -1,11 +1,11 @@
 package gestorAplicacion.administracionHospital;
 
+import gestorAplicacion.personas.Paciente;
+import gestorAplicacion.servicios.CitaVacuna;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
-
-import gestorAplicacion.personas.Paciente;
-import gestorAplicacion.servicios.CitaVacuna;
 
 public class Vacuna implements Serializable{
 
@@ -49,7 +49,7 @@ public class Vacuna implements Serializable{
         CitaVacuna citaAsignada= null;
         for (int i=1 ; i<=agenda.size();i++){
              if(Objects.equals(agenda.get(i-1).getFecha(), agendaDisponible.get(numeroCita-1).getFecha())){
-                agenda.get(i-1).setPaceinte(pacienteAsignado);
+                agenda.get(i-1).setPaciente(pacienteAsignado);
                 citaAsignada=agenda.get(i-1);
              }
         }

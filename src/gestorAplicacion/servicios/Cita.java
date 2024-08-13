@@ -5,20 +5,20 @@ import gestorAplicacion.personas.Paciente;
 public class Cita extends Servicio {
     private Doctor doctor;
     protected String fecha;
-    //Atributos
+    //ATRIBUTOS
 
     public Cita(Doctor doctor, String fecha, Paciente paciente){
         super(paciente);
         this.doctor = doctor;
         this.fecha = fecha;
     }
-    //Constructor
+    //CONSTRUCTOR
 
     @Override
     public void validarPago(Paciente paciente, long idServicio){
         for (Cita cita:  paciente.getHistoriaClinica().getHistorialCitas()){
             if(cita.getIdServicio() == idServicio){
-                cita.getEstadoPago(true);
+                cita.setEstadoPago(true);
             }
         }
     }
@@ -26,7 +26,8 @@ public class Cita extends Servicio {
     public String descripcionServicio() {
         return idServicio + " - Cita medica con " + doctor.getNombre() + " (" + fecha + ")";
     }
-    //metodos
+
+    //GETS Y SETS
 
     public Doctor getDoctor() {
         return doctor;
@@ -44,7 +45,7 @@ public class Cita extends Servicio {
     public String mensaje(){
         return "del servicio cita médica!";
     }
-    //gets y sets
+
 
     
 

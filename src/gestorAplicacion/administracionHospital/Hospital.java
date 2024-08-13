@@ -109,7 +109,7 @@ public class Hospital { //TODO: UTILIZAR EL SERIALIZABLE
 
         public void setListaVacunas (ArrayList < Vacuna > listaVacunas) {this.listaVacunas = listaVacunas;}
 
-        public static ArrayList<Habitacion> getHabitaciones(){return habitaciones;}
+        public static ArrayList<Habitacion> getListaHabitaciones(){return habitaciones;}
 
         public static void setHabitaciones(ArrayList<Habitacion> habitaciones){Hospital.habitaciones = habitaciones;}
 

@@ -38,7 +38,7 @@ public class Paciente extends Persona implements Pago{
         return medEnfermedades;
     }
     //METODO ENCARGADO DE BUSCAR DOCTORES POR EXPECIALIDAD Y TIPO DE EPS
-    public ArrayList<Doctor> buscarDoctorEps(Doctor doctor, Hospital hospital) {
+    public ArrayList<Doctor> buscarDoctorEps(String especialidad, Hospital hospital) {
         ArrayList<Doctor> doctoresPorEspecialidad = hospital.buscarTipoDoctor(especialidad);
         ArrayList<Doctor> doctoresDisponibles = new ArrayList<Doctor>();
 
