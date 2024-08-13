@@ -44,7 +44,7 @@ public class HistoriaClinica { // -> Implementar interface Serializable.
         listaFormulas.add(formulaPaciente);
     }
 
-    
+
     //GETS Y SETS
 
     public Paciente getPaciente() {
@@ -63,9 +63,14 @@ public class HistoriaClinica { // -> Implementar interface Serializable.
         return historialVacunas;
     }
 
+    public ArrayList<Cita> getHistorialCitas() {
+        return historialCitas;}
+
+    public void setHistorialCitas(ArrayList<Cita> historialcitas) {
+        this.historialCitas = historialcitas;}
+    
     public void setHistorialVacunas(ArrayList<CitaVacuna> historialVacunas) {
-        this.historialVacunas = historialVacunas;
-    }
+        this.historialVacunas = historialVacunas;}
 
     public ArrayList<Enfermedad> getEnfermedades() {
         return enfermedades;

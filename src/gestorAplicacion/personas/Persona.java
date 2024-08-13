@@ -1,7 +1,8 @@
 package gestorAplicacion.personas;
 
+//import java.io.Serializable //TODO: IMPORTAR EL SERIALIZABLE
 
-public class Persona {
+public class Persona { //TODO: IMPLEMENTAR EL SERIALIZABLE AAA
 
     //Atributos
 
@@ -24,27 +25,32 @@ public class Persona {
     public int getCedula(){
         return cedula;
     }
+
     public void setCedula(int cedula){
         this.cedula = cedula;
-
     }
+
     public String getNombre(){
         return nombre;
     }
+
     public void setNombre(String nombre){
         this.nombre = nombre;
-
     }
+
     public String getTipoEps(){
         return tipoEps;
     }
+
     public void setTipoEps(String tipoEps){
         this.tipoEps = tipoEps;
-
     }
+
     public String Bienvenida(){
         return "bienvenido usuario"+nombre;
     }
+
+
 
 
 }
