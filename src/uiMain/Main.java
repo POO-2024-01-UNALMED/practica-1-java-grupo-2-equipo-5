@@ -16,11 +16,18 @@ public class Main {
         mostrarMenuInicial(hospital);
     }
 
+
+
     private static void mostrarMenuInicial(Hospital hospital) {
 
         byte opcionSeleccionada;
 
         while (true) {
+            System.out.println("██   ██  ██████  ███████ ██████  ██ ████████  █████  ██      \n" +
+                    "██   ██ ██    ██ ██      ██   ██ ██    ██    ██   ██ ██      \n" +
+                    "███████ ██    ██ ███████ ██████  ██    ██    ███████ ██      \n" +
+                    "██   ██ ██    ██      ██ ██      ██    ██    ██   ██ ██      \n" +
+                    "██   ██  ██████  ███████ ██      ██    ██    ██   ██ ███████ ");
             System.out.println("\n--- MENU INICIAL ---");
             System.out.println("1. Servicios para pacientes");
             System.out.println("2. Gestionar registros");
