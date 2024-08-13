@@ -12,7 +12,7 @@ public class Vacuna implements Serializable{
     //Atributos
 
     private String tipo;
-    private double valor;
+    private double precio;
     private String nombre;
     private ArrayList<CitaVacuna> agenda =  new ArrayList<CitaVacuna>();
     private ArrayList<String> tipoEps = new ArrayList<String>();
@@ -22,7 +22,7 @@ public class Vacuna implements Serializable{
     public Vacuna(String tipo, String nombre, ArrayList<String> tipoEps, double valor){
         this.tipo = tipo;
         this.nombre = nombre;
-        this.valor = valor;
+        this.precio = valor;
         this.tipoEps = tipoEps;
 
         agenda.add(new CitaVacuna("23 de Agosto de 2024. Hora 7:45 am", null, this));
@@ -60,14 +60,23 @@ public class Vacuna implements Serializable{
     public String getTipo(){
         return tipo;
     }
+
+    public void setTipo(String tipo){this.tipo = tipo;}
+
     public String getNombre(){
         return nombre;
     }
+
+    public void setNombre(String nombre){this.nombre = nombre;}
+
     public ArrayList<String> getTipoEps(){
         return tipoEps;
     }
-    public double getValor(){
-        return valor;
+
+
+
+    public double getPrecio(){
+        return precio;
     }
 
     public ArrayList<CitaVacuna> getAgenda(){

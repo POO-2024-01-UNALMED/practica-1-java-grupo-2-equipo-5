@@ -9,9 +9,9 @@ public interface Pago {
 
     double IVA = 0.19;
 
-    double calcularValor(Formula formula);
-    double calcularValor(Cita cita);
-    double calcularValor(CitaVacuna citaVacuna);
-    double calcularValor(Habitacion habitacion);
+    double calcularPrecio(Formula formula);
+    double calcularPrecio(Cita cita);
+    double calcularPrecio(CitaVacuna citaVacuna);
+    double calcularPrecio(Habitacion habitacion);
 
 }

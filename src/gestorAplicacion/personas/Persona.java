@@ -46,7 +46,7 @@ public class Persona { //TODO: IMPLEMENTAR EL SERIALIZABLE AAA
         this.tipoEps = tipoEps;
     }
 
-    public String Bienvenida(){
+    public String bienvenida(){
         return "bienvenido usuario"+nombre;
     }
 

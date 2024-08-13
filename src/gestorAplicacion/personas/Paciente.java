@@ -159,13 +159,13 @@ public class Paciente extends Persona implements Pago{
         //Hay ligadura dinámica
         return doctor.bienvenida()+ "\nPor favor selecciona los medicamentos que vas a formularle a: "+getNombre();
     }
-
-    //Getter y setter
-
-    //Agrega una cita de vacuna al historial de vacunas del paciente
     public void actualizarHistorialVacunas(CitaVacuna citaAsignada){
         historiaClinica.getHistorialVacunas().add(citaAsignada);
     }
+
+    //Getter y setter
+
+
 
     public HistoriaClinica getHistoriaClinica() {
         return historiaClinica;
@@ -187,6 +187,8 @@ public class Paciente extends Persona implements Pago{
         this.habitacionAsignada = habitacionAsignada;
     }
 
+
+
     @Override
 
     public String toString(){
@@ -194,11 +196,12 @@ public class Paciente extends Persona implements Pago{
     }
 
     public String despedida(Cita citaAsignada ){
-        /*Hay ligadura dinámica ya que la referencia
-        citaAsignada puede apuntar a una cita o a una cita vacuna
-        y dependiendo de eso ejecutará el método más específico
-        de mensaje().
-         */
+
+        /*EXISTE UNA LIGADURA DINAMICA EN ESTE CAMPO YA QUE LA REFERENCIA DE
+        citaAsignada PUEDE APUNTAR A UNA CITA O CITA VACUNA Y DEPENDIENDO DE
+        ESTO, SE EJECUTA EL METODO MAS ESPECIFICO DEL MENSAJE*/
+
+
         return "¡Adiós "+getNombre()+" "+citaAsignada.mensaje();
     }
 }
