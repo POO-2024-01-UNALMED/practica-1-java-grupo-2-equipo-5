@@ -24,7 +24,7 @@ public class AgregarMedicamentos {
                         //VerMedicamentos.verMedicamentos(Hospital); //Quitar comentario
                         byte opcionMed = sc.nextByte();
                         if (opcionMed <= 0 || opcionMed > listaMedicamentos.size()) {
-                            System.out.println("Opción no válida. Intente de nuevo");
+                            System.out.println("Opción no válida. Intente de nuevo.");
                         } else {
                             Medicamento escogido = listaMedicamentos.get(opcionMed - 1);
                             System.out.println("Ingrese la nueva cantidad del medicamento:");
@@ -37,7 +37,43 @@ public class AgregarMedicamentos {
                     }
                     break;
                 case 2:
-                    while (true) {}
+                    System.out.println("Por favor, ingrese el nombre del nuevo medicamento:");
+                    String nombre = sc.nextLine();
+                    Enfermedad enfermedad;
+                    ArrayList<Enfermedad> enfermedades = Enfermedad.getEnfermedadesRegistradas();
+                    while (true) {
+                        System.out.println("¿Qué enfermedad trata este medicamento?");
+                        System.out.println("0. Registrar una nueva enfermedad");
+                        for (int i = 0; i < enfermedades.size(); i++) {
+                            System.out.println(i + 1 + ". " + enfermedades.get(i));
+                        }
+                        byte opcionEnf = sc.nextByte();
+                        sc.nextLine();
+                        if (opcionEnf == 0) {
+                            System.out.println("Por favor, ingrese el nombre de la nueva enfermedad:");
+                            String nEnfermedad = sc.nextLine();
+                            System.out.println("Por favor, ingrese la tipología de la enfermedad:");
+                            String tEnfermedad = sc.next();
+                            System.out.println("Por favor, ingrese la especialidad que trata dicha enfermedad:");
+                            String eEnfermedad = sc.next();
+                            Enfermedad nuevaEnfermedad = new Enfermedad(eEnfermedad, nEnfermedad, tEnfermedad);
+                            System.out.println("Se ha registrado la nueva enfermedad en el sistema!");
+                        } else if (opcionEnf <= 0 || opcionEnf > enfermedades.size()) {
+                            System.out.println("Opción no válida. Intente de nuevo.");
+                        } else {
+                            enfermedad = enfermedades.get(opcionEnf - 1);
+                            break;
+                        }
+                    }
+                    System.out.println("Por favor, ingrese una descripción para el medicamento:");
+                    String dMedicamento = sc.nextLine();
+                    System.out.println("Por favor, ingrese la cantidad de unidades del medicamento:");
+                    int cMedicamento = sc.nextInt();
+                    System.out.println("Por favor, ingrese el precio del medicamento:");
+                    float pMedicamento = sc.nextFloat();
+                    Medicamento nuevoMedicamento = new Medicamento(nombre, enfermedad, dMedicamento, cMedicamento, pMedicamento);
+                    hospital.getListaMedicamentos().add(nuevoMedicamento);
+                    break;
             }
         }
     }
