@@ -1,104 +1,117 @@
 package gestorAplicacion.administracionHospital;
 
-import java.util.ArrayList;
+//TODO:import baseDatos.Desearializador;
 
 import gestorAplicacion.personas.Doctor;
 import gestorAplicacion.personas.Paciente;
 import gestorAplicacion.servicios.Habitacion;
-import javax.print.Doc;
+
+//TODO: import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Objects;
 
 
-//Importar el serializable y lo que falte.
+//EN ESTA CLASE VA LA ESTRUCTURA PRINCIPAL DEL HOSPITAL
 
-//En esta clase va todo lo más general relacionado con el hospital
-public class Hospital { //implementar de serializable
+public class Hospital { //TODO: UTILIZAR EL SERIALIZABLE
 
     //Atributos
     private ArrayList<Doctor> listaDoctores = new ArrayList<>();
     private ArrayList<Paciente> listaPacientes = new ArrayList<>();
     private ArrayList<Medicamento> listaMedicamentos = new ArrayList<Medicamento>();
     private ArrayList<Vacuna> listaVacunas = new ArrayList<>();
-    //Atributo estático que cumple con el requerimiento del proyecto:
-    private static ArrayList<Habitacion> listaHabitaciones = new ArrayList<Habitacion>();
+    public static ArrayList<Habitacion> habitaciones= new ArrayList<>();
 
-    //Implementar constructor aqui...
-    //public Hospital() {
-        //Deserializador.deserializar(this);
-    //}
+    //Constructor
+
+    public Hospital(){
+        //Deserializador.deserializar(this); //TODO: REALIZAR EL SERIALIZADOR
+    }
 
     //Métodos
-
-    //Buscar un paciente en la base de datos usando su numero de cédula
-    public Paciente buscarPaciente(int cedula) {
-        for (Paciente paciente : listaPacientes) {
-            //if (paciente.getCedula() == cedula) {
-            //    return paciente;
-            //} --> Implementar método getCedula Paciente!
-        }
-        return null;
-    }
-
-    //Sobrecarga de métodos buscarDoctor: Uno con la cédula y otro con la especialidad
-
-    public Doctor buscarDoctor(int cedula) {
-        for (Doctor doctor : listaDoctores) {
-            if (doctor.getCedula() == cedula) {
-                return doctor;
+    public ArrayList<Doctor> buscarTipoDoctor(String especialidad) {
+        ArrayList<Doctor> doctoresDisponibles = new ArrayList<Doctor>();
+        for (int i = 1; i <= listaDoctores.size(); i++) {
+            if (Objects.equals(listaDoctores.get(i - 1).getEspecialidad(), especialidad)) {
+                doctoresDisponibles.add(listaDoctores.get(i - 1));
             }
         }
-        return null;
+        return doctoresDisponibles;
     }
+        //Buscar un paciente en la base de datos usando su numero de cédula
 
-    public ArrayList<Doctor> buscarDoctor(String especialidad) {
-        ArrayList<Doctor> doctores = new ArrayList<>();
-        for (Doctor doctor : listaDoctores) {
-            if (doctor.getEspecialidad().equals(especialidad)) {
-                doctores.add(doctor);
+        public Paciente buscarPaciente (int cedula){
+            for (Paciente paciente : listaPacientes) {
+                if (paciente.getCedula() == cedula) {
+                    return paciente;
+                }
             }
+            return null;
         }
-        return doctores;
-    }
 
-    //Faltan métodos para vacunas
+        //Sobrecarga de métodos buscarDoctor: Uno con la cédula y otro con la especialidad
 
-    //Getters y setters
-    public ArrayList<Doctor> getListaDoctores() {
-        return listaDoctores;
-    }
+        public Doctor buscarDoctor ( int cedula){
+            for (Doctor doctor : listaDoctores) {
+                if (doctor.getCedula() == cedula) {
+                    return doctor;
+                }
+            }
+            return null;
+        }
 
-    public void setListaDoctores(ArrayList<Doctor> listaDoctores) {
-        this.listaDoctores = listaDoctores;
-    }
 
-    public ArrayList<Paciente> getListaPacientes() {
-        return listaPacientes;
-    }
+        public Vacuna buscarVacuna(String nombre){
+            for (Vacuna vacuna : listaVacunas) {
+                if (Objects.equals(vacuna.getNombre(), nombre)) {
+                    return vacuna;
+                }
+            }
+            return null;
+        }
 
-    public void setListaPacientes(ArrayList<Paciente> listaPacientes) {
-        this.listaPacientes = listaPacientes;
-    }
 
-    public ArrayList<Medicamento> getListaMedicamentos() {
-        return listaMedicamentos;
-    }
+        public ArrayList<Medicamento> medicamentosDisponibles(){
+            ArrayList<Medicamento> medicamentos = new ArrayList<>();
+            for (int i = 0; i <= listaMedicamentos.size(); i++) {
+                if (listaMedicamentos.get(i).getCantidad()>0){
+                    medicamentos.add(listaMedicamentos.get(i));
+                }
+            }
+            return medicamentos;
+        }
+        public ArrayList<Vacuna> buscarTipoVacuna(String tipo){
+            ArrayList<Vacuna> vacunas = new ArrayList<>();
+            for (int i = 1; i < listaVacunas.size(); i++) {
+                if (Objects.equals(listaVacunas.get(i-1).getTipo(), tipo)){
+                    vacunas.add(listaVacunas.get(i-1));
+                }
+            }
+            return vacunas;
+        }
 
-    public void setListaMedicamentos(ArrayList<Medicamento> listaMedicamentos) {
-        this.listaMedicamentos = listaMedicamentos;
-    }
+        //Faltan métodos para vacunas
 
-    public ArrayList<Vacuna> getListaVacunas() {
-        return listaVacunas;
-    }
+        //Getters y setters
+        public ArrayList<Doctor> getListaDoctores() {return listaDoctores;}
 
-    public void setListaVacunas(ArrayList<Vacuna> listaVacunas) {
-        this.listaVacunas = listaVacunas;
-    }
+        public void setListaDoctores (ArrayList<Doctor> listaDoctores) {this.listaDoctores = listaDoctores;}
 
-    public static ArrayList<Habitacion> getListaHabitaciones() {
-        return listaHabitaciones;
-    }
+        public ArrayList<Paciente> getListaPacientes() {return listaPacientes;}
 
-    public static void setListaHabitaciones(ArrayList<Habitacion> listaHabitaciones) {
-        Hospital.listaHabitaciones = listaHabitaciones;
-    }
+        public void setListaPacientes (ArrayList<Paciente> listaPacientes) {this.listaPacientes = listaPacientes;}
+
+        public ArrayList<Medicamento> getListaMedicamentos() {return listaMedicamentos;}
+
+        public void setListaMedicamentos (ArrayList<Medicamento> listaMedicamentos) {this.listaMedicamentos = listaMedicamentos;}
+
+        public ArrayList<Vacuna> getListaVacunas () {return listaVacunas;}
+
+        public void setListaVacunas (ArrayList < Vacuna > listaVacunas) {this.listaVacunas = listaVacunas;}
+
+        public static ArrayList<Habitacion> getListaHabitaciones(){return habitaciones;}
+
+        public static void setHabitaciones(ArrayList<Habitacion> habitaciones){Hospital.habitaciones = habitaciones;}
+
+
 }

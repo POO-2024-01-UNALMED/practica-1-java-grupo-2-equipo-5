@@ -14,4 +14,8 @@ public enum CategoriaHabitacion {
     private CategoriaHabitacion(int valor) {
         this.valor = valor;
     }
+
+    public int getValor() {
+        return valor;
+    }
 }

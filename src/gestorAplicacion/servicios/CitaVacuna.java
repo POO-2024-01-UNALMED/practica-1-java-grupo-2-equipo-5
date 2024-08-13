@@ -1,22 +1,29 @@
 package gestorAplicacion.servicios;
+
 import gestorAplicacion.administracionHospital.Vacuna;
 import gestorAplicacion.personas.Paciente;
 
 public class CitaVacuna extends Cita {
-    private Vacuna vacuna;
-    //Atributos
 
-    public CitaVacuna( Vacuna vacuna, String fecha, Paciente paciente){
+    //ATRIBUTOS
+
+    private Vacuna vacuna;
+
+
+    //CONSTRUTOR
+
+    public CitaVacuna(String fecha, Paciente paciente, Vacuna vacuna) {
         super(null, fecha, paciente);
         this.vacuna=vacuna;
     }
-    //Constructor
+
+    //METODOS
 
     @Override
     public void validarPago(Paciente paciente, long idServicio){
-        for (CitaVacuna citaVacuna:  paciente.getHistoriaClinica().getHistorialCitas()){
+        for (CitaVacuna citaVacuna:  paciente.getHistoriaClinica().getHistorialVacunas()){
             if(citaVacuna.getIdServicio() == idServicio){
-                citaVacuna.getEstadoPago(true);
+                citaVacuna.setEstadoPago(true);
             }
         }
     }
@@ -24,7 +31,8 @@ public class CitaVacuna extends Cita {
     public String descripcionServicio() {
         return idServicio + " - Vacuna " + vacuna.getNombre() + " (" + fecha + ")";
     }
-    //metodos
+
+    //GETS Y SETS
 
     public Vacuna getVacuna() {
         return vacuna;
@@ -36,7 +44,7 @@ public class CitaVacuna extends Cita {
     public String mensaje(){
         return "del servicio de vacunas";
     }
-    //gets y sets
+
     
 
 }
