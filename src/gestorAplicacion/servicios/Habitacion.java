@@ -3,6 +3,7 @@ package gestorAplicacion.servicios;
 import java.util.ArrayList;
 
 import gestorAplicacion.administracionHospital.CategoriaHabitacion;
+import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.personas.Paciente;
 import gestorAplicacion.administracionHospital.Hospital;
 
@@ -28,7 +29,7 @@ public class Habitacion extends Servicio{
 
         ArrayList<Habitacion>habitacionesDisponibles=new ArrayList<>();
 
-        for (Habitacion habitacion: Hospital.habitaciones){
+        for (Habitacion habitacion: Hospital.getListaHabitaciones()){
 
             if (!habitacion.isOcupada() && habitacion.getCategoria()==categoria){
 
@@ -90,7 +91,7 @@ public class Habitacion extends Servicio{
 
     }
 
-    public boolean isOcupada(boolean ocupada){
+    public boolean isOcupada(){
 
         return ocupada;
     }
