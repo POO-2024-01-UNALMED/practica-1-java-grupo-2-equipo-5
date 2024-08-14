@@ -9,11 +9,11 @@ import java.util.Scanner;
 
 public class RegistarEliminarVacunas {
 
-    public static boolean verificarExistenciaVacuna(String nombre, Hospital hospital){
+    public static boolean verificarExistenciaVacuna(String nombreVacuna, Hospital hospital){
         boolean valor = false;
 
-        for(int i =1; i<=hospital.getListaVacunas().size;i++){
-            if (nombre.equials(hospital.getListaVacunas().get(-1).getNombre())){
+        for(int i =1; i<=hospital.getListaVacunas().size();i++){
+            if (nombreVacuna.equals(hospital.getListaVacunas().get(-1).getNombre())){
                 valor = true;
                 break;
             }
@@ -32,9 +32,9 @@ public class RegistarEliminarVacunas {
 
         System.out.println("A continuacion ingrese la informacion de la nueva vacuna: ");
         System.out.println("Nombre de la vacuna:(Debe iniciar con mayúscula) ");
-        String nombre = sc.nextLine();
+        String nombreVacuna = sc.nextLine();
 
-        if (RegistrarVacuna.verificarExistenciaVacuna(nombre, hospital)) {
+        if (RegistrarVacuna.verificarExistenciaVacuna(nombreVacuna, hospital)) {
             System.out.println("La vacuna ya existe en el sistema");
             return;
             
@@ -53,7 +53,7 @@ public class RegistarEliminarVacunas {
 
             tipoEps.add(eps);
 
-            while (True) {
+            while (true) {
                 System.out.println("¿Desea agregar otro tipo de EPS? (s/n)");
                 String letra = sc.next();
 
@@ -76,5 +76,24 @@ public class RegistarEliminarVacunas {
         System.out.println("Precio de la vacuna:" +vacunaNueva.getPrecio());
 
         sc.nextLine();
+    }
+
+    public static void eliminarVacuna(Hospital hospital){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese el nombre de la vacuna que desea eliminar: ");
+        String nombreVacuna = sc.nextLine();
+
+        if (!RegistrarVacuna.verificarExistenciaVacuna(nombreVacuna, hospital)) {
+            System.out.println("Esta vacuna no existe en el inventario del hospital");
+        }
+
+        else{
+            for(int i=1; i<=hospital.getListaVacunas().size(); i++){
+                if(Objects.equals(hospital.getListaVacunas().get(i-1).getNombre(), nombreVacuna)){
+                    System.out.println(hospital.getListaVacunas().get(i-1).getNombre()+" fue eliminada exitosamente");
+                    hospital.getListaVacunas().remove(hospital.getListaVacunas().get(i-1));
+                }
+            }
+        }
     }
 }
