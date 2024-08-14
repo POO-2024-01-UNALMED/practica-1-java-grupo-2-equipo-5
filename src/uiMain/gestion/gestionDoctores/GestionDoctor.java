@@ -2,7 +2,7 @@ package uiMain.gestion.gestionDoctores;
 
 import baseDatos.Serializador;
 //base de datos necesitada
-import gestorAplicacion.administracionHospital.*;.Hospital;
+import gestorAplicacion.administracionHospital.Hospital;
 
 import java.util.Scanner;
 
