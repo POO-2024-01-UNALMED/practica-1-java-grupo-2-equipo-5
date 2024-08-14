@@ -59,7 +59,7 @@ public class AgregarMedicamentos {
                             Enfermedad nuevaEnfermedad = new Enfermedad(eEnfermedad, nEnfermedad, tEnfermedad);
                             System.out.println("Se ha registrado la nueva enfermedad en el sistema!");
                         } else if (opcionEnf <= 0 || opcionEnf > enfermedades.size()) {
-                            System.out.println("Opción no válida. Intente de nuevo.");
+                            System.out.println("Opción no válida. Por favor intente de nuevo.");
                         } else {
                             enfermedad = enfermedades.get(opcionEnf - 1);
                             break;
@@ -74,7 +74,20 @@ public class AgregarMedicamentos {
                     Medicamento nuevoMedicamento = new Medicamento(nombre, enfermedad, dMedicamento, cMedicamento, pMedicamento);
                     hospital.getListaMedicamentos().add(nuevoMedicamento);
                     break;
+                default:
+                    System.out.println("Opción no válida. Por favor intente de nuevo.");
             }
-        }
+            while (true) {
+                System.out.println("¿Desea añadir un nuevo medicamento? (s/n)");
+                char confirmar = sc.next().charAt(0);
+                if (confirmar == 's' || confirmar == 'n') {
+                    anadirOtro = confirmar == 's';
+                    break;
+                } else {
+                    System.out.println("Opción no válida. Por favor intente de nuevo");
+                }
+            }
+        } while (anadirOtro);
+            System.out.println("Se han actualizado los medicamentos!");
     }
 }
