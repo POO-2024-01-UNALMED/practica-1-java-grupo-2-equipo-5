@@ -6,7 +6,7 @@ import gestorAplicacion.administracionHospital.CategoriaHabitacion;
 import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.servicios.Habitacion;
 
-public class DestruirHbaitacion {
+public class DestruirHabitacion {
 
     public static void destruirHabitacion(Hospital hospital) {
         Scanner sc = new Scanner(System.in);
