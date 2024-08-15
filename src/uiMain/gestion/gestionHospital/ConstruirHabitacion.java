@@ -13,7 +13,7 @@ public class ConstruirHabitacion {
         System.out.println("Por favor introduzca la información de la nueva habitación a construir:");
         System.out.println("Ingrese el número de la habitación:");
         int nHabitacion = sc.nextInt();
-        CategoriaHabitacion categoriaHabitacion = null;
+        CategoriaHabitacion categoriaHabitacion;
         int eleccion;
 
         do {
@@ -24,9 +24,30 @@ public class ConstruirHabitacion {
             System.out.println("4. OBSERVACION");
             System.out.println("5. UCI");
             System.out.println("6. UCC");
-            System.out.print("Ingrese una opción: ");
+            System.out.print("Escoja una de las opciones: ");
             eleccion = sc.nextInt();
             sc.nextLine();
-        }
+
+            switch (eleccion) {
+                case 1:
+                    categoriaHabitacion = categoriaHabitacion.CAMILLA:
+                    break;
+                case 2:
+                    categoriaHabitacion = categoriaHabitacion.INDIVIDUAL;
+                    break;
+                case 3:
+                    categoriaHabitacion = categoriaHabitacion.DOBLE;
+                    break;
+                case 4:
+                    categoriaHabitacion = categoriaHabitacion.OBSERVACION;
+                    break;
+                case 5:
+                    categoriaHabitacion = categoriaHabitacion.UCI;
+                    break;
+                case 6:
+                    categoriaHabitacion = categoriaHabitacion.UCC;
+                    break;
+            }
+        } while (eleccion)
     }
 }
