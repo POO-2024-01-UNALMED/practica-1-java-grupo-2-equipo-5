@@ -1,7 +1,7 @@
 package uiMain;
 
-import gestorAplicacion.administracionHospital.Hospital;  
-  //importar baseDatos.Serializador
+import gestorAplicacion.administracionHospital.Hospital;
+  //import baseDatos.Serializador //TODO: IMPORTAR SERIALIZADOR
   //importar uiMain.funcionalidades.MenuFuncionalidades
   //importar uiMain.gestion.MenuGestion
 
@@ -12,7 +12,7 @@ public class Main {
     private static final Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Hospital hospital = new Hospital(); // Crear instancia de Hospital
+        Hospital hospital = new Hospital();
         mostrarMenuInicial(hospital);
     }
 
