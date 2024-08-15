@@ -19,7 +19,7 @@ public class Vacuna implements Serializable{
     
     //Constructor
 
-    public Vacuna(String tipo, String nombre, ArrayList<String> tipoEps, double valor){
+    public Vacuna(String tipo, String nombre, ArrayList<String> tipoEps, double precio){
         this.tipo = tipo;
         this.nombre = nombre;
         this.precio = precio;

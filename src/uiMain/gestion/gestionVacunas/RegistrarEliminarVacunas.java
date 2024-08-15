@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class RegistarEliminarVacunas {
+public class RegistrarEliminarVacunas {
 
     public static boolean verificarExistenciaVacuna(String nombreVacuna, Hospital hospital){
         boolean valor = false;
@@ -27,14 +27,14 @@ public class RegistarEliminarVacunas {
 
     }
 
-    public static void RegistrarVacuna (Hospital hospital){
+    public static void registrarVacuna (Hospital hospital){
         Scanner sc = new Scanner(System.in);
 
         System.out.println("A continuacion ingrese la informacion de la nueva vacuna: ");
         System.out.println("Nombre de la vacuna:(Debe iniciar con mayúscula) ");
         String nombreVacuna = sc.nextLine();
 
-        if (RegistrarVacuna.verificarExistenciaVacuna(nombreVacuna, hospital)) {
+        if (RegistrarEliminarVacunas.verificarExistenciaVacuna(nombreVacuna, hospital)) {
             System.out.println("La vacuna ya existe en el sistema");
             return;
             
@@ -83,7 +83,7 @@ public class RegistarEliminarVacunas {
         System.out.println("Ingrese el nombre de la vacuna que desea eliminar: ");
         String nombreVacuna = sc.nextLine();
 
-        if (!RegistrarVacuna.verificarExistenciaVacuna(nombreVacuna, hospital)) {
+        if (!RegistrarEliminarVacunas.verificarExistenciaVacuna(nombreVacuna, hospital)) {
             System.out.println("Esta vacuna no existe en el inventario del hospital");
         }
 

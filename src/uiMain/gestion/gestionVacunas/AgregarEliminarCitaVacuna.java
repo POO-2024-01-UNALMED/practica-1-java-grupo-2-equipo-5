@@ -1,13 +1,14 @@
 package uiMain.gestion.gestionVacunas;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.administracionHospital.Vacuna;
 import gestorAplicacion.servicios.CitaVacuna;
 
-public class AgregarElinimarCitaVacuna {
+import java.util.ArrayList;
+import java.util.Objects;
+import java.util.Scanner;
+
+public class AgregarEliminarCitaVacuna {
 
     public static void agregarCitaVacuna(Hospital hospital){
 
@@ -16,7 +17,7 @@ public class AgregarElinimarCitaVacuna {
         System.out.println("Ingrese el nombre de la vacuna: ");
         String nombreVacuna = sc.nextLine();
 
-        if(!RegistrarVacuna.verificarExistenciaVacuna(nombreVacuna, hospital)){
+        if(!RegistrarEliminarVacunas.verificarExistenciaVacuna(nombreVacuna, hospital)){
             System.out.println("Esta vacuna no existe en el inventario del hospital");
 
         }
@@ -38,13 +39,13 @@ public class AgregarElinimarCitaVacuna {
     }   
 
 
-    public static void eliminarCiatvacuna(Hospital hospital){
-        Scanner sc = new Scanner(System.in);
+    public static void eliminarCitaVacuna(Hospital hospital){
+        Scanner sc= new Scanner(System.in);
 
         System.out.println("Ingrese el nombre de la vacuna a la que se le eliminará su cita");
         String nombreVacuna = sc.nextLine();
 
-        if(!RegistroVacuna.verificarExistenciaVacuna(nombreVacuna, hospital)){
+        if(!RegistrarEliminarVacunas.verificarExistenciaVacuna(nombreVacuna, hospital)){
             System.out.println("Esta vacuna no existe en el inventario del hospital.");
 
         }

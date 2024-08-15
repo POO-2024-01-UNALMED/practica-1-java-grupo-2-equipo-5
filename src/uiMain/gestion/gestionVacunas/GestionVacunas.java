@@ -22,8 +22,8 @@ public class GestionVacunas {
             switch(opcion){
                 case 1 -> RegistrarEliminarVacunas.registrarVacuna(hospital);
                 case 2 -> RegistrarEliminarVacunas.eliminarVacuna(hospital);
-                case 3 -> AgregarElinimarCitaVacuna.agregarCitaVacuna(hospital);
-                case 4 -> AgregarElinimarCitaVacuna.eliminarCitaVacuna(hospital);
+                case 3 -> AgregarEliminarCitaVacuna.agregarCitaVacuna(hospital);
+                case 4 -> AgregarEliminarCitaVacuna.eliminarCitaVacuna(hospital);
                 case 5 -> VerVacuna.verVacuna(hospital);
                 case 6 -> {
                     return;

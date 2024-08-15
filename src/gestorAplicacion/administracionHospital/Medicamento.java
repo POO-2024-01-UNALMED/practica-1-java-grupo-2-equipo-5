@@ -37,7 +37,9 @@ public class Medicamento implements Serializable {
         this.nombre = nombre;
     }
 
-    public Enfermedad getEnfermedad(){return enfermedad;}
+    public Enfermedad getEnfermedad(){
+        return enfermedad;
+    }
 
     public void setEnfermedad(Enfermedad enfermedad){
         this.enfermedad = enfermedad;
@@ -47,7 +49,7 @@ public class Medicamento implements Serializable {
         return descripcion;
     }
 
-    public void setDescripcion(){
+    public void setDescripcion(String descripcion){
         this.descripcion = descripcion;
     }
 
@@ -59,7 +61,10 @@ public class Medicamento implements Serializable {
         this.cantidad = cantidad;
     }
 
-    public float getPrecio(){return valor;}
+    public float getPrecio(){
+
+        return precio;
+    }
 
     public void setPrecio(float precio){
         this.precio = precio;
