@@ -13,7 +13,7 @@ public class ConstruirHabitacion {
         System.out.println("Por favor introduzca la información de la nueva habitación a construir:");
         System.out.println("Ingrese el número de la habitación:");
         int nHabitacion = sc.nextInt();
-        CategoriaHabitacion categoriaHabitacion;
+        CategoriaHabitacion categoriaHabitacion = null;
         int eleccion;
 
         do {
@@ -30,7 +30,7 @@ public class ConstruirHabitacion {
 
             switch (eleccion) {
                 case 1:
-                    categoriaHabitacion = categoriaHabitacion.CAMILLA:
+                    categoriaHabitacion = categoriaHabitacion.CAMILLA;
                     break;
                 case 2:
                     categoriaHabitacion = categoriaHabitacion.INDIVIDUAL;
@@ -48,6 +48,19 @@ public class ConstruirHabitacion {
                     categoriaHabitacion = categoriaHabitacion.UCC;
                     break;
             }
-        } while (eleccion)
+        } while (eleccion != 1 && eleccion != 2 && eleccion != 3 && eleccion != 4 && eleccion != 5 && eleccion != 6);
+        boolean habitacionOcupada = false;
+        int dias = 0;
+
+        for (Habitacion habitacion : Hospital.getListaHabitaciones()) {
+            if (habitacion.getNumero() == nHabitacion && habitacion.getCategoria() == categoriaHabitacion) {
+                System.out.println("La habitación que está intentando constuir ya existe");
+                return;
+            }
+        }
+        Habitacion nuevaHabitacion = new Habitacion(nHabitacion, categoriaHabitacion, habitacionOcupada, null, dias);
+        System.out.println("Se construyó la nueva habitacion!");
+        hospital.getListaHabitaciones().add(nuevaHabitacion);
+        System.out.println("-Número de ID de la habitación: " + nuevaHabitacion.getNumero() + " " + "-Categoria de la habitación: " + nuevaHabitacion.getCategoria());
     }
 }
