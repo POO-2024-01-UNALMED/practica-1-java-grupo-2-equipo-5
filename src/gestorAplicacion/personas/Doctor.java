@@ -8,7 +8,6 @@ public class Doctor extends Persona{ //Falta el extends de persona
     //ATRIBUTOS
 
     private String especialidad;
-    private ArrayList<Cita> agenda =  new ArrayList();
     private ArrayList<Cita> agendaDoctor = new ArrayList<Cita>();
 
     //Constructor clase Doctor
@@ -16,28 +15,28 @@ public class Doctor extends Persona{ //Falta el extends de persona
     super(cedula, nombre, tipoEps);
     this.especialidad = especialidad;
 
-    agenda.add(new Cita(this,"3 de Abril, 8:00 am", null));
-    agenda.add(new Cita(this,"4 de Abril, 3:00 pm", null));
-    agenda.add(new Cita(this,"5 de Abril, 10:00 am", null));
+    agendaDoctor.add(new Cita(this,"3 de Abril, 8:00 am", null));
+    agendaDoctor.add(new Cita(this,"4 de Abril, 3:00 pm", null));
+    agendaDoctor.add(new Cita(this,"5 de Abril, 10:00 am", null));
     }
 
     //Metodos clase doctor
 
     public ArrayList<Cita> mostrarAgendaDisponible() {
         ArrayList<Cita> agendaDisponible = new ArrayList<Cita>();
-        for (int i = 1; i <= agenda.size(); i++) {
-            if (agenda.get(i - 1).getPaciente() == null) {
-                agendaDisponible.add(agenda.get(i - 1));}
+        for (int i = 1; i <= agendaDoctor.size(); i++) {
+            if (agendaDoctor.get(i - 1).getPaciente() == null) {
+                agendaDisponible.add(agendaDoctor.get(i - 1));}
         }
         return agendaDisponible;
     }
 
     public Cita actualizarAgenda(Paciente pacienteAsignado, byte numeroCita, ArrayList<Cita> agendaDisponible) {
         Cita citaAsignada = null;
-        for(int i=1; i<=agenda.size(); i++) {
-            if (agenda.get(i-1).getFecha() == agendaDisponible.get(numeroCita-1).getFecha()) {
-                agenda.get(i-1).setPaciente(pacienteAsignado);
-                citaAsignada = agenda.get(i-1);
+        for(int i=1; i<=agendaDoctor.size(); i++) {
+            if (agendaDoctor.get(i-1).getFecha() == agendaDisponible.get(numeroCita-1).getFecha()) {
+                agendaDoctor.get(i-1).setPaciente(pacienteAsignado);
+                citaAsignada = agendaDoctor.get(i-1);
             }
         }
         return citaAsignada;
