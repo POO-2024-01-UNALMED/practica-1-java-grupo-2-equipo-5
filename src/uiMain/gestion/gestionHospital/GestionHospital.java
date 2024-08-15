@@ -28,7 +28,21 @@ public class GestionHospital {
 
             opcion = sc.nextByte();
 
-            
+            switch (opcion) {
+                case 1 -> ConstruirHabitacion.construirHabitacion(hospital);
+                case 2 -> VerHabitacion.verHabitacion(hospital);
+                case 3 -> DestruirHabitacion.destruirHabitacion(hospital);
+                case 4 -> AgregarMedicamentos.agregarMedicamentos(hospital);
+                case 5 -> VerMedicamentos.verMedicamentos(hospital);
+                case 6 -> VerPersonasRegistradas.verPersonasRegistradas(hospital);
+                case 7 -> VerVacunas.verVacunas(hospital);
+                case 8 -> {
+                    return;
+                }
+                case 9 -> {
+                    //Serializador.serializar(hospital); -> Terminar
+                    System.exit(0);
+                }
             }
         } while (true);
     }
