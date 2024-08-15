@@ -11,8 +11,15 @@ public class DestruirHbaitacion {
         Scanner sc = new Scanner(System.in);
         System.out.println("Por favor, introduzca la información de la habitación que desea destruir");
         System.out.println("Ingrese el número de la habitación: ");
-        int numero = sc.nextInt();
+        int nHabitacion = sc.nextInt();
         System.out.println("¿Qué tipo de habitación desea destruir?");
-        System.out.println("nada")
+        System.out.println("'CAMILLA', 'INDIVIDUAL', 'DOBLE', 'OBSERVACION', 'UCI', 'UCC': "); //Igual que en ConstruirHabitacion?
+        String categoriaEscogida = sc.nextLine();
+        CategoriaHabitacion hEscogida = CategoriaHabitacion.valueOf(categoriaEscogida);
+        for (Habitacion habitacion : Hospital.getListaHabitaciones()) {
+            if (habitacion.getNumero() == nHabitacion && habitacion.getCategoria() == hEscogida) {
+                if (!habitacion.isOcupada()) {}
+            }
+        }
     }
 }
