@@ -22,7 +22,7 @@ public class Vacuna implements Serializable{
     public Vacuna(String tipo, String nombre, ArrayList<String> tipoEps, double valor){
         this.tipo = tipo;
         this.nombre = nombre;
-        this.precio = valor;
+        this.precio = precio;
         this.tipoEps = tipoEps;
 
         agenda.add(new CitaVacuna("23 de Agosto de 2024. Hora 7:45 am", null, this));
