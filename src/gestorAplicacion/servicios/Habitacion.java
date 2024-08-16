@@ -1,10 +1,10 @@
 package gestorAplicacion.servicios;
 
-import java.util.ArrayList;
-
 import gestorAplicacion.administracionHospital.CategoriaHabitacion;
 import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.personas.Paciente;
+
+import java.util.ArrayList;
 
 
 public class Habitacion extends Servicio{
@@ -67,6 +67,14 @@ public class Habitacion extends Servicio{
     public Paciente getPaciente(){
         
         return paciente;
+    }
+
+    public int getNumero(){
+        return numero;
+    }
+
+    public void setNumero(int numero){
+        this.numero = numero;
     }
 
     public void setPaciente(Paciente paciente){

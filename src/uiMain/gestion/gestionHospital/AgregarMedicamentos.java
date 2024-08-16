@@ -8,7 +8,7 @@ import gestorAplicacion.administracionHospital.Medicamento;
 import gestorAplicacion.administracionHospital.Enfermedad;
 
 public class AgregarMedicamentos {
-    public static void agregarMeicamentos(Hospital hospital) {
+    public static void agregarMedicamentos(Hospital hospital) {
         try (Scanner sc = new Scanner(System.in)) {
             boolean anadirOtro = false;
             do {
