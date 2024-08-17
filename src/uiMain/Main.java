@@ -40,6 +40,7 @@ public class Main {
 
             switch (opcionSeleccionada) {
                 case 1:
+
                     // MenuFuncionalidades
                     break;
                 case 2:
