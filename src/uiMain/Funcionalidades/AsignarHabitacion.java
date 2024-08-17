@@ -78,16 +78,43 @@ public class AsignarHabitacion {
                                 paciente.setCategoriaHabitacion(CategoriaHabitacion.OBSERVACION);
                                 hDisponibles = Habitacion.BuscarHabitacionDisponible(paciente.getCategoriaHabitacion());
                                 habitacion = disponibilidadHabitacion(hDisponibles, paciente);
+                                break;
 
                             case 3:
                                 paciente.setCategoriaHabitacion(CategoriaHabitacion.UCI);
                                 hDisponibles = Habitacion.BuscarHabitacionDisponible(paciente.getCategoriaHabitacion());
                                 habitacion = disponibilidadHabitacion(hDisponibles, paciente);
+                                break;
 
                             default:
                                 System.out.println("Opción no válida. Intente de nuevo.");
+                                break;
                         }
                     } while (eleccion != 1 && eleccion != 2 && eleccion != 3);
+                } else if (paciente.getTipoEps().equals("Contributivo")) {
+                    int eleccion;
+                    do {
+                        System.out.println("Seleccione la habitación que necesite. Recuerde que el precio a pagar se determina por el tipo de la habitación.");
+                        System.out.println("1. INDIVIDUAL.\n2. DOBLE.\n3. OBSERVACION.\n4. UCI.\n5. UCC.");
+                        eleccion = sc.nextInt();
+                        sc.nextLine();
+
+                        switch (eleccion) {
+                            case 1:
+                                paciente.setCategoriaHabitacion(CategoriaHabitacion.INDIVIDUAL);
+                                hDisponibles = Habitacion.BuscarHabitacionDisponible(paciente.getCategoriaHabitacion());
+                                habitacion = disponibilidadHabitacion(hDisponibles, paciente);
+                                break;
+
+                            case 2:
+                                paciente.setCategoriaHabitacion(CategoriaHabitacion.DOBLE);
+                                hDisponibles = Habitacion.BuscarHabitacionDisponible(paciente.getCategoriaHabitacion());
+                                habitacion = disponibilidadHabitacion(hDisponibles,paciente);
+                                break;
+
+                            case 3:
+                        }
+                    }
                 }
             }
         }
