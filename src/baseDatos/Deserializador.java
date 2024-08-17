@@ -13,12 +13,12 @@ import java.util.ArrayList;
 
 public class Deserializador {
     public static void deserializar(Hospital hospital){
-        deserializarDoctores(hospital,new File("src\\baseDatos\\temp\\registroDoctores.dat"));
-        deserializarPacientes(hospital,new File("src\\baseDatos\\temp\\registroPacientes.dat"));
-        deserializarMedicamentos(hospital,new File("src\\baseDatos\\temp\\registroMedicamentos.dat"));
-        deserializarVacunas(hospital,new File("src\\baseDatos\\temp\\registroVacunas.dat"));
-        deserializarHabitaciones(hospital,new File("src\\baseDatos\\temp\\registroHabitaciones.dat"));
-        deserializarEnfermedades(hospital,new File("src\\baseDatos\\temp\\registroEnfermedades.dat"));
+        deserializarDoctores(hospital,new File("src\\baseDatos\\temp\\registroDoctores.txt"));
+        deserializarPacientes(hospital,new File("src\\baseDatos\\temp\\registroPacientes.txt"));
+        deserializarMedicamentos(hospital,new File("src\\baseDatos\\temp\\registroMedicamentos.txt"));
+        deserializarVacunas(hospital,new File("src\\baseDatos\\temp\\registroVacunas.txt"));
+        deserializarHabitaciones(hospital,new File("src\\baseDatos\\temp\\registroHabitaciones.txt"));
+        deserializarEnfermedades(hospital,new File("src\\baseDatos\\temp\\registroEnfermedades.txt"));
     }
     public static void deserializarDoctores(Hospital hospital, File ruta) {
         try {
