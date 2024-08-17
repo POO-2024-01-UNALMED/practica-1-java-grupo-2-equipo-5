@@ -113,8 +113,56 @@ public class AsignarHabitacion {
                                 break;
 
                             case 3:
+                                paciente.setCategoriaHabitacion(CategoriaHabitacion.OBSERVACION);
+                                hDisponibles = Habitacion.BuscarHabitacionDisponible(paciente.getCategoriaHabitacion());
+                                habitacion = disponibilidadHabitacion(hDisponibles,paciente);
+                                break;
+
+                            case 4:
+                                paciente.setCategoriaHabitacion(CategoriaHabitacion.UCI);
+                                hDisponibles = Habitacion.BuscarHabitacionDisponible(paciente.getCategoriaHabitacion());
+                                habitacion = disponibilidadHabitacion(hDisponibles,paciente);
+                                break;
+
+                            case 5:
+                                paciente.setCategoriaHabitacion(CategoriaHabitacion.UCC);
+                                hDisponibles = Habitacion.BuscarHabitacionDisponible(paciente.getCategoriaHabitacion());
+                                habitacion = disponibilidadHabitacion(hDisponibles,paciente);
+                                break;
+
+                            default:
+                                System.out.print("Opción no válida. Intente de nuevo.");
+                                break;
                         }
-                    }
+                    } while (eleccion != 1 && eleccion != 2 && eleccion != 3 && eleccion != 4 && eleccion != 5);
+                } else {
+                    int eleccion;
+
+                    do {
+                        System.out.println("Seleccione la habitación que necesite. Recuerde que el precio a pagar se determina por el tipo de la habitación.");
+                        System.out.println("1. CAMILLA.\n2. UCI");
+
+                        eleccion = sc.nextInt();
+                        sc.nextLine();
+
+                        switch (eleccion) {
+                            case 1:
+                                paciente.setCategoriaHabitacion(CategoriaHabitacion.CAMILLA);
+                                hDisponibles = Habitacion.BuscarHabitacionDisponible(paciente.getCategoriaHabitacion());
+                                habitacion = disponibilidadHabitacion(hDisponibles, paciente);
+                                break;
+
+                            case 2:
+                                paciente.setCategoriaHabitacion(CategoriaHabitacion.UCI);
+                                hDisponibles = Habitacion.BuscarHabitacionDisponible(paciente.getCategoriaHabitacion());
+                                habitacion = disponibilidadHabitacion(hDisponibles, paciente);
+                                break;
+
+                            default:
+                                System.out.println("Opción no válida. Intente de nuevo");
+                                break;
+                        }
+                    } while (eleccion != 1 && eleccion != 2);
                 }
             }
         }
