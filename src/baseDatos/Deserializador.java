@@ -1,9 +1,9 @@
 package baseDatos;
 
-import gestorAplicacion.administracionHospital.Hospital;
-import gestorAplicacion.personas.Doctor;
-import gestorAplicacion.personas.Paciente;
-import gestorAplicacion.servicios.Habitacion;
+import gestorAplicacion.administracionHospital.*;
+import gestorAplicacion.personas.*;
+import gestorAplicacion.servicios.*;
+
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -88,4 +88,4 @@ public class Deserializador {
 }
 
 
-}
+
