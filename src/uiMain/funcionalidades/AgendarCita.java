@@ -148,8 +148,17 @@ public class AgendarCita {
                 System.out.println("Información de su cita:\nFecha: " + cita.getFecha() + "\nDoctor: " + cita.getDoctor().getNombre());
 
                 //Limpiar Arrays
-            }
+                agendaDoctor.clear();
+                doctoresDisponibles.clear();
 
+                //Historial de citas del paciente?
+
+                System.out.println("\n" + pacienteCita.despedida(cita));
+                break;
+            }
+            else {
+                System.out.println("Lo sentimos! El doctor elegido no tiene citas disponibles en su agenda. Puede intentar elegir otro Doctor.");
+            }
         }
     }
 }
