@@ -185,8 +185,52 @@ public class AsignarHabitacion {
                     System.out.println("Número de ID de la habitación: " + habitacion.getNumero());
                     System.out.println("Categoria de la habitación: " + habitacion.getCategoria());
 
+                } // Si no se pudo seleccionar una habitación:
+                else {
+                    System.out.println("Lo sentimos! No hay habitaciones disponibles en este momento para la categoría " + paciente.getCategoriaHabitacion());
+                    System.out.println("¿Desea elegir una habitación de otra categoría (S/N)?");
+
+                    String eleccion = sc.nextLine();
+
+                    switch (eleccion) {
+                        case "S":
+                            CategoriaHabitacion categoria = Habitacion.BuscarOtraCategoria(paciente.getCategoriaHabitacion());
+                            otraHabitacionDisponibles = Habitacion.BuscarHabitacionDisponible(categoria);
+                            otraHabitacion = disponibilidadHabitacion(otraHabitacionDisponibles, paciente);
+
+                            if (otraHabitacion != null) {
+                                //La habitación ahora está ocupada:
+                                otraHabitacion.setOcupada(true);
+
+                                //Asignar habitación al paciente y viceversa:
+                                otraHabitacion.setPaciente(paciente);
+                                paciente.setHabitacionAsignada(otraHabitacion);
+
+                                //Dias estimados de uso:
+                                System.out.println("¿Cuántos días estima que hará uso de la habitación?");
+                                int dias = sc.nextInt();
+                                sc.nextLine();
+                                paciente.getHabitacionAsignada().setDias(dias);
+
+                                //Información de la habitación asignada:
+                                System.out.println("\nSe le ha asignado una habitación! A continuación está la infomación de su reserva: ");
+                                System.out.println("Cedula del Paciente: " + paciente.getCedula());
+                                System.out.println("Nombre del Paciente: " + paciente.getNombre());
+                                System.out.println("Número de ID de la habitación: " + otraHabitacion.getNumero());
+                                System.out.println("Categoria de la habitación: " + otraHabitacion.getCategoria());
+                            } else {
+                                System.out.println("Lo sentimos! No hay habitaciones disponibles en este momento para ninguna de las categorías.");
+                            }
+                    }
                 }
+            } //Si el paciente ya tenía una habitación reservada
+            else {
+                System.out.println("El peciente ya tiene una habiatación reservada.");
             }
+        } //Si no se encontró un paciente:
+        else {
+            System.out.println("El paciente con identificación " + nIdentificacion + " no está registrado en el sistema.");
+            //Opcion para registrarlo?
         }
     }
 }
