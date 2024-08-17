@@ -25,7 +25,7 @@ public class MenuFuncionalidades {
 
             switch (opcion) {
                 case 1: AgendarCita.agendarCita(hospital);
-                case 2: Formula.Formula(hospital);
+                case 2: FormulaMedica.FormulaMedica(hospital);
                 case 3: AsignarHabitacion.asignarHabitacion(hospital);
                 case 4: Vacunacion.vacunacion(hospital);
                 case 5: Facturacion.facturacion(hospital);

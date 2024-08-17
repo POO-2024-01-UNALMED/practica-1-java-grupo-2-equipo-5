@@ -25,6 +25,7 @@ public class Hospital implements Serializable { //TODO: UTILIZAR EL SERIALIZABLE
 
     public Hospital(){
         //Deserializador.deserializar(this); //TODO: REALIZAR EL SERIALIZADOR
+
     }
 
     //Métodos
