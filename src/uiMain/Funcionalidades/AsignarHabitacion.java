@@ -51,7 +51,7 @@ public class AsignarHabitacion {
         if (paciente != null) {
             if (paciente.getHabitacionAsignada() == null) {
                 //Algunos atributos que se usarán
-                Habitacion habitacion;
+                Habitacion habitacion = null;
                 Habitacion otraHabitacion;
                 ArrayList<Habitacion> hDisponibles;
                 ArrayList<Habitacion> otraHabitacionDisponibles;
@@ -163,6 +163,28 @@ public class AsignarHabitacion {
                                 break;
                         }
                     } while (eleccion != 1 && eleccion != 2);
+                }
+                if (habitacion != null) {
+                    //La habitación ahora está ocupada:
+                    habitacion.setOcupada(true);
+
+                    //Asignar habitación al paciente y viceversa:
+                    habitacion.setPaciente(paciente);
+                    paciente.setHabitacionAsignada(habitacion);
+
+                    //Dias estimados de uso:
+                    System.out.println("¿Cuántos días estima que hará uso de la habitación?");
+                    int dias = sc.nextInt();
+                    sc.nextLine();
+                    paciente.getHabitacionAsignada().setDias(dias);
+
+                    //Información de la habitación asignada:
+                    System.out.println("\nSe le ha asignado una habitación! A continuación está la infomación de su reserva: ");
+                    System.out.println("Cedula del Paciente: " + paciente.getCedula());
+                    System.out.println("Nombre del Paciente: " + paciente.getNombre());
+                    System.out.println("Número de ID de la habitación: " + habitacion.getNumero());
+                    System.out.println("Categoria de la habitación: " + habitacion.getCategoria());
+
                 }
             }
         }
