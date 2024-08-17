@@ -1,4 +1,4 @@
-package uiMain.Funcionalidades;
+package uiMain.funcionalidades;
 
 import baseDatos.Serializador;
 import gestorAplicacion.administracionHospital.Hospital;
