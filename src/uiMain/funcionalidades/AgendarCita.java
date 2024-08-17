@@ -43,7 +43,7 @@ public class AgendarCita {
                 byte opcion = sc.nextByte();
                 switch (opcion) {
                     case 1:
-                        //RegistrarPaciente.registrarPaciente(hospital); Terminar
+                        //RegistrarPaciente.registrarPaciente(hospital); Terminar...
                         return;
                     case 2:
                         System.out.println("Regresando a la opción anterior...");
@@ -56,7 +56,7 @@ public class AgendarCita {
         System.out.println(pacienteCita.bienvenida());
 
         //Array de doctores para uso posterior
-        ArrayList<Doctor> doctoresDisponibles = new ArrayList<Doctor>();
+        ArrayList<Doctor> doctoresDisponibles = new ArrayList<>();
 
         //Si no hay doctores por tipo de EPS buscada
         while(doctoresDisponibles.isEmpty()) {
