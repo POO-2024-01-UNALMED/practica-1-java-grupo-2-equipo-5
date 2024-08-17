@@ -7,6 +7,7 @@ import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.personas.Paciente;
 import gestorAplicacion.servicios.CitaVacuna;
 import gestorAplicacion.servicios.Formula;
+import gestorAplicacion.servicios.Habitacion;
 import gestorAplicacion.servicios.Servicio;
 
 public class Facturacion {
@@ -73,7 +74,28 @@ public class Facturacion {
 
     else if (servicioSeleccionado instanceof CitaVacuna)
     precioServicioSeleccionado = pacienteSeleccionado.calcularPrecio((CitaVacuna) servicioSeleccionado);
-        
+
+    else if (servicioSeleccionado instanceof Habitacion)
+    precioServicioSeleccionado = pacienteSeleccionado.calcularPrecio((Habitacion) servicioSeleccionado);
+
+    else if (servicioSeleccionado instanceof Cita) 
+    precioServicioSeleccionado = pacienteSeleccionado.calcularPrecio((Cita) servicioSeleccionado);        
+    
+    System.out.println("Total a pagar: $"+ precioServicioSeleccionado);
+    System.out.println("¿Desea pagar? (s/n)");
+
+    if (sc.nextLine().equalsIgnoreCase("s")){
+        servicioSeleccionado.validarPago(pacienteSeleccionado, servicioSeleccionado.getIdServicio());
+        System.out.println("Pago realizado con éxito");
+
+    }
+
+    else{
+        System.out.println("Pago cancelado");
+    }
+    serviciosSinPagar.clear();
+
+
     
 
 }
