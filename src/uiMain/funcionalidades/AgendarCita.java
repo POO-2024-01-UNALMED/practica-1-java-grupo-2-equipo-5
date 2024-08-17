@@ -7,7 +7,7 @@ import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.servicios.Cita;
 import gestorAplicacion.personas.Doctor;
 import gestorAplicacion.personas.Paciente;
-//import uiMain.gestion.gestionPacientes.RegistrarPaciente;
+import uiMain.gestion.gestionPaciente.RegistrarPaciente;
 
 public class AgendarCita {
     static Scanner sc = new Scanner(System.in);
@@ -43,7 +43,7 @@ public class AgendarCita {
                 byte opcion = sc.nextByte();
                 switch (opcion) {
                     case 1:
-                        //RegistrarPaciente.registrarPaciente(hospital); Terminar...
+                        RegistrarPaciente.registrarPaciente(hospital);
                         return;
                     case 2:
                         System.out.println("Regresando a la opción anterior...");
