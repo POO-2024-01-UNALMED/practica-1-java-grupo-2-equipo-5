@@ -3,15 +3,13 @@ package gestorAplicacion.servicios;
 import gestorAplicacion.administracionHospital.HistoriaClinica;
 import gestorAplicacion.personas.Paciente;
 
+import java.io.Serializable;
 import java.util.ArrayList;
-
-
-//import java.io.Serializable;
 
 
 
 //COMO CLASE ABSTRACTA, ESTA PENSADA PARA IMPLEMENTAR LA HERENCIA DE LOS SERVICIOS GENERALES DEL HOSPITAL
-public abstract class Servicio { //TODO: IMPLEMENTAR SERIALIZABLE
+public abstract class Servicio implements Serializable {
 
     //ATRIBUTOS
     protected Paciente paciente;

@@ -1,8 +1,8 @@
 package gestorAplicacion.personas;
 
-//import java.io.Serializable //TODO: IMPORTAR EL SERIALIZABLE
+import java.io.Serializable;
 
-public class Persona { //TODO: IMPLEMENTAR EL SERIALIZABLE AAA
+public class Persona implements Serializable {
 
     //Atributos
 
