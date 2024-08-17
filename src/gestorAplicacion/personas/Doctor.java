@@ -3,7 +3,7 @@ package gestorAplicacion.personas;
 import gestorAplicacion.servicios.Cita;
 import java.util.ArrayList;
 
-public class Doctor extends Persona{ //Falta el extends de persona
+public class Doctor extends Persona{
 
     //ATRIBUTOS
 

@@ -1,10 +1,9 @@
 package gestorAplicacion.administracionHospital;
 
-//Imports serializable
-
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Enfermedad { //implements Serializador
+public class Enfermedad implements Serializable {
     //Atributos
 
     private String especialidad;
