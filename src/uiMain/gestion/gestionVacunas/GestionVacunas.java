@@ -1,8 +1,9 @@
 package uiMain.gestion.gestionVacunas;
 
-import java.util.Scanner;
-
+import baseDatos.Serializador;
 import gestorAplicacion.administracionHospital.Hospital;
+
+import java.util.Scanner;
 
 public class GestionVacunas {
 
@@ -29,7 +30,7 @@ public class GestionVacunas {
                     return;
                 }
                 case 7 -> {
-                    Serializador.serializador(hospital);
+                    Serializador.serializar(hospital);
                     System.exit(0);
                 }
 

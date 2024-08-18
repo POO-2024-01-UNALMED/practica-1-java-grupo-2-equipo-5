@@ -21,13 +21,17 @@ public class Paciente extends Persona implements Pago{
         this.historiaClinica = new HistoriaClinica(this);
 
     }
+    public Paciente(int cedula, String nombre, String tipoEps){
+        this(cedula, nombre, tipoEps, null);
+    }
+
     //Metodos
 
 
 
 
     //METODO ENCARGADO DE REALIZAR LA BUSQUEDA DE MEDICAMENTOS DISPONIBLES
-    public ArrayList<Medicamento> medEnfermedades(Enfermedad enfermedad, Hospital hospital){
+    public ArrayList<Medicamento> medEnfermedad(Enfermedad enfermedad, Hospital hospital){
         ArrayList<Medicamento> medicamentospacientes = new ArrayList<Medicamento>();
         ArrayList<Medicamento> medEnfermedades = new ArrayList<Medicamento>();
         for (Medicamento med: medicamentospacientes) {

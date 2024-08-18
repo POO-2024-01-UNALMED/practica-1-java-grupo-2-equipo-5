@@ -1,10 +1,9 @@
 package gestorAplicacion.administracionHospital;
 
-//Imports serializable
-
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Enfermedad { //implements Serializador
+public class Enfermedad implements Serializable {
     //Atributos
 
     private String especialidad;
@@ -27,7 +26,7 @@ public class Enfermedad { //implements Serializador
     }
     //Metodos clase Enfermedad
 
-    public void nuenoEnfermo(){
+    public void nuevoEnfermo(){
         enfermos = enfermos + 1;
     }
     @Override

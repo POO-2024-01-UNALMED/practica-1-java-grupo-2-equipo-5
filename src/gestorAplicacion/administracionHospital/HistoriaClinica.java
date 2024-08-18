@@ -6,11 +6,12 @@ import gestorAplicacion.servicios.Cita;
 import gestorAplicacion.servicios.CitaVacuna;
 import gestorAplicacion.servicios.Formula;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
 //Se usa para revisar actividad pasada del paciente con el hospital.
-public class HistoriaClinica { // -> Implementar interface Serializable.
+public class HistoriaClinica implements Serializable { // -> Implementar interface Serializable.
 
     //Atributos
     private final Paciente paciente;

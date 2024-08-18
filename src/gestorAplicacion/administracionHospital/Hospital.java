@@ -1,19 +1,17 @@
 package gestorAplicacion.administracionHospital;
 
-//TODO:import baseDatos.Desearializador;
-
+import baseDatos.Deserializador;
 import gestorAplicacion.personas.Doctor;
 import gestorAplicacion.personas.Paciente;
 import gestorAplicacion.servicios.Habitacion;
 
-//TODO: import java.io.Serializable;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
-
 //EN ESTA CLASE VA LA ESTRUCTURA PRINCIPAL DEL HOSPITAL
 
-public class Hospital { //TODO: UTILIZAR EL SERIALIZABLE
+public class Hospital implements Serializable {
 
     //Atributos
     private ArrayList<Doctor> listaDoctores = new ArrayList<>();
@@ -25,7 +23,8 @@ public class Hospital { //TODO: UTILIZAR EL SERIALIZABLE
     //Constructor
 
     public Hospital(){
-        //Deserializador.deserializar(this); //TODO: REALIZAR EL SERIALIZADOR
+        Deserializador.deserializar(this);
+
     }
 
     //Métodos
