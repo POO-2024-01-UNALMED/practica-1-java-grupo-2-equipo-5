@@ -30,7 +30,7 @@ public class RegistrarPaciente {
         String eps = sc.nextLine();
 
         // Crear nuevo paciente y agregarlo al hospital
-        Paciente nuevoPaciente = new Paciente(id, nombre, eps);
+        Paciente nuevoPaciente = new Paciente(cedula, nombre, eps);
         hospital.getListaPacientes().add(nuevoPaciente);
 
         // Confirmar registro exitoso
@@ -38,14 +38,4 @@ public class RegistrarPaciente {
         System.out.println("Recuerde que actualmente la historia clínica del paciente está vacía.");
         System.out.println(nuevoPaciente);
     }
-
-	public static void registrarPaciente (Hospital hospital) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public static void registrarPaciente(Hospital hospital) {
-		// TODO Auto-generated method stub
-		
-	}
 }

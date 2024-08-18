@@ -26,7 +26,7 @@ public class Enfermedad implements Serializable {
     }
     //Metodos clase Enfermedad
 
-    public void nuenoEnfermo(){
+    public void nuevoEnfermo(){
         enfermos = enfermos + 1;
     }
     @Override
