@@ -11,6 +11,7 @@ public class EliminarDoctor {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.println("Ingrese la cédula del doctor que se ELIMINARA: ");
             int cedula = sc.nextInt();
+            sc.nextLine();
             Doctor doctor = hospital.buscarDoctor(cedula);
             if (doctor == null) { //verificamos si existe el doctor =)
                 System.out.println("No puedo eliminar algo que no existe asi que...");

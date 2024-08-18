@@ -34,7 +34,7 @@ public class Doctor extends Persona{
     public Cita actualizarAgenda(Paciente pacienteAsignado, byte numeroCita, ArrayList<Cita> agendaDisponible) {
         Cita citaAsignada = null;
         for(int i=1; i<=agendaDoctor.size(); i++) {
-            if (agendaDoctor.get(i-1).getFecha() == agendaDisponible.get(numeroCita-1).getFecha()) {
+            if (agendaDoctor.get(i-1).getFecha().equals(agendaDisponible.get(numeroCita-1).getFecha())) {
                 agendaDoctor.get(i-1).setPaciente(pacienteAsignado);
                 citaAsignada = agendaDoctor.get(i-1);
             }

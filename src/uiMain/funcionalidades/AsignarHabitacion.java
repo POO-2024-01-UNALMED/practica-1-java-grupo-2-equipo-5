@@ -225,7 +225,7 @@ public class AsignarHabitacion {
                 }
             } //Si el paciente ya tenía una habitación reservada
             else {
-                System.out.println("El peciente ya tiene una habiatación reservada.");
+                System.out.println("El paciente ya tiene una habiatación reservada.");
             }
         } //Si no se encontró un paciente:
         else {

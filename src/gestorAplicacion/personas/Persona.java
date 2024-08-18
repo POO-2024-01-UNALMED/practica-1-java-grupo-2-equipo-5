@@ -47,7 +47,7 @@ public class Persona implements Serializable {
     }
 
     public String bienvenida(){
-        return "bienvenido usuario"+nombre;
+        return "Bienvenid@, " + nombre;
     }
 
 

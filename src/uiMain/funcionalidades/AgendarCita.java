@@ -36,17 +36,18 @@ public class AgendarCita {
 
         //Verificamos si se encontró un paciente que coincida con la cédula
         if (pacienteCita == null) {
-            //Si no se encontró, podems registrarlo
+            //Si no se encontró, podemos registrarlo
             while(true) {
                 System.out.println("El paciente no está registrado.\nDesea registrarlo?");
-                System.out.println("Por favor elija una opción:\n1. Si\n2. No");
+                System.out.println("\n1. Si\n2. No");
                 byte opcion = sc.nextByte();
                 switch (opcion) {
                     case 1:
                         RegistrarPaciente.registrarPaciente(hospital);
                         return;
                     case 2:
-                        System.out.println("Regresando a la opción anterior...");
+                        System.out.println("Regresando al menú principal...");
+                        return;
                     default:
                         System.out.println("Opción no válida. Intente de nuevo.");
                 }
@@ -126,7 +127,7 @@ public class AgendarCita {
                     System.out.println(i + ". " + agendaDoctor.get(i - 1).getFecha());
                 }
                 //Elegir entre los horarios disponibles
-                System.out.println("Por favor, elija el horario de la cita que quiera tomar: ");
+                System.out.println("Por favor, elija el horario de la cita que el paciente quiere tomar: ");
 
                 byte eleccionCita;
                 eleccionCita = sc.nextByte();

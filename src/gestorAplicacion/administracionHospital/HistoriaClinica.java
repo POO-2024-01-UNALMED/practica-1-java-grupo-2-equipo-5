@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 
 //Se usa para revisar actividad pasada del paciente con el hospital.
-public class HistoriaClinica implements Serializable { // -> Implementar interface Serializable.
+public class HistoriaClinica implements Serializable {
 
     //Atributos
     private final Paciente paciente;
@@ -19,8 +19,6 @@ public class HistoriaClinica implements Serializable { // -> Implementar interfa
     private ArrayList<Formula> listaFormulas = new ArrayList<>();
     private ArrayList<CitaVacuna> historialVacunas = new ArrayList<>();
     private ArrayList<Enfermedad> enfermedades = new ArrayList<>();
-    //private ArrayList<Formula> listaFormulas = new ArrayList<>(); para cuando se cree la clase Formula
-
 
     //CONSTRUCTOR
     public HistoriaClinica(Paciente paciente) {
