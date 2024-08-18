@@ -1,4 +1,4 @@
-package uiMain.Funcionalidades;
+package uiMain.funcionalidades;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -20,7 +20,7 @@ public class Facturacion {
         Paciente pacienteSeleccionado;
 
         do{
-            System.out.println("Ingrese el cedula del paciente:");
+            System.out.println("Ingrese la cedula del paciente:");
             pacienteSeleccionado = hospital.buscarPaciente(Integer.parseInt(sc.nextLine()));
 
             if (pacienteSeleccionado == null) {
@@ -69,7 +69,7 @@ public class Facturacion {
         while(servicioSeleccionado == null);
 
         //Calcular precios 
-
+        //Hay ligadura dinamica
         double precioServicioSeleccionado = 0;
         if(servicioSeleccionado instanceof Formula)
         precioServicioSeleccionado = pacienteSeleccionado.calcularPrecio((Formula)servicioSeleccionado);
