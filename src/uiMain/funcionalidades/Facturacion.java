@@ -1,14 +1,12 @@
 package uiMain.funcionalidades;
 
+import gestorAplicacion.administracionHospital.Hospital;
+import gestorAplicacion.personas.Paciente;
+import gestorAplicacion.servicios.*;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import gestorAplicacion.administracionHospital.Hospital;
-import gestorAplicacion.personas.Paciente;
-import gestorAplicacion.servicios.CitaVacuna;
-import gestorAplicacion.servicios.Formula;
-import gestorAplicacion.servicios.Habitacion;
-import gestorAplicacion.servicios.Servicio;
 
 public class Facturacion {
 
@@ -51,7 +49,7 @@ public class Facturacion {
         do {
             long idSeleccionada = Long.parseLong(sc.nextLine());
             for (Servicio servicio : serviciosSinPagar) {
-                if (servicio.idServicio() == idSeleccionada) {
+                if (servicio.getIdServicio() == idSeleccionada) {
                     servicioSeleccionado = servicio;
                     break;
                 }

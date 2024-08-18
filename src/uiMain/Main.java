@@ -3,7 +3,7 @@ package uiMain;
 import gestorAplicacion.administracionHospital.Hospital;
 import baseDatos.Serializador;
 import uiMain.funcionalidades.MenuFuncionalidades;
-import uiMain.Funcionalidades.MenuGestion;
+import uiMain.funcionalidades.MenuGestion;
 
 import java.util.Scanner;
 

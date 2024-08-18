@@ -41,7 +41,7 @@ public class GestionPaciente {
                     break;
                     
                 case 4:
-                    VerPaciente.VerPaciente(hospital);
+                    VerPaciente.mostrarInformacionPaciente(hospital);
                     break;
                     
                 case 5:
