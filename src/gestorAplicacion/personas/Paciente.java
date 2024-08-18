@@ -31,7 +31,7 @@ public class Paciente extends Persona implements Pago{
 
 
     //METODO ENCARGADO DE REALIZAR LA BUSQUEDA DE MEDICAMENTOS DISPONIBLES
-    public ArrayList<Medicamento> medEnfermedades(Enfermedad enfermedad, Hospital hospital){
+    public ArrayList<Medicamento> medEnfermedad(Enfermedad enfermedad, Hospital hospital){
         ArrayList<Medicamento> medicamentospacientes = new ArrayList<Medicamento>();
         ArrayList<Medicamento> medEnfermedades = new ArrayList<Medicamento>();
         for (Medicamento med: medicamentospacientes) {
