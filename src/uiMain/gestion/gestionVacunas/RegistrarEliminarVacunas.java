@@ -43,7 +43,7 @@ public class RegistrarEliminarVacunas {
         System.out.println("Ingrese el tipo de la vacuna: (Obligatoria, No obligatoria)");
         String tipo = sc.nextLine();
 
-        ArrayList<String> tipoEps = new ArrayList<~>();
+        ArrayList<String> tipoEps = new ArrayList<>();
         boolean respuesta;
 
         do {

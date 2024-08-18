@@ -61,7 +61,7 @@ public class AsignarHabitacion {
                     int eleccion;
 
                     do {
-                        System.out.println("Seleccione la habitación que necesite. Recuerde que el precio a pagar se determina por el tipo de la habitación.");
+                        System.out.println("Seleccione el tipo de habitación que necesite. Recuerde que el precio a pagar se determina por el tipo de la habitación.");
                         System.out.println("1. CAMILLA.\n2. OBSERVACION.\n3. UCI");
 
                         eleccion = sc.nextInt();
@@ -94,7 +94,7 @@ public class AsignarHabitacion {
                 } else if (paciente.getTipoEps().equals("Contributivo")) {
                     int eleccion;
                     do {
-                        System.out.println("Seleccione la habitación que necesite. Recuerde que el precio a pagar se determina por el tipo de la habitación.");
+                        System.out.println("Seleccione el tipo de habitación que necesite. Recuerde que el precio a pagar se determina por el tipo de la habitación.");
                         System.out.println("1. INDIVIDUAL.\n2. DOBLE.\n3. OBSERVACION.\n4. UCI.\n5. UCC.");
                         eleccion = sc.nextInt();
                         sc.nextLine();
@@ -139,7 +139,7 @@ public class AsignarHabitacion {
                     int eleccion;
 
                     do {
-                        System.out.println("Seleccione la habitación que necesite. Recuerde que el precio a pagar se determina por el tipo de la habitación.");
+                        System.out.println("Seleccione el tipo de habitación que necesite. Recuerde que el precio a pagar se determina por el tipo de la habitación.");
                         System.out.println("1. CAMILLA.\n2. UCI");
 
                         eleccion = sc.nextInt();
