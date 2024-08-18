@@ -37,15 +37,16 @@ public class Main {
             System.out.println("3. Salir");
             System.out.print("Seleccione una opción: ");
             opcionSeleccionada = sc.nextByte();
+            sc.nextLine();
 
             switch (opcionSeleccionada) {
 
                 // MenuFuncionalidades
-                case 1 -> {
-                    MenuFuncionalidades.menuFuncionalidades(hospital);}
+                case 1 ->
+                    MenuFuncionalidades.menuFuncionalidades(hospital);
 
                 // MenuGestion
-                case 2 -> {MenuGestion.menuGestion(hospital);}
+                case 2 -> MenuGestion.menuGestion(hospital);
 
                 // Serializador
                 case 3 -> {

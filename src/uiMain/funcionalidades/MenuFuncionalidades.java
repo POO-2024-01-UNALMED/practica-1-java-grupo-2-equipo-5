@@ -24,13 +24,13 @@ public class MenuFuncionalidades {
             opcion = sc.nextByte();
 
             switch (opcion) {
-                case 1: AgendarCita.agendarCita(hospital);
-                case 2: FormulaMedica.formulaMedica(hospital);
-                case 3: AsignarHabitacion.asignarHabitacion(hospital);
-                case 4: Vacunacion.vacunacion(hospital);
-                case 5: Facturacion.facturacion(hospital);
-                case 6:                     return;
-                case 7 : {
+                case 1 -> AgendarCita.agendarCita(hospital);
+                case 2 -> FormulaMedica.formulaMedica(hospital);
+                case 3 -> AsignarHabitacion.asignarHabitacion(hospital);
+                case 4 -> Vacunacion.vacunacion(hospital);
+                case 5 -> Facturacion.facturacion(hospital);
+                case 6 -> {return;}
+                case 7 -> {
                     Serializador.serializar(hospital);
                     System.exit(0);
                 }
