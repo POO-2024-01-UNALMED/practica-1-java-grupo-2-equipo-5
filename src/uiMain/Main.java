@@ -1,9 +1,9 @@
 package uiMain;
 
 import gestorAplicacion.administracionHospital.Hospital;
-  //import baseDatos.Serializador //TODO: IMPORTAR SERIALIZADOR
-  //importar uiMain.funcionalidades.MenuFuncionalidades
-  //importar uiMain.gestion.MenuGestion
+import baseDatos.Serializador;
+import uiMain.funcionalidades.MenuFuncionalidades;
+import uiMain.Funcionalidades.MenuGestion;
 
 import java.util.Scanner;
 
@@ -39,17 +39,21 @@ public class Main {
             opcionSeleccionada = sc.nextByte();
 
             switch (opcionSeleccionada) {
-                case 1:
 
-                    // MenuFuncionalidades
-                    break;
-                case 2:
-                    // MenuGestion
-                    break;
-                case 3:
-                    // Serializador
-                default:
-                    System.out.println("Opción no válida. Intente nuevamente.");
+                // MenuFuncionalidades
+                case 1 -> {
+                    MenuFuncionalidades.menuFuncionalidades(hospital);}
+
+                // MenuGestion
+                case 2 -> {MenuGestion.menuGestion(hospital);}
+
+                // Serializador
+                case 3 -> {
+                    Serializador.serializar(hospital);
+                    System.exit(0);
+                }
+
+
             }
         }
     }

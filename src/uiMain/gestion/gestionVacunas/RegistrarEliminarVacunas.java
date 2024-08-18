@@ -43,7 +43,7 @@ public class RegistrarEliminarVacunas {
         System.out.println("Ingrese el tipo de la vacuna: (Obligatoria, No obligatoria)");
         String tipo = sc.nextLine();
 
-        ArrayList<String> tipoEps = new ArrayList<~>();
+        ArrayList<String> tipoEps = new ArrayList<>();
         boolean respuesta;
 
         do {
@@ -68,8 +68,16 @@ public class RegistrarEliminarVacunas {
                 
             }
         }
+        
         while (respuesta);
+        
+        System.out.println("Ingrese el precio de la vacuna: ");
+        double precio = sc.nextDouble();
 
+        Vacuna vacunaNueva= new Vacuna(tipo, nombreVacuna, tipoEps, precio );
+        System.out.println("¡La vacuna ha sido registrada con éxito!");
+
+        hospital.getListaVacunas().add(vacunaNueva);
         System.out.println("\nInformacion general de la nueva vacuna registrada; ");
         System.out.println("Nombre de la vacuna: " + vacunaNueva.getNombre());
         System.out.println("Tipo de la vacuna: " + vacunaNueva.getTipo());

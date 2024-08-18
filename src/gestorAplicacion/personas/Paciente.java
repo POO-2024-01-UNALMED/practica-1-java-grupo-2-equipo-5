@@ -21,6 +21,10 @@ public class Paciente extends Persona implements Pago{
         this.historiaClinica = new HistoriaClinica(this);
 
     }
+    public Paciente(int cedula, String nombre, String tipoEps){
+        this(cedula, nombre, tipoEps, null);
+    }
+
     //Metodos
 
 
