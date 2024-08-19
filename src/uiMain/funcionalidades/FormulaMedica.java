@@ -141,7 +141,8 @@ public class FormulaMedica {
                 }
             }
         } while (agregarOtro);
-        if (listMedicamento.isEmpty()) { /* En caso de que listaMedicamentos este vacía significa que no formulo medicamentos
+        if (listMedicamento.isEmpty()) {
+            /* En caso de que listaMedicamentos este vacía significa que no formulo medicamentos
          entonces que esa formula vacía creada al inicio de la funcionalidad no se guarde en la historia del paciente */
             return;
         }

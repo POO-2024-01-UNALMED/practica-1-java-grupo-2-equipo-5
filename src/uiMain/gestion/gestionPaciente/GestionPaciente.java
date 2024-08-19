@@ -15,14 +15,15 @@ public class GestionPaciente {
         	
             // Menú para gestionar la clase Paciente
         	
-            System.out.println("\n--- MENU GESTIÓN PACIENTE ---");
+            System.out.println("\n───────── MENU GESTION DEL PACIENTE ─────────");
             System.out.println("1. Registrar paciente");
             System.out.println("2. Registrar enfermedad");
             System.out.println("3. Eliminar paciente");
             System.out.println("4. Ver paciente");
             System.out.println("5. Regresar al menú anterior");
             System.out.println("6. Salir");
-            System.out.print("Seleccione una opción: ");
+            System.out.print("──────────────────────────────");
+            System.out.print("\nSeleccione una opción: ");
             opcionSeleccionada = sc.nextByte();
             sc.nextLine();
 

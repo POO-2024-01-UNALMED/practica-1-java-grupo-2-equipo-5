@@ -13,7 +13,7 @@ public class GestionHospital {
         byte opcion;
 
         do {
-            System.out.println("\n---Menu Gestion Hospital---");
+            System.out.println("\n───────── MENU GESTION DEL HOSPITAL ────────────");
             System.out.println("Por favor, elija una de las siguientes opciones: ");
             System.out.println("1. Construir Habitación");
             System.out.println("2. Ver lista de Habitaciones");
@@ -24,6 +24,8 @@ public class GestionHospital {
             System.out.println("7. Ver vacunas registradas en el hospital");
             System.out.println("8. --Regresar al menu anterior--");
             System.out.println("9. --Salir--");
+            System.out.print("──────────────────────────────");
+            System.out.print("\nSeleccione una opción: ");
 
             opcion = sc.nextByte();
             sc.nextLine();

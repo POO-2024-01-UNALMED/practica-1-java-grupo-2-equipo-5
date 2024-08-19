@@ -12,7 +12,7 @@ public class MenuFuncionalidades {
         byte opcion;
 
         do {
-            System.out.println("\nMENU FUNCIONALIDADES");
+            System.out.println("\n───────── MENU FUNCIONALIDADES ─────────");
             System.out.println("1. Agendar una cita medica");
             System.out.println("2. Generar fórmula médica");
             System.out.println("3. Asignar habitación a un paciente");
@@ -20,8 +20,10 @@ public class MenuFuncionalidades {
             System.out.println("5. Facturacion");
             System.out.println("6. --Regresar al menu inicial--");
             System.out.println("7. --Salir--");
-            System.out.println("Ingrese una opcion: ");
+            System.out.print("──────────────────────────────");
+            System.out.print("\nSeleccione una opción: ");
             opcion = sc.nextByte();
+            sc.nextLine();
 
             switch (opcion) {
                 case 1 -> AgendarCita.agendarCita(hospital);

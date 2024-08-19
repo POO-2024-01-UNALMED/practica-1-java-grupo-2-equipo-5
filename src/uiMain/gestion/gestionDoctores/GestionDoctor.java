@@ -13,7 +13,7 @@ public class GestionDoctor {
         byte opcion;
         do {
             // Menu para gestionar la clase Doctor
-            System.out.println("\nMENU Gestion Doctor");
+            System.out.println("───────── MENU GESTION DE DOCTORES   ─────────");
             System.out.println("1. Registrar doctor");
             System.out.println("2. Eliminar doctor");
             System.out.println("3. Ver doctor");
@@ -21,7 +21,8 @@ public class GestionDoctor {
             System.out.println("5. Eliminar citas");
             System.out.println("6. --Regresar al menu anterior--");
             System.out.println("7. --Salir--");
-            System.out.println("Ingrese una opcion: ");
+            System.out.print("──────────────────────────────");
+            System.out.print("\nSeleccione una opción: ");
             opcion = sc.nextByte();
             sc.nextLine();
             switch (opcion) {
