@@ -55,8 +55,6 @@ public class Main {
                     Serializador.serializar(hospital);
                     System.exit(0);
                 }
-
-
             }
         }
     }
