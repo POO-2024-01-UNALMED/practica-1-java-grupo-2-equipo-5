@@ -7,12 +7,12 @@ import java.io.*;
 
 public class Serializador {
     public static void serializar(Hospital hospital) {
-        serializarDoctores(hospital,new File("src\\baseDatos\\temp\\registroDoctores.txt\\"));
-        serializarPacientes(hospital, new File("src\\baseDatos\\temp\\registroPacientes.txt\\"));
+        serializarDoctores(hospital,new File("src\\baseDatos\\temp\\registroDoctores.txt"));
+        serializarPacientes(hospital, new File("src\\baseDatos\\temp\\registroPacientes.txt"));
         serializarMedicamentos(hospital, new File("src\\baseDatos\\temp\\registroMedicamentos.txt"));
         serializarVacunas(hospital, new File("src\\baseDatos\\temp\\registroVacunas.txt"));
         serializarHabitaciones(hospital, new File("src\\baseDatos\\temp\\registroHabitaciones.txt"));
-        serializarEnfermedades(hospital, new File("src\\baseDatos\\temp\\registroVacunas.txt"));
+        serializarEnfermedades(hospital, new File("src\\baseDatos\\temp\\registroEnfermedades.txt"));
     }
 
     public static void serializarDoctores(Hospital hospital, File archivo) {
@@ -73,7 +73,7 @@ public class Serializador {
             PrintWriter pw = new PrintWriter(archivo);
             FileOutputStream file = new FileOutputStream(archivo);
             ObjectOutput out = new ObjectOutputStream(file);
-            out.writeObject(hospital.getListaHabitaciones());
+            out.writeObject(Hospital.getListaHabitaciones());
             out.close();
             file.close();
         }

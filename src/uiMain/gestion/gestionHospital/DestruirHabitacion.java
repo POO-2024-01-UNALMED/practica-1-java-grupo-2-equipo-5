@@ -1,10 +1,10 @@
 package uiMain.gestion.gestionHospital;
 
-import java.util.Scanner;
-
 import gestorAplicacion.administracionHospital.CategoriaHabitacion;
 import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.servicios.Habitacion;
+
+import java.util.Scanner;
 
 public class DestruirHabitacion {
 
@@ -13,15 +13,17 @@ public class DestruirHabitacion {
         System.out.println("Por favor, introduzca la información de la habitación que desea destruir");
         System.out.println("Ingrese el número de la habitación: ");
         int nHabitacion = sc.nextInt();
+        sc.nextLine();
         System.out.println("¿Qué tipo de habitación desea destruir?");
         System.out.println("'CAMILLA', 'INDIVIDUAL', 'DOBLE', 'OBSERVACION', 'UCI', 'UCC': "); //Igual que en ConstruirHabitacion?
-        String categoriaEscogida = sc.nextLine();
+        String categoriaEscogida = sc.next();
+        sc.nextLine();
         CategoriaHabitacion hEscogida = CategoriaHabitacion.valueOf(categoriaEscogida);
 
-        for (Habitacion habitacion : Hospital.getListaHabitaciones()) {
+        for (Habitacion habitacion : hospital.habitaciones) {
             if (habitacion.getNumero() == nHabitacion && habitacion.getCategoria() == hEscogida) {
                 if (!habitacion.isOcupada()) {
-                    Hospital.getListaHabitaciones().remove(habitacion);
+                    hospital.getListaHabitaciones().remove(habitacion);
                     System.out.println("Se ha destruido la habitación!");
                     return;
                 } else {

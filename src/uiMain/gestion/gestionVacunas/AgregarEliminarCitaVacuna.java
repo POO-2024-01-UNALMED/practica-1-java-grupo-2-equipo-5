@@ -30,6 +30,7 @@ public class AgregarEliminarCitaVacuna {
 
             vacuna.getAgenda().add(new CitaVacuna(fechaCita, null, null));
             System.out.println("Cita vacuna agregada con exito");
+
             System.out.println("\nVacuna: "+vacuna.getNombre());
             System.out.println("Agenda: ");
             for(int i=1; i<vacuna.getAgenda().size(); i++){
@@ -67,21 +68,24 @@ public class AgregarEliminarCitaVacuna {
 
             System.out.println("Seleccione la cita que desea eliminar: ");
             byte numeroCita = sc.nextByte();
-
+            sc.nextLine();
+            
             while (numeroCita<1 || numeroCita>agendaDisponible.size()) {
                 System.out.println("Ingrese un número válido");
-                numeroCita = sc.nextByte();
+                numeroCita = sc.nextByte(); 
+                sc.nextLine();
                 
             }
 
-            for(int i=1; i<vacuna.getAgenda().size();i++){
-                if(Objects.equals(vacuna.getAgenda().get(-1).getFecha(), agendaDisponible.get(numeroCita-1).getFecha())){
+            for (int i=1; i<=vacuna.getAgenda().size(); i++){
+                if(Objects.equals(vacuna.getAgenda().get(i - 1).getFecha(), agendaDisponible.get(numeroCita - 1).getFecha())){
                     vacuna.getAgenda().remove(vacuna.getAgenda().get(i-1));
                 }
             }
             System.out.println("Cita eliminada con éxito");
             System.out.println("\nVacuna "+vacuna.getNombre());
             System.out.println("Agenda: ");
+
             for (CitaVacuna agenda : vacuna.getAgenda()){
                 System.out.println(agenda.getFecha());
             }

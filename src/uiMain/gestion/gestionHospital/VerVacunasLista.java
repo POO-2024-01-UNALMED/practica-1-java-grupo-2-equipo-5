@@ -4,7 +4,7 @@ import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.administracionHospital.Vacuna;
 import gestorAplicacion.servicios.CitaVacuna;
 
-public class VerVacunas {
+public class VerVacunasLista {
     public static void verVacunas(Hospital hospital) {
 
         for (Vacuna vacuna: hospital.getListaVacunas()){

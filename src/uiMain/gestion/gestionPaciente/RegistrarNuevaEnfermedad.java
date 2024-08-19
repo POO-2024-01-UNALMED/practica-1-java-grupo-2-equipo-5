@@ -72,8 +72,10 @@ public class RegistrarNuevaEnfermedad {
                     String nombre = sc.nextLine();
                     System.out.print("Ingrese la tipología de la enfermedad: ");
                     String tipologia = sc.next();
+                    sc.nextLine();
                     System.out.print("Ingrese la especialidad que trata la enfermedad: ");
                     String especialidad = sc.next();
+                    sc.nextLine();
 
                     Enfermedad nuevaEnfermedad = new Enfermedad(especialidad, nombre, tipologia);
                     historiaPaciente.getEnfermedades().add(nuevaEnfermedad);
@@ -93,6 +95,7 @@ public class RegistrarNuevaEnfermedad {
             while (true) {
                 System.out.print("¿Desea agregar otra enfermedad? (s/n): ");
                 char respuesta = sc.next().charAt(0);
+                sc.nextLine();
 
                 if (respuesta == 's' || respuesta == 'n') {
                     agregarOtraEnfermedad = respuesta == 's';

@@ -1,16 +1,16 @@
 package uiMain.gestion.gestionHospital;
 
+import gestorAplicacion.administracionHospital.Enfermedad;
+import gestorAplicacion.administracionHospital.Hospital;
+import gestorAplicacion.administracionHospital.Medicamento;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import gestorAplicacion.administracionHospital.Hospital;
-import gestorAplicacion.administracionHospital.Medicamento;
-import gestorAplicacion.administracionHospital.Enfermedad;
-
 public class AgregarMedicamentos {
     public static void agregarMedicamentos(Hospital hospital) {
-        try (Scanner sc = new Scanner(System.in)) {
-            boolean anadirOtro = false;
+        Scanner sc = new Scanner(System.in);
+            boolean anadirOtro;
             do {
                 System.out.println("Bienvenido! Deseas aumentar el stock de un medicamento existente (1) o añadoir uno nuevo (2)?");
                 System.out.println("1. Aumentar el stock de un medicamento existente.");
@@ -21,7 +21,7 @@ public class AgregarMedicamentos {
                 switch (opcion) {
                     case 1:
                         while (true) {
-                            //VerMedicamentos.verMedicamentos(Hospital); //Quitar comentario
+                            VerMedicamentos.verMedicamentos(hospital);
                             byte opcionMed = sc.nextByte();
                             if (opcionMed <= 0 || opcionMed > listaMedicamentos.size()) {
                                 System.out.println("Opción no válida. Intente de nuevo.");
@@ -87,8 +87,8 @@ public class AgregarMedicamentos {
                         System.out.println("Opción no válida. Por favor intente de nuevo");
                     }
                 }
-            } while (anadirOtro);
-        }
+
+        }while (anadirOtro);
         System.out.println("Se han actualizado los medicamentos!");
     }
 }

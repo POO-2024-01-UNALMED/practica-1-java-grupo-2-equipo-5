@@ -24,6 +24,7 @@ public class GestionPaciente {
             System.out.println("6. Salir");
             System.out.print("Seleccione una opción: ");
             opcionSeleccionada = sc.nextByte();
+            sc.nextLine();
 
             switch (opcionSeleccionada) {
             

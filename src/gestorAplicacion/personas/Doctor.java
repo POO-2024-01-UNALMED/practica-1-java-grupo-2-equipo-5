@@ -1,6 +1,7 @@
 package gestorAplicacion.personas;
 
 import gestorAplicacion.servicios.Cita;
+
 import java.util.ArrayList;
 
 public class Doctor extends Persona{
@@ -8,7 +9,7 @@ public class Doctor extends Persona{
     //ATRIBUTOS
 
     private String especialidad;
-    private ArrayList<Cita> agendaDoctor = new ArrayList<Cita>();
+    private ArrayList<Cita> agendaDoctor = new ArrayList<>();
 
     //Constructor clase Doctor
     public Doctor(int cedula, String nombre, String tipoEps, String especialidad) {
@@ -23,7 +24,7 @@ public class Doctor extends Persona{
     //Metodos clase doctor
 
     public ArrayList<Cita> mostrarAgendaDisponible() {
-        ArrayList<Cita> agendaDisponible = new ArrayList<Cita>();
+        ArrayList<Cita> agendaDisponible = new ArrayList<>();
         for (int i = 1; i <= agendaDoctor.size(); i++) {
             if (agendaDoctor.get(i - 1).getPaciente() == null) {
                 agendaDisponible.add(agendaDoctor.get(i - 1));}
@@ -48,9 +49,6 @@ public class Doctor extends Persona{
 
     }
 
-    public String despedida(){
-        return "Adios, Doctor";
-    }
 
     public String toString(){
         return "Nombre: "+ getNombre() +"\nCedula: " +getCedula() + "\nTipo de EPS: "+ getTipoEps() + "\nEspecialidad: " +getEspecialidad();

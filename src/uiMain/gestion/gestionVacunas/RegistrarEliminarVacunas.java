@@ -9,32 +9,30 @@ import java.util.Scanner;
 
 public class RegistrarEliminarVacunas {
 
-    public static boolean verificarExistenciaVacuna(String nombreVacuna, Hospital hospital){
-        boolean valor = false;
+    public static boolean verificarExistenciaVacuna(String nombre,Hospital hospital){
+        boolean valor= false;
 
-        for(int i =1; i<=hospital.getListaVacunas().size();i++){
-            if (nombreVacuna.equals(hospital.getListaVacunas().get(-1).getNombre())){
-                valor = true;
+        for(int i=1; i<=hospital.getListaVacunas().size();i++){
+            if (nombre.equals(hospital.getListaVacunas().get(i - 1).getNombre())){
+                valor=true;
                 break;
             }
-
             else{
-                valor = false;
+                valor=false;
             }
-
         }
         return valor;
-
     }
 
     public static void registrarVacuna (Hospital hospital){
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("A continuacion ingrese la informacion de la nueva vacuna: ");
-        System.out.println("Nombre de la vacuna:(Debe iniciar con mayúscula) ");
-        String nombreVacuna = sc.nextLine();
+        System.out.println("Nombre de la vacuna:(Debe iniciar con mayúscula) : ");
+        String nombre = sc.nextLine();
 
-        if (RegistrarEliminarVacunas.verificarExistenciaVacuna(nombreVacuna, hospital)) {
+        if (RegistrarEliminarVacunas.verificarExistenciaVacuna(nombre, hospital)) {
             System.out.println("La vacuna ya existe en el sistema");
             return;
             
@@ -56,6 +54,7 @@ public class RegistrarEliminarVacunas {
             while (true) {
                 System.out.println("¿Desea agregar otro tipo de EPS? (s/n)");
                 String letra = sc.next();
+                sc.nextLine();
 
                 if(Objects.equals(letra, "s")|| Objects.equals(letra, "n")){
                     respuesta = letra.equals("s");
@@ -73,8 +72,10 @@ public class RegistrarEliminarVacunas {
         
         System.out.println("Ingrese el precio de la vacuna: ");
         double precio = sc.nextDouble();
+        sc.nextLine();
 
-        Vacuna vacunaNueva= new Vacuna(tipo, nombreVacuna, tipoEps, precio );
+
+        Vacuna vacunaNueva= new Vacuna(tipo, nombre, tipoEps, precio );
         System.out.println("¡La vacuna ha sido registrada con éxito!");
 
         hospital.getListaVacunas().add(vacunaNueva);

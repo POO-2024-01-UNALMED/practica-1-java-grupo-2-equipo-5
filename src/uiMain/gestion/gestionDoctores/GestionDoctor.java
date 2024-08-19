@@ -23,6 +23,7 @@ public class GestionDoctor {
             System.out.println("7. --Salir--");
             System.out.println("Ingrese una opcion: ");
             opcion = sc.nextByte();
+            sc.nextLine();
             switch (opcion) {
                 case 1-> RegistrarDoctor.registrarDoctor(hospital);
                 case 2-> EliminarDoctor.eliminarDoctor(hospital);

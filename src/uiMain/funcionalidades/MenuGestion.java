@@ -27,12 +27,12 @@ public class MenuGestion {
             System.out.println("Ingrese una opcion: ");
             opcion = sc.nextByte();
             switch (opcion) {
-                case 1: GestionPaciente.mostrarMenuGestionPaciente(hospital);
-                case 2: GestionVacunas.menuGestionVacunas(hospital);
-                case 3: GestionDoctor.menuGestionDoctor(hospital);
-                case 4: GestionHospital.menuGestionHospital(hospital);
-                case 5:                    return;
-                case 6: {
+                case 1-> GestionPaciente.mostrarMenuGestionPaciente(hospital);
+                case 2-> GestionVacunas.menuGestionVacunas(hospital);
+                case 3-> GestionDoctor.menuGestionDoctor(hospital);
+                case 4-> GestionHospital.menuGestionHospital(hospital);
+                case 5->{return;}
+                case 6-> {
                     Serializador.serializar(hospital);
                     System.exit(0);
                 }
