@@ -30,9 +30,9 @@ public class RegistrarEliminarVacunas {
 
         System.out.println("A continuacion ingrese la informacion de la nueva vacuna: ");
         System.out.println("Nombre de la vacuna:(Debe iniciar con mayúscula) : ");
-        String nombreVacuna = sc.nextLine();
+        String nombre = sc.nextLine();
 
-        if (RegistrarEliminarVacunas.verificarExistenciaVacuna(nombreVacuna, hospital)) {
+        if (RegistrarEliminarVacunas.verificarExistenciaVacuna(nombre, hospital)) {
             System.out.println("La vacuna ya existe en el sistema");
             return;
             
@@ -72,7 +72,7 @@ public class RegistrarEliminarVacunas {
         System.out.println("Ingrese el precio de la vacuna: ");
         double precio = sc.nextDouble();
 
-        Vacuna vacunaNueva= new Vacuna(tipo, nombreVacuna, tipoEps, precio );
+        Vacuna vacunaNueva= new Vacuna(tipo, nombre, tipoEps, precio );
         System.out.println("¡La vacuna ha sido registrada con éxito!");
 
         hospital.getListaVacunas().add(vacunaNueva);

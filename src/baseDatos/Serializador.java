@@ -12,7 +12,7 @@ public class Serializador {
         serializarMedicamentos(hospital, new File("src\\baseDatos\\temp\\registroMedicamentos.txt"));
         serializarVacunas(hospital, new File("src\\baseDatos\\temp\\registroVacunas.txt"));
         serializarHabitaciones(hospital, new File("src\\baseDatos\\temp\\registroHabitaciones.txt"));
-        serializarEnfermedades(hospital, new File("src\\baseDatos\\temp\\registroVacunas.txt"));
+        serializarEnfermedades(hospital, new File("src\\baseDatos\\temp\\registroEnfermedades.txt"));
     }
 
     public static void serializarDoctores(Hospital hospital, File archivo) {
