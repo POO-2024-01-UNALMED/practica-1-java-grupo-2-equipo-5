@@ -53,7 +53,7 @@ public class Doctor extends Persona{
     }
 
     public String toString(){
-        return "Nombre: "+ getNombre() +"\nCedula: " +getCedula() + "\nTipo de EPS"+ getTipoEps() + "\nEspecialidad: " +getEspecialidad();
+        return "Nombre: "+ getNombre() +"\nCedula: " +getCedula() + "\nTipo de EPS: "+ getTipoEps() + "\nEspecialidad: " +getEspecialidad();
     }
 
 
