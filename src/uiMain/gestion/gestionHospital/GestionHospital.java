@@ -26,6 +26,7 @@ public class GestionHospital {
             System.out.println("9. --Salir--");
 
             opcion = sc.nextByte();
+            sc.nextLine();
 
             switch (opcion) {
                 case 1 -> ConstruirHabitacion.construirHabitacion(hospital);

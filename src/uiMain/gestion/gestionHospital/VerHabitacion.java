@@ -12,8 +12,9 @@ public class VerHabitacion {
         System.out.println("Ingrese el tipo de Habitacion que desea ver");
         System.out.println("'CAMILLA' , 'INDIVIDUAL' , 'DOBLE' , 'OBSERVACION' , 'UCI' , 'UCC''");
         String categoriaSeleccionada = sc.next();
+        sc.nextLine();
         CategoriaHabitacion habitacionSeleccionada = CategoriaHabitacion.valueOf(categoriaSeleccionada);
-        for (Habitacion habitacion: hospital.habitaciones){
+        for (Habitacion habitacion: Hospital.habitaciones){
             if (habitacion.getCategoria()==habitacionSeleccionada){
                 String ocupada = "Libre";
                 if(habitacion.isOcupada()){

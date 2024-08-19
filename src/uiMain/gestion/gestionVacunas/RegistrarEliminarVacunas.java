@@ -54,6 +54,7 @@ public class RegistrarEliminarVacunas {
             while (true) {
                 System.out.println("¿Desea agregar otro tipo de EPS? (s/n)");
                 String letra = sc.next();
+                sc.nextLine();
 
                 if(Objects.equals(letra, "s")|| Objects.equals(letra, "n")){
                     respuesta = letra.equals("s");
@@ -71,6 +72,8 @@ public class RegistrarEliminarVacunas {
         
         System.out.println("Ingrese el precio de la vacuna: ");
         double precio = sc.nextDouble();
+        sc.nextLine();
+
 
         Vacuna vacunaNueva= new Vacuna(tipo, nombre, tipoEps, precio );
         System.out.println("¡La vacuna ha sido registrada con éxito!");

@@ -1,12 +1,12 @@
 package uiMain.funcionalidades;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 import gestorAplicacion.administracionHospital.CategoriaHabitacion;
-import gestorAplicacion.servicios.Habitacion;
 import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.personas.Paciente;
+import gestorAplicacion.servicios.Habitacion;
+
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class AsignarHabitacion {
     static Scanner sc = new Scanner(System.in);
@@ -22,11 +22,13 @@ public class AsignarHabitacion {
             System.out.println("Escoja la habitación de su preferencia:");
 
             eleccion = sc.nextInt();
+            sc.nextLine();
 
             //Casos de error:
             while (eleccion < 1 || eleccion > habitaciones.size()) {
                 System.out.println("Opción no válida. Intente de nuevo");
                 eleccion = sc.nextInt();
+                sc.nextLine();
             }
 
             //Quitar la habitacion elegida de la lista de habitaciones disponibles:
@@ -190,7 +192,8 @@ public class AsignarHabitacion {
                     System.out.println("Lo sentimos! No hay habitaciones disponibles en este momento para la categoría " + paciente.getCategoriaHabitacion());
                     System.out.println("¿Desea elegir una habitación de otra categoría (S/N)?");
 
-                    String eleccion = sc.nextLine();
+                    String eleccion = sc.next();
+                    sc.nextLine();
 
                     switch (eleccion) {
                         case "S":

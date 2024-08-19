@@ -20,6 +20,7 @@ public class GestionVacunas {
             System.out.println("6. Regresar al menu anterior");
             System.out.println("7. Salir");
             opcion = sc.nextByte();
+            sc.nextLine();
             switch(opcion){
                 case 1 -> RegistrarEliminarVacunas.registrarVacuna(hospital);
                 case 2 -> RegistrarEliminarVacunas.eliminarVacuna(hospital);

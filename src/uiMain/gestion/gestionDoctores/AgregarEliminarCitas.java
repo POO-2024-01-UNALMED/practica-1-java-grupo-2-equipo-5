@@ -37,6 +37,7 @@ public class AgregarEliminarCitas {
                 }
             System.out.println("Ingrese la fecha de la cita: ");
             String fecha = sc.nextLine();
+            sc.nextLine();
             doctor.getAgendaDoctor().add(new Cita(doctor, fecha, null));
             System.out.println("Listo! La cita ya ha sido agregada a la agenda del doctor correctamente!");
             System.out.println(doctor);
@@ -55,6 +56,7 @@ public class AgregarEliminarCitas {
                 System.out.println("El doctor no esta registrado.\n¿Desea registrarlo?");
                 System.out.println("1. Si\n2. No \nSeleccione una opción");
                 byte opcion = sc.nextByte();
+                sc.nextLine();
                 switch (opcion) {
                     case 1:
                         RegistrarDoctor.registrarDoctor(hospital);
@@ -78,11 +80,13 @@ public class AgregarEliminarCitas {
 
         System.out.println("Seleccione la cita que desea eliminar: ");
         byte numeroCita = sc.nextByte();
+        sc.nextLine();
 
         //Se valida la opción
         while (numeroCita<1 || numeroCita>agendaDisponible.size()){
             System.out.println("OPCION INVALIDA, te equivocate, por favor ingrese otra opción: ");
             numeroCita= sc.nextByte();
+            sc.nextLine();
         }
 
         for(int i=1; i<=doctor.getAgendaDoctor().size(); i++) {

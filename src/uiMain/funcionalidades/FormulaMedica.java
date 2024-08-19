@@ -19,6 +19,7 @@ public class FormulaMedica {
         //Se pide la cedula del paciente y se arroja el paciente
         System.out.println("Ingrese la cédula del paciente: ");
         int cedula = sc.nextInt();
+        sc.nextLine();
         Paciente paciente = hospital.buscarPaciente(cedula);
         if (paciente == null) { /*Si el paciente es null, quiere decir que no lo encontró, por lo que
         preguntamos si desea registrar este paciente */
@@ -26,6 +27,7 @@ public class FormulaMedica {
                 System.out.println("El paciente no esta registrado.\n¿Desea registrarlo?");
                 System.out.println("1. Si\n2. No \nSeleccione una opción");
                 byte opcion = sc.nextByte();
+                sc.nextLine();
                 switch (opcion) {
                     case 1:
                         RegistrarPaciente.registrarPaciente(hospital);
@@ -55,6 +57,7 @@ public class FormulaMedica {
                 System.out.println(i + 1 + "." + paciente.getHistoriaClinica().getEnfermedades().get(i));
             }
             byte opcEnf = sc.nextByte();
+            sc.nextLine();
             if (opcEnf <= paciente.getHistoriaClinica().getEnfermedades().size() && opcEnf > 0) {
                 enfermedadTratar = paciente.getHistoriaClinica().getEnfermedades().get(opcEnf - 1); //Aquí seleccionamos que enfermedad eligió el paciente a tratar
                 break;
@@ -77,6 +80,7 @@ public class FormulaMedica {
                 System.out.println(i + 1 + "." + doctoresCita.get(i).getNombre());
             }
             byte opcDoc = sc.nextByte();
+            sc.nextLine();
             if (opcDoc > 0 & opcDoc <= doctoresCita.size()) {
                 doctorEscogido = doctoresCita.get(opcDoc - 1); //seleccionamos el doctor
                 break;
@@ -104,6 +108,7 @@ public class FormulaMedica {
                 }
                 //guarda la opcion elegida
                 byte opcMed = sc.nextByte();
+                sc.nextLine();
                 if (opcMed <= 0 || opcMed > disponibleEnf.size()) {
                     System.out.println("Opción inválida");
                 }
@@ -127,6 +132,7 @@ public class FormulaMedica {
             while (true) { //Bucle para el caso en el que se ingresen opciones incorrectas
                 System.out.println("¿Desea agregar otro medicamento? (s/n)");
                 char agregar = sc.next().charAt(0);
+                sc.nextLine();
                 if (agregar == 's' || agregar == 'n') {
                     agregarOtro = agregar == 's';
                     break;

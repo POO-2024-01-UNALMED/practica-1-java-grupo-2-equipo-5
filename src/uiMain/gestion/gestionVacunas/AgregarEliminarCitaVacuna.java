@@ -68,10 +68,12 @@ public class AgregarEliminarCitaVacuna {
 
             System.out.println("Seleccione la cita que desea eliminar: ");
             byte numeroCita = sc.nextByte();
-
+            sc.nextLine();
+            
             while (numeroCita<1 || numeroCita>agendaDisponible.size()) {
                 System.out.println("Ingrese un número válido");
-                numeroCita = sc.nextByte();
+                numeroCita = sc.nextByte(); 
+                sc.nextLine();
                 
             }
 

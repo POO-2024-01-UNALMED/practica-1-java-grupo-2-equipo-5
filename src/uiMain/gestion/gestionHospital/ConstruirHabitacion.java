@@ -13,6 +13,7 @@ public class ConstruirHabitacion {
         System.out.println("Por favor introduzca la información de la nueva habitación a construir:");
         System.out.println("Ingrese el número de la habitación:");
         int nHabitacion = sc.nextInt();
+        sc.nextLine();
         CategoriaHabitacion categoriaHabitacion = null;
         int eleccion;
 

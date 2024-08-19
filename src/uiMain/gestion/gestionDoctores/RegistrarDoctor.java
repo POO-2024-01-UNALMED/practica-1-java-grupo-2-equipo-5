@@ -13,8 +13,10 @@ public class RegistrarDoctor {
         System.out.println("Por favor introduce la información del doctor para su registro");
         System.out.println("Ingrese el nombre del doctor:");
         String nombre = sc.next();
+        sc.nextLine();
         System.out.println("Ingrese el número de cédula: ");
         int id = sc.nextInt();
+        sc.nextLine();
 
         if (hospital.buscarDoctor(id) != null) {
             System.out.println("Este doctor ya esta registrado");
@@ -23,8 +25,10 @@ public class RegistrarDoctor {
 
         System.out.println("Ingrese su tipo de EPS 'Subsidiado','Contributivo' o 'Particular':");
         String eps = sc.next();
+        sc.nextLine();
         System.out.println("Ingrese su especialidad 'General', 'Odontologia' o 'Oftalmologia': ");
         String especialidad = sc.next();
+        sc.nextLine();
 
         Doctor doctor = new Doctor(id, nombre, eps, especialidad);
         System.out.println("¡El doctor ha sido registrado con éxito!");

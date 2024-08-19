@@ -31,6 +31,7 @@ public class AgendarCita {
         System.out.println("Por favor, ingrese su número de identificación: ");
 
         int numeroCedula = sc.nextInt();
+        sc.nextLine();
 
         Paciente pacienteCita = hospital.buscarPaciente(numeroCedula);
 
@@ -41,6 +42,7 @@ public class AgendarCita {
                 System.out.println("El paciente no está registrado.\nDesea registrarlo?");
                 System.out.println("\n1. Si\n2. No");
                 byte opcion = sc.nextByte();
+                sc.nextLine();
                 switch (opcion) {
                     case 1:
                         RegistrarPaciente.registrarPaciente(hospital);
@@ -68,11 +70,13 @@ public class AgendarCita {
             System.out.println("1. General.\n2. Odontología.\n3. Oftanmología.\n4. Regresar al menú");
 
             opcion = sc.nextByte();
+            sc.nextLine();
 
             //Casos de error:
             while(opcion < 1 || opcion > 4) {
                 System.out.println("Opción no válida. Intente de nuevo");
                 opcion = sc.nextByte();
+                sc.nextLine();
             }
 
             //Busqueda de doctores según la especialidad elegida y que coincidan con la EPS del paciente
@@ -106,11 +110,13 @@ public class AgendarCita {
 
             byte eleccionDoctor;
             eleccionDoctor = sc.nextByte();
+            sc.nextLine();
 
             //Casos de error:
             while (eleccionDoctor < 1 || eleccionDoctor > doctoresDisponibles.size() + 1) {
                 System.out.println("Opción no válida. Intente de nuevo.");
                 eleccionDoctor = sc.nextByte();
+                sc.nextLine();
             }
 
             if (eleccionDoctor == doctoresDisponibles.size() + 1) {
@@ -131,11 +137,13 @@ public class AgendarCita {
 
                 byte eleccionCita;
                 eleccionCita = sc.nextByte();
+                sc.nextLine();
 
                 //Casos de error
                 while (eleccionCita < 1 || eleccionCita > agendaDoctor.size()) {
                     System.out.println("Opción no válida. Intente de nuevo");
                     eleccionCita = sc.nextByte();
+                    sc.nextLine();
                 }
 
                 //Actualizar agenda Doctor

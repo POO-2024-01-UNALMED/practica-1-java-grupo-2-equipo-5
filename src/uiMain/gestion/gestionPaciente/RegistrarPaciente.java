@@ -28,6 +28,7 @@ public class RegistrarPaciente {
 
         System.out.print("Ingrese su tipo de EPS ('Subsidiado', 'Contributivo' o 'Particular'): ");
         String eps = sc.nextLine();
+        sc.nextLine();
 
         // Crear nuevo paciente y agregarlo al hospital
         Paciente nuevoPaciente = new Paciente(cedula, nombre, eps);

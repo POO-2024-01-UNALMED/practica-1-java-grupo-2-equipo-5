@@ -11,7 +11,7 @@ public class EliminarDoctor {
             Scanner sc = new Scanner(System.in);
             System.out.println("Ingrese la cédula del doctor que se ELIMINARA: ");
             int cedula = sc.nextInt();
-            sc.nextLine(); //Si hay Error es por este NEXTLINE
+            sc.nextLine();
             Doctor doctor = hospital.buscarDoctor(cedula);
             if (doctor == null) { //verificamos si existe el doctor =)
                 System.out.println("No puedo eliminar algo que no existe asi que...");
@@ -19,6 +19,7 @@ public class EliminarDoctor {
                     System.out.println("El doctor no esta registrado.\n¿Desea registrarlo?");
                     System.out.println("1. Si\n2. No \nSeleccione una opción");
                     byte opcion = sc.nextByte();
+                    sc.nextLine();
                     switch (opcion) {
                         case 1:
                             RegistrarDoctor.registrarDoctor(hospital);

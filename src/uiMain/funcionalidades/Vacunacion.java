@@ -22,6 +22,7 @@ public class Vacunacion {
 
         int numeroCedula;
         numeroCedula= sc.nextInt();
+        sc.nextLine();
 
         //Se busca el paciente por el numero de cédula
         Paciente pacienteAsignado= hospital.buscarPaciente(numeroCedula);
@@ -34,6 +35,7 @@ public class Vacunacion {
                 System.out.println("El paciente no está registrado.\n¿Desea registrarlo?");
                 System.out.println("1. Si\n2.No \nSeleccione una opción");
                 byte opcion= sc.nextByte();
+                sc.nextLine();
                 switch (opcion){
                     case 1:
                         RegistrarPaciente.registrarPaciente(hospital);
@@ -61,11 +63,13 @@ public class Vacunacion {
         System.out.println("Ingrese una opcion: ");
 
         tipoVacuna= sc.nextByte();
+        sc.nextLine();
 
         //Validación de la opción ingresada
         while ((tipoVacuna<1) || (tipoVacuna>2)){
             System.out.println("Opción fuera de rango, por favor ingrese otro número: ");
             tipoVacuna = sc.nextByte();
+            sc.nextLine();
         }
 
         System.out.println("Vacunas Disponibles");
@@ -106,6 +110,7 @@ public class Vacunacion {
 
         byte numeroVacuna;
         numeroVacuna = sc.nextByte();
+        sc.nextLine();
 
         //Si la variable verificarVacuna es false, el paciente no se ha puesto esa vacuna anteriormente.
         boolean verificarVacuna=false;
@@ -115,13 +120,15 @@ public class Vacunacion {
             while ((numeroVacuna<1) || (numeroVacuna>vacunasDisponibles.size())){
                 System.out.println("Opción fuera de rango, por favor ingrese otro número: ");
                 numeroVacuna = sc.nextByte();
+                sc.nextLine();
             }
             // Se verifica que la vacuna seleccionada no se la haya puesto antes
             for (int i=1;i<=pacienteAsignado.getHistoriaClinica().getHistorialVacunas().size();i++){
                 if (Objects.equals(pacienteAsignado.getHistoriaClinica().getHistorialVacunas().get(i - 1).getVacuna().getNombre(), vacunasDisponibles.get(numeroVacuna - 1).getNombre())){
                     verificarVacuna=true;
                     System.out.println("Usted ya se puso esta vacuna, por favor ingrese otra opción o ingrese el número 0 para terminar el proceso: ");
-                    numeroVacuna= sc.nextByte();;
+                    numeroVacuna= sc.nextByte();
+                    sc.nextLine();
                     if (numeroVacuna==0){
                         return;
                     }
@@ -155,6 +162,7 @@ public class Vacunacion {
 
         byte numeroCita;
         numeroCita= sc.nextByte();
+        sc.nextLine();
 
         //Se actualiza la agenda de la vacuna (Se asigna el paciente a esa cita de vacuna)
 
