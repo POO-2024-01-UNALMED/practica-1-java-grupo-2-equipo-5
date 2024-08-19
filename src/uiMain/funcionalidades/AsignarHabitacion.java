@@ -31,11 +31,13 @@ public class AsignarHabitacion {
                 sc.nextLine();
             }
 
+            Habitacion auxiliarHabitaciones = habitaciones.get(eleccion-1);
+
             //Quitar la habitacion elegida de la lista de habitaciones disponibles:
-            habitaciones.remove(eleccion);
+            habitaciones.remove(eleccion - 1);
 
             //Devolvemos la opción elegida:
-            return habitaciones.get(eleccion);
+            return auxiliarHabitaciones;
         }
         return null;
     }
