@@ -9,29 +9,27 @@ import java.util.Scanner;
 
 public class RegistrarEliminarVacunas {
 
-    public static boolean verificarExistenciaVacuna(String nombreVacuna, Hospital hospital){
-        boolean valor = false;
+    public static boolean verificarExistenciaVacuna(String nombre,Hospital hospital){
+        boolean valor= false;
 
-        for(int i =1; i<=hospital.getListaVacunas().size();i++){
-            if (nombreVacuna.equals(hospital.getListaVacunas().get(-1).getNombre())){
-                valor = true;
+        for(int i=1; i<=hospital.getListaVacunas().size();i++){
+            if (nombre.equals(hospital.getListaVacunas().get(i - 1).getNombre())){
+                valor=true;
                 break;
             }
-
             else{
-                valor = false;
+                valor=false;
             }
-
         }
         return valor;
-
     }
 
     public static void registrarVacuna (Hospital hospital){
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("A continuacion ingrese la informacion de la nueva vacuna: ");
-        System.out.println("Nombre de la vacuna:(Debe iniciar con mayúscula) ");
+        System.out.println("Nombre de la vacuna:(Debe iniciar con mayúscula) : ");
         String nombreVacuna = sc.nextLine();
 
         if (RegistrarEliminarVacunas.verificarExistenciaVacuna(nombreVacuna, hospital)) {
