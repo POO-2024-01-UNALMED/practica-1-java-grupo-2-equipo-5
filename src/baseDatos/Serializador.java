@@ -73,7 +73,7 @@ public class Serializador {
             PrintWriter pw = new PrintWriter(archivo);
             FileOutputStream file = new FileOutputStream(archivo);
             ObjectOutput out = new ObjectOutputStream(file);
-            out.writeObject(hospital.getListaHabitaciones());
+            out.writeObject(Hospital.getListaHabitaciones());
             out.close();
             file.close();
         }
