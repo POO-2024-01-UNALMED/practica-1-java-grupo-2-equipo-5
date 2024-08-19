@@ -37,7 +37,8 @@ public class Main {
             System.out.println("1. Servicios para pacientes");
             System.out.println("2. Gestionar registros");
             System.out.println("3. Salir");
-            System.out.print("Seleccione una opción: ");
+            System.out.print("────────────────────────────────");
+            System.out.print("\nSeleccione una opción: ");
             opcionSeleccionada = sc.nextByte();
             sc.nextLine();
 
