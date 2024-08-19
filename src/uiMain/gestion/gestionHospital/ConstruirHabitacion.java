@@ -1,10 +1,10 @@
 package uiMain.gestion.gestionHospital;
 
-import java.util.Scanner;
-
+import gestorAplicacion.administracionHospital.CategoriaHabitacion;
 import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.servicios.Habitacion;
-import gestorAplicacion.administracionHospital.CategoriaHabitacion;
+
+import java.util.Scanner;
 
 public class ConstruirHabitacion {
     public static void construirHabitacion(Hospital hospital) {
@@ -52,7 +52,7 @@ public class ConstruirHabitacion {
         boolean habitacionOcupada = false;
         int dias = 0;
 
-        for (Habitacion habitacion : Hospital.getListaHabitaciones()) {
+        for (Habitacion habitacion : Hospital.habitaciones) {
             if (habitacion.getNumero() == nHabitacion && habitacion.getCategoria() == categoriaHabitacion) {
                 System.out.println("La habitación que está intentando constuir ya existe");
                 return;

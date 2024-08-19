@@ -70,7 +70,7 @@ public class Vacunacion {
 
         System.out.println("Vacunas Disponibles");
 
-        ArrayList<Vacuna> vacunasDisponibles = new ArrayList<Vacuna>();
+        ArrayList<Vacuna> vacunasDisponibles = new ArrayList<>();
 
         //Busca las vacunas disponibles según su Eps y tipo de Vacuna
         switch (tipoVacuna){
@@ -78,7 +78,7 @@ public class Vacunacion {
                 //Se busca vacunas disponibles para la EPS del paciente, y que sean obligatorias.
                 vacunasDisponibles= pacienteAsignado.buscarVacunaPorEps("Obligatoria",hospital);
                 //Validación por si no tiene vacunas disponibles
-                if (vacunasDisponibles.size()==0){
+                if (vacunasDisponibles.isEmpty()){
                     System.out.println("No hay vacunas disponibles para usted de tipo obligatoria");
                     return;
                 }
@@ -91,7 +91,7 @@ public class Vacunacion {
                 //Se busca vacunas disponibles para la EPS del paciente, y que no sean obligatorias
                 vacunasDisponibles= pacienteAsignado.buscarVacunaPorEps("No obligatoria",hospital);
                 //Validación por si no tiene vacunas disponibles
-                if (vacunasDisponibles.size()==0){
+                if (vacunasDisponibles.isEmpty()){
                     System.out.println("No hay vacunas disponibles para usted de tipo no obligatoria");
                     return;
                 }

@@ -8,10 +8,10 @@ import java.util.Scanner;
 public class EliminarDoctor {
 
     public static void eliminarDoctor(Hospital hospital) {
-        try (Scanner sc = new Scanner(System.in)) {
+            Scanner sc = new Scanner(System.in);
             System.out.println("Ingrese la cédula del doctor que se ELIMINARA: ");
             int cedula = sc.nextInt();
-            sc.nextLine();
+            sc.nextLine(); //Si hay Error es por este NEXTLINE
             Doctor doctor = hospital.buscarDoctor(cedula);
             if (doctor == null) { //verificamos si existe el doctor =)
                 System.out.println("No puedo eliminar algo que no existe asi que...");
@@ -33,7 +33,6 @@ public class EliminarDoctor {
                 }
             }
             hospital.getListaDoctores().remove(doctor);
-        }
-        System.out.println("¡DOCTOR ASESINADO! digo eliminado");
+            System.out.println("¡DOCTOR ASESINADO! digo eliminado");
     }
 }

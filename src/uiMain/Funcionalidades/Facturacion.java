@@ -33,7 +33,7 @@ public class Facturacion {
         //Buscar servicios pendientes por pago
         ArrayList<Servicio> serviciosSinPagar = Servicio.obtenerServiciosSinPagar(pacienteSeleccionado);
 
-        if (serviciosSinPagar.size()==0){
+        if (serviciosSinPagar.isEmpty()){
             System.out.println("El paciente no tiene servicios pendientes de pago.");
             return;
         }
@@ -67,17 +67,17 @@ public class Facturacion {
         //Calcular precios 
         //Hay ligadura dinamica
         double precioServicioSeleccionado = 0;
-        if(servicioSeleccionado instanceof Formula)
-        precioServicioSeleccionado = pacienteSeleccionado.calcularPrecio((Formula)servicioSeleccionado);
+        if (servicioSeleccionado instanceof Formula)
+            precioServicioSeleccionado = pacienteSeleccionado.calcularPrecio((Formula)servicioSeleccionado);
     
         else if (servicioSeleccionado instanceof CitaVacuna)
-        precioServicioSeleccionado = pacienteSeleccionado.calcularPrecio((CitaVacuna) servicioSeleccionado);
+            precioServicioSeleccionado = pacienteSeleccionado.calcularPrecio((CitaVacuna) servicioSeleccionado);
     
         else if (servicioSeleccionado instanceof Habitacion)
-        precioServicioSeleccionado = pacienteSeleccionado.calcularPrecio((Habitacion) servicioSeleccionado);
+            precioServicioSeleccionado = pacienteSeleccionado.calcularPrecio((Habitacion) servicioSeleccionado);
     
         else if (servicioSeleccionado instanceof Cita) 
-        precioServicioSeleccionado = pacienteSeleccionado.calcularPrecio((Cita) servicioSeleccionado);        
+            precioServicioSeleccionado = pacienteSeleccionado.calcularPrecio((Cita) servicioSeleccionado);
         
         // Meterse la mano al drill(Pagar)
         System.out.println("Total a pagar: $"+ precioServicioSeleccionado);

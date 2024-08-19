@@ -1,10 +1,9 @@
 package uiMain.gestion.gestionHospital;
 
-import java.util.Scanner;
-
-//import baseDatos.Serializador;
 import baseDatos.Serializador;
 import gestorAplicacion.administracionHospital.Hospital;
+
+import java.util.Scanner;
 
 
 public class GestionHospital {
@@ -35,12 +34,12 @@ public class GestionHospital {
                 case 4 -> AgregarMedicamentos.agregarMedicamentos(hospital);
                 case 5 -> VerMedicamentos.verMedicamentos(hospital);
                 case 6 -> VerPersonasRegistradas.verPersonasRegistradas(hospital);
-                case 7 -> VerVacunas.verVacunas(hospital);
+                case 7 -> VerVacunasLista.verVacunas(hospital);
                 case 8 -> {
                     return;
                 }
                 case 9 -> {
-                    //Serializador.serializar(hospital); -> Terminar
+                    Serializador.serializar(hospital);
                     System.exit(0);
                 }
             }

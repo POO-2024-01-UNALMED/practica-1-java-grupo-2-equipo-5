@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class VerDoctor {
     public static void verDoctor(Hospital hospital) {
-        try (Scanner sc = new Scanner(System.in)) {
+            Scanner sc = new Scanner(System.in);
             System.out.println("Ingrese la cédula del doctor: ");
             int cedula = sc.nextInt();
             Doctor doctor = hospital.buscarDoctor(cedula);
@@ -38,4 +38,4 @@ public class VerDoctor {
             }
         }
     }
-}
+

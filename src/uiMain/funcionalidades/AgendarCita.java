@@ -1,13 +1,13 @@
 package uiMain.funcionalidades;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 import gestorAplicacion.administracionHospital.Hospital;
-import gestorAplicacion.servicios.Cita;
 import gestorAplicacion.personas.Doctor;
 import gestorAplicacion.personas.Paciente;
+import gestorAplicacion.servicios.Cita;
 import uiMain.gestion.gestionPaciente.RegistrarPaciente;
+
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class AgendarCita {
     static Scanner sc = new Scanner(System.in);
@@ -97,7 +97,7 @@ public class AgendarCita {
             }
         }
         //Agenda del doctor escogido:
-        ArrayList<Cita> agendaDoctor = new ArrayList<Cita>();
+        ArrayList<Cita> agendaDoctor = new ArrayList<>();
 
         //Si el doctor no tiene citas escogidas:
         while (agendaDoctor.isEmpty()) {
