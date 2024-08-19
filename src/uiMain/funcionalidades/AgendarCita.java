@@ -39,7 +39,7 @@ public class AgendarCita {
         if (pacienteCita == null) {
             //Si no se encontró, podemos registrarlo
             while(true) {
-                System.out.println("El paciente no está registrado.\nDesea registrarlo?");
+                System.out.println("El paciente no está registrado.\nDesea registrarlo? ");
                 System.out.println("\n1. Si\n2. No");
                 byte opcion = sc.nextByte();
                 sc.nextLine();
@@ -48,10 +48,10 @@ public class AgendarCita {
                         RegistrarPaciente.registrarPaciente(hospital);
                         return;
                     case 2:
-                        System.out.println("Regresando al menú principal...");
+                        System.out.println("Regresando al menú principal... ");
                         return;
                     default:
-                        System.out.println("Opción no válida. Intente de nuevo.");
+                        System.out.println("Opción no válida. Intente de nuevo. ");
                 }
             }
         }

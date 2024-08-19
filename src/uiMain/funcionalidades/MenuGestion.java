@@ -17,15 +17,17 @@ public class MenuGestion {
         byte opcion;
         // Menú para gestionar las clases del programa
         do {
-            System.out.println("\nMENU Gestion");
+            System.out.println("\n─────────   MENU GESTION GENERAL   ─────────");
             System.out.println("1. Gestionar Pacientes");
             System.out.println("2. Gestionar apartado de vacunas");
             System.out.println("3. Gestionar Doctores");
             System.out.println("4. Gestionar Hospital");
             System.out.println("5. --Regresar al menu inicial--");
             System.out.println("6. --Salir--");
-            System.out.println("Ingrese una opcion: ");
+            System.out.print("──────────────────────────────");
+            System.out.print("\nSeleccione una opción: ");
             opcion = sc.nextByte();
+            sc.nextLine();
             switch (opcion) {
                 case 1-> GestionPaciente.mostrarMenuGestionPaciente(hospital);
                 case 2-> GestionVacunas.menuGestionVacunas(hospital);

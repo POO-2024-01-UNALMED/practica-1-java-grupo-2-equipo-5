@@ -19,14 +19,14 @@ public class AsignarHabitacion {
                 System.out.println(i + ". ID habitación: " + habitaciones.get(i - 1).getNumero());
             }
 
-            System.out.println("Escoja la habitación de su preferencia:");
+            System.out.println("Escoja la habitación de su preferencia: ");
 
             eleccion = sc.nextInt();
             sc.nextLine();
 
             //Casos de error:
             while (eleccion < 1 || eleccion > habitaciones.size()) {
-                System.out.println("Opción no válida. Intente de nuevo");
+                System.out.println("Opción no válida. Intente de nuevo ");
                 eleccion = sc.nextInt();
                 sc.nextLine();
             }

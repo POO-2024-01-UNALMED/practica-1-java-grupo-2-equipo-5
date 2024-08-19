@@ -33,7 +33,7 @@ public class Main {
                     "888    888  \"Y88888P\"   \"Y8888P\"  888       8888888     888  d88P     888 88888888      d88P     888 888    Y888 8888888P\" 8888888 888    Y888  \"Y88888P\"");
 
 
-            System.out.println("\n--- MENU INICIAL ---");
+            System.out.println("\n───────── MENU INICIAL ─────────");
             System.out.println("1. Servicios para pacientes");
             System.out.println("2. Gestionar registros");
             System.out.println("3. Salir");
