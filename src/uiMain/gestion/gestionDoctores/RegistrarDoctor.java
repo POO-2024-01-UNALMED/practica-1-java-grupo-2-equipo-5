@@ -9,7 +9,7 @@ public class RegistrarDoctor {
 
     public static void registrarDoctor (Hospital hospital){
 
-        try (Scanner sc = new Scanner(System.in)) {
+        Scanner sc = new Scanner(System.in);
             System.out.println("Por favor introduce la información del doctor para su registro");
             System.out.println("Ingrese el nombre del doctor:");
             String nombre = sc.next();
@@ -32,4 +32,4 @@ public class RegistrarDoctor {
             System.out.println(doctor);
         }
     }
-}
+

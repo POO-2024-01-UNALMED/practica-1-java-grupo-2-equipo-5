@@ -24,16 +24,16 @@ public class GestionDoctor {
             System.out.println("Ingrese una opcion: ");
             opcion = sc.nextByte();
             switch (opcion) {
-                case 1: RegistrarDoctor.registrarDoctor(hospital);
-                case 2: EliminarDoctor.eliminarDoctor(hospital);
-                case 3: VerDoctor.verDoctor(hospital);
-                case 4: AgregarEliminarCitas.agregarCitas(hospital);
-                case 5: AgregarEliminarCitas.eliminarCitas(hospital);
-                case 6: return;
-                case 7:
+                case 1-> RegistrarDoctor.registrarDoctor(hospital);
+                case 2-> EliminarDoctor.eliminarDoctor(hospital);
+                case 3-> VerDoctor.verDoctor(hospital);
+                case 4-> AgregarEliminarCitas.agregarCitas(hospital);
+                case 5-> AgregarEliminarCitas.eliminarCitas(hospital);
+                case 6-> {return;}
+                case 7-> {
                     Serializador.serializar(hospital);
                     System.exit(0);
-                
+                }
             }
         } while (true);
     }

@@ -27,7 +27,7 @@ public class Deserializador {
             hospital.setListaDoctores((ArrayList<Doctor>) in.readObject());
 
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Error en la serializacion" + e);
+            System.out.println("Error en la serializacion Doctores" + e);
         }
     }
 
@@ -38,7 +38,7 @@ public class Deserializador {
             hospital.setListaPacientes((ArrayList<Paciente>) in.readObject());
 
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Error en la serializacion" + e);
+            System.out.println("Error en la serializacion Pacientes" + e);
         }
     }
 
@@ -49,7 +49,7 @@ public class Deserializador {
             hospital.setListaMedicamentos((ArrayList<Medicamento>) in.readObject());
 
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Error en la serializacion" + e);
+            System.out.println("Error en la serializacion Medicamentos" + e);
         }
     }
 
@@ -60,7 +60,7 @@ public class Deserializador {
             hospital.setListaVacunas((ArrayList<Vacuna>) in.readObject());
 
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Error en la serializacion" + e);
+            System.out.println("Error en la serializacion Vacunas" + e);
         }
     }
 
@@ -71,7 +71,7 @@ public class Deserializador {
             Hospital.setHabitaciones((ArrayList<Habitacion>) in.readObject());
 
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Error en la serializacion" + e);
+            System.out.println("Error en la serializacion Habitaciones" + e);
         }
     }
 
@@ -82,7 +82,7 @@ public class Deserializador {
             Enfermedad.setEnfermedadesRegistradas((ArrayList<Enfermedad>) in.readObject());
 
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Error en la serializacion" + e);
+            System.out.println("Error en la serializacion Enfermedades" + e);
         }
     }
 }

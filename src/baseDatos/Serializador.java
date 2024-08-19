@@ -8,8 +8,8 @@ import java.io.*;
 public class Serializador {
     public static void serializar(Hospital hospital) {
         serializarDoctores(hospital,new File("src\\baseDatos\\temp\\registroDoctores.txt\\"));
-        serializarPacientes(hospital, new File("src\\baseDatos\\temp\\registroPacientes.txt"));
-        serializarMedicamentos(hospital, new File("sc\\baseDatos\\temp\\registroMedicamentos.txt"));
+        serializarPacientes(hospital, new File("src\\baseDatos\\temp\\registroPacientes.txt\\"));
+        serializarMedicamentos(hospital, new File("src\\baseDatos\\temp\\registroMedicamentos.txt"));
         serializarVacunas(hospital, new File("src\\baseDatos\\temp\\registroVacunas.txt"));
         serializarHabitaciones(hospital, new File("src\\baseDatos\\temp\\registroHabitaciones.txt"));
         serializarEnfermedades(hospital, new File("src\\baseDatos\\temp\\registroVacunas.txt"));
@@ -25,7 +25,7 @@ public class Serializador {
             file.close();
         }
         catch (IOException e) {
-            System.out.println("Error al serializar" + e);
+            System.out.println("Error al serializar Doctores" + e);
         }
     }
 
@@ -39,7 +39,7 @@ public class Serializador {
             file.close();
         }
         catch (IOException e) {
-            System.out.println("Error al serializar" + e);
+            System.out.println("Error al serializar Pacientes" + e);
         }
     }
     public static void serializarMedicamentos(Hospital hospital, File archivo) {
@@ -52,7 +52,7 @@ public class Serializador {
             file.close();
         }
         catch (IOException e) {
-            System.out.println("Error al serializar" + e);
+            System.out.println("Error al serializar Medicamentos" + e);
         }
     }
     public static void serializarVacunas(Hospital hospital, File archivo) {
@@ -65,7 +65,7 @@ public class Serializador {
             file.close();
         }
         catch (IOException e) {
-            System.out.println("Error al serializar" + e);
+            System.out.println("Error al serializar Vacunas" + e);
         }
     }
     public static void serializarHabitaciones(Hospital hospital, File archivo) {
@@ -78,7 +78,7 @@ public class Serializador {
             file.close();
         }
         catch (IOException e) {
-            System.out.println("Error al serializar" + e);
+            System.out.println("Error al serializar Habitaciones" + e);
         }
     }
     public static void serializarEnfermedades(Hospital hospital, File archivo) {
@@ -91,7 +91,7 @@ public class Serializador {
             file.close();
         }
         catch (IOException e) {
-            System.out.println("Error al serializar" + e);
+            System.out.println("Error al serializar Enfermedades" + e);
         }
     }
 

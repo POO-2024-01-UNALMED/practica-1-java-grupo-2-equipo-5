@@ -34,8 +34,8 @@ public class GestionVacunas {
                     System.exit(0);
                 }
 
-            }  
-        }
-        while (true);
+            }
+
+        }while (true);
     }
 }

@@ -2,7 +2,6 @@ package uiMain.gestion.gestionPaciente;
 
 import baseDatos.Serializador;
 import gestorAplicacion.administracionHospital.Hospital;
-import uiMain.gestion.gestionVacunas.EliminarPaciente;
 
 import java.util.Scanner;
 
