@@ -147,7 +147,7 @@ public class Vacunacion {
         agendaDisponible = vacunaAsignada.mostrarAgendaDisponible();
 
         //Caso en el que no hayan citas disponibles de esa vacuna
-        if(agendaDisponible.size()==0){
+        if(agendaDisponible.isEmpty()){
             System.out.println("No hay citas disponibles para esta vacuna");
             return;
         }

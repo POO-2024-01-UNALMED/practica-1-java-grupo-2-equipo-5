@@ -31,7 +31,8 @@ public class MenuFuncionalidades {
                 case 3 -> AsignarHabitacion.asignarHabitacion(hospital);
                 case 4 -> Vacunacion.vacunacion(hospital);
                 case 5 -> Facturacion.facturacion(hospital);
-                case 6 -> {return;}
+                case 6 -> {Serializador.serializar(hospital);
+                    return;}
                 case 7 -> {
                     Serializador.serializar(hospital);
                     System.exit(0);

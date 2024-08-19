@@ -13,7 +13,7 @@ public class RegistrarNuevaEnfermedad {
     public static void registrarNuevaEnfermedad(Hospital hospital) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Ingrese la cédula del paciente para registrar nuevas enfermedades: ");
+        System.out.print("Ingrese la CEDULA del paciente para registrar nuevas enfermedades: ");
         int cedula = sc.nextInt();
         sc.nextLine(); // Consumir la nueva línea pendiente
 

@@ -16,7 +16,7 @@ public class AgendarCita {
         if (!doctores.isEmpty()) {
             System.out.println("Los doctores disponibles para la EPS " + paciente.getTipoEps() + " son:");
 
-            for (int i =0; i <= doctores.size();i++) {
+            for (int i =1; i <= doctores.size();i++) {
                 System.out.println(i + ". " + doctores.get(i - 1).getNombre());
             }
 
@@ -129,7 +129,7 @@ public class AgendarCita {
             if (!agendaDoctor.isEmpty()) {
                 //Mostrar agenda del Doctor
                 System.out.println("\nLas citas disponibles para el/la Doctor(a) " + doctorElegido.getNombre() + " son:");
-                for (int i = 0; i <= agendaDoctor.size(); i++) {
+                for (int i = 1; i <= agendaDoctor.size(); i++) {
                     System.out.println(i + ". " + agendaDoctor.get(i - 1).getFecha());
                 }
                 //Elegir entre los horarios disponibles

@@ -11,7 +11,7 @@ public class ConstruirHabitacion {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Por favor introduzca la información de la nueva habitación a construir:");
-        System.out.println("Ingrese el número de la habitación:");
+        System.out.println("Ingrese el NUMERO de la habitación:");
         int nHabitacion = sc.nextInt();
         sc.nextLine();
         CategoriaHabitacion categoriaHabitacion = null;

@@ -33,7 +33,8 @@ public class MenuGestion {
                 case 2-> GestionVacunas.menuGestionVacunas(hospital);
                 case 3-> GestionDoctor.menuGestionDoctor(hospital);
                 case 4-> GestionHospital.menuGestionHospital(hospital);
-                case 5->{return;}
+                case 5->{Serializador.serializar(hospital);
+                    return;}
                 case 6-> {
                     Serializador.serializar(hospital);
                     System.exit(0);
