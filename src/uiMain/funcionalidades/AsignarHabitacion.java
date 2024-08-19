@@ -32,10 +32,10 @@ public class AsignarHabitacion {
             }
 
             //Quitar la habitacion elegida de la lista de habitaciones disponibles:
-            habitaciones.remove(eleccion - 1);
+            habitaciones.remove(eleccion-1);
 
             //Devolvemos la opción elegida:
-            return habitaciones.get(eleccion - 1);
+            return habitaciones.get(eleccion-1);
         }
         return null;
     }
