@@ -7,8 +7,8 @@ import java.io.*;
 
 public class Serializador {
     public static void serializar(Hospital hospital) {
-        serializarDoctores(hospital,new File("src\\baseDatos\\temp\\registroDoctores.txt\\"));
-        serializarPacientes(hospital, new File("src\\baseDatos\\temp\\registroPacientes.txt\\"));
+        serializarDoctores(hospital,new File("src\\baseDatos\\temp\\registroDoctores.txt"));
+        serializarPacientes(hospital, new File("src\\baseDatos\\temp\\registroPacientes.txt"));
         serializarMedicamentos(hospital, new File("src\\baseDatos\\temp\\registroMedicamentos.txt"));
         serializarVacunas(hospital, new File("src\\baseDatos\\temp\\registroVacunas.txt"));
         serializarHabitaciones(hospital, new File("src\\baseDatos\\temp\\registroHabitaciones.txt"));
