@@ -28,16 +28,15 @@ public class Paciente extends Persona implements Pago{
     //Metodos
 
 
-
-
     //METODO ENCARGADO DE REALIZAR LA BUSQUEDA DE MEDICAMENTOS DISPONIBLES
-    public ArrayList<Medicamento> medEnfermedad(Enfermedad enfermedad, Hospital hospital){
-        ArrayList<Medicamento> medicamentospacientes = new ArrayList<Medicamento>();
+    public ArrayList<Medicamento> medEnfermedad(Enfermedad enfermedad, Hospital hospital) {
+        ArrayList<Medicamento> medicamentos = hospital.medicamentosDisponibles();
         ArrayList<Medicamento> medEnfermedades = new ArrayList<Medicamento>();
-        for (Medicamento med: medicamentospacientes) {
-            if (enfermedad.getNombre().equals(med.getEnfermedad().getNombre()) && enfermedad.getTipologia().equals(med.getEnfermedad().getTipologia())) {
-                medicamentospacientes.add(med);
+        for (Medicamento med : medicamentos){
+            if (enfermedad.getNombre().equals(med.getEnfermedad().getNombre()) && enfermedad.getTipologia().equals(med.getEnfermedad().getTipologia())){
+                medEnfermedades.add(med);
             }
+
         }
         return medEnfermedades;
     }

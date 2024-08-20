@@ -72,13 +72,14 @@ public class Hospital implements Serializable {
 
         public ArrayList<Medicamento> medicamentosDisponibles(){
             ArrayList<Medicamento> medicamentos = new ArrayList<>();
-            for (int i = 0; i <= listaMedicamentos.size(); i++) {
+            for (int i = 0; i < listaMedicamentos.size(); i++) {
                 if (listaMedicamentos.get(i).getCantidad()>0){
                     medicamentos.add(listaMedicamentos.get(i));
                 }
             }
             return medicamentos;
         }
+
         public ArrayList<Vacuna> buscarTipoVacuna(String tipo){
             ArrayList<Vacuna> vacunas = new ArrayList<>();
             for (int i = 1; i < listaVacunas.size(); i++) {
