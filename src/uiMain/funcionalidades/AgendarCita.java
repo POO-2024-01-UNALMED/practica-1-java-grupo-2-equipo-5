@@ -9,8 +9,12 @@ import uiMain.gestion.gestionPaciente.RegistrarPaciente;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+//Clase destinada para la funcionalidad de agendar citas medicas.
 public class AgendarCita {
     static Scanner sc = new Scanner(System.in);
+
+
 
     public static void doctoresEps(ArrayList<Doctor> doctores, Paciente paciente) {
         if (!doctores.isEmpty()) {
@@ -26,6 +30,7 @@ public class AgendarCita {
         }
     }
 
+    //Metodo que busca el paciente por la cedula
     public static void agendarCita(Hospital hospital) {
         //Buscar el paciente con el numero de la cédula
         System.out.println("Por favor, ingrese su número de identificación: ");

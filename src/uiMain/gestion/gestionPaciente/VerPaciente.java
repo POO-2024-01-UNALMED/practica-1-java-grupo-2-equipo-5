@@ -9,6 +9,7 @@ import gestorAplicacion.servicios.Formula;
 
 import java.util.Scanner;
 
+//Clase de gestion encargada de visualizar el objeto paciente
 public class VerPaciente {
 
     public static void mostrarInformacionPaciente(Hospital hospital) {

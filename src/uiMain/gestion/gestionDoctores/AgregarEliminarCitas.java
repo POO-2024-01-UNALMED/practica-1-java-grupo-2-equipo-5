@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
+//Clase de gestion para Agregar y Eliminar Citas
 public class AgregarEliminarCitas {
     public static void agregarCitas(Hospital hospital) {
             Scanner sc = new Scanner(System.in);
@@ -24,7 +25,6 @@ public class AgregarEliminarCitas {
                         switch (opcion) {
                             case 1:
                                 RegistrarDoctor.registrarDoctor(hospital);
-                                //??????????????????
                                 return;
    
                             case 2:

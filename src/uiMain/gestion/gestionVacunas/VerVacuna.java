@@ -6,6 +6,7 @@ import gestorAplicacion.administracionHospital.Vacuna;
 import java.util.Objects;
 import java.util.Scanner;
 
+//Clase de Gestion encargada de ver las vacunas disponibles del hospital
 public class VerVacuna {
 
     public static void verVacuna(Hospital hospital) {

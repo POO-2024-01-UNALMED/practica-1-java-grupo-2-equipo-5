@@ -5,6 +5,7 @@ import gestorAplicacion.personas.Paciente;
 
 import java.util.Scanner;
 
+//Clase de gestion encargada de registrar un paciente
 public class RegistrarPaciente {
 
     public static void registrarPaciente (Hospital hospital) {

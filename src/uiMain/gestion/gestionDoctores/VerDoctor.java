@@ -6,6 +6,7 @@ import gestorAplicacion.personas.Doctor;
 
 import java.util.Scanner;
 
+//Clase de Gestion para mirar los detalles de un doctor creado previamente
 public class VerDoctor {
     public static void verDoctor(Hospital hospital) {
             Scanner sc = new Scanner(System.in);

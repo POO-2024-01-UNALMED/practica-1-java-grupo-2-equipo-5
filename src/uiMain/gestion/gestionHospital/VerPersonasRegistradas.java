@@ -6,6 +6,7 @@ import gestorAplicacion.personas.Paciente;
 
 import java.util.ArrayList;
 
+//Clase de gestion encargada de ver las personas registradas, sean pacientes o doctores.
 public class VerPersonasRegistradas {
     public static void verPersonasRegistradas(Hospital hospital) {
         ArrayList<Doctor> listaDoctores = hospital.getListaDoctores();

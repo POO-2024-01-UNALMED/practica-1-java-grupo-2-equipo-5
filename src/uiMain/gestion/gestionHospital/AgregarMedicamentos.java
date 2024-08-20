@@ -7,6 +7,7 @@ import gestorAplicacion.administracionHospital.Medicamento;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//Clase de Gestion encargada de agregar los medicamentos al paciente
 public class AgregarMedicamentos {
     public static void agregarMedicamentos(Hospital hospital) {
         Scanner sc = new Scanner(System.in);

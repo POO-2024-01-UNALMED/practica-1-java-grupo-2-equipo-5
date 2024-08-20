@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
+
+//Clase de gestion encargada de registrar y eliminar vacunas
 public class RegistrarEliminarVacunas {
 
     public static boolean verificarExistenciaVacuna(String nombre,Hospital hospital){

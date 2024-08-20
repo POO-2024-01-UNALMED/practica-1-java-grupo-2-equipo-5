@@ -4,6 +4,7 @@ import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.administracionHospital.Vacuna;
 import gestorAplicacion.servicios.CitaVacuna;
 
+//Clase de Gestion para ver la lista de vacunas
 public class VerVacunasLista {
     public static void verVacunas(Hospital hospital) {
 

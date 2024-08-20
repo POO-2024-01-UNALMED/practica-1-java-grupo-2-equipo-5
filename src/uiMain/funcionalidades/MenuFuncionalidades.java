@@ -5,6 +5,7 @@ import gestorAplicacion.administracionHospital.Hospital;
 
 import java.util.Scanner;
 
+//Menu utilizado para las funcionalidades
 public class MenuFuncionalidades {
 
     private static final Scanner sc = new Scanner(System.in);

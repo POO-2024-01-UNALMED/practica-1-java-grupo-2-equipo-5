@@ -5,6 +5,7 @@ import gestorAplicacion.administracionHospital.Medicamento;
 
 import java.util.ArrayList;
 
+//Clase de Gestion para ver los medicamentos de lista medicamentos
 public class VerMedicamentos {
     public static void verMedicamentos(Hospital hospital) {
         ArrayList<Medicamento> listaMedicamentos = hospital.getListaMedicamentos();

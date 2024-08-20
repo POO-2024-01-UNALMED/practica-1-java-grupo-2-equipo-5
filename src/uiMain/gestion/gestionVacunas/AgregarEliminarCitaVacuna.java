@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
+//Clase de Gestion encargada de Agregar y Eliminar citas de vacuna
 public class AgregarEliminarCitaVacuna {
 
     public static void agregarCitaVacuna(Hospital hospital){

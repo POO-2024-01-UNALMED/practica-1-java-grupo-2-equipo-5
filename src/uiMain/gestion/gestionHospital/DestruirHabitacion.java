@@ -6,6 +6,7 @@ import gestorAplicacion.servicios.Habitacion;
 
 import java.util.Scanner;
 
+//Clase de Gestion para destruir las habitaciones creadas previamente
 public class DestruirHabitacion {
 
     public static void destruirHabitacion(Hospital hospital) {

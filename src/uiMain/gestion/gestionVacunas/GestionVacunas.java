@@ -5,6 +5,7 @@ import gestorAplicacion.administracionHospital.Hospital;
 
 import java.util.Scanner;
 
+//Clase de Gestion que se encarga del menu de gestion de vacunas
 public class GestionVacunas {
 
     static Scanner sc = new Scanner(System.in);

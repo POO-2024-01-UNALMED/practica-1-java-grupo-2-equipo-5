@@ -8,6 +8,7 @@ import gestorAplicacion.personas.Paciente;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//Clase de gestion encargada de registrar una nueva enfermedad
 public class RegistrarNuevaEnfermedad {
 
     public static void registrarNuevaEnfermedad(Hospital hospital) {

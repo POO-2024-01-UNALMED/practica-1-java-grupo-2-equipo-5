@@ -5,6 +5,7 @@ import gestorAplicacion.administracionHospital.Hospital;
 
 import java.util.Scanner;
 
+//Menu dirigido a gestionar el hospital
 
 public class GestionHospital {
     private static final Scanner sc = new Scanner(System.in);

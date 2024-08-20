@@ -5,7 +5,7 @@ import gestorAplicacion.administracionHospital.Hospital;
 import gestorAplicacion.servicios.Habitacion;
 
 import java.util.Scanner;
-
+//Clase de gestion dirigida a crear las habitaciones del hospital
 public class ConstruirHabitacion {
     public static void construirHabitacion(Hospital hospital) {
         Scanner sc = new Scanner(System.in);

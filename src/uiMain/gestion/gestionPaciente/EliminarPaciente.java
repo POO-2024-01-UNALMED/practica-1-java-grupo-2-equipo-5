@@ -5,6 +5,7 @@ import gestorAplicacion.personas.Paciente;
 
 import java.util.Scanner;
 
+//Clase de gestion encargada de eliminar el paciente
 public class EliminarPaciente {
     public static void eliminarPaciente(Hospital hospital) {
         Scanner sc = new Scanner(System.in);

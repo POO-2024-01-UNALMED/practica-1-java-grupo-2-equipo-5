@@ -6,6 +6,8 @@ import gestorAplicacion.servicios.Habitacion;
 
 import java.util.Scanner;
 
+//Clase de gestion creada para ver una habitacion
+
 public class VerHabitacion {
     public static void verHabitacion(Hospital hospital) {
         Scanner sc = new Scanner(System.in);
