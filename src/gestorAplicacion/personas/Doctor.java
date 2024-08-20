@@ -4,6 +4,7 @@ import gestorAplicacion.servicios.Cita;
 
 import java.util.ArrayList;
 
+//Clase destinada a crear doctores
 public class Doctor extends Persona{
 
     //ATRIBUTOS
@@ -23,6 +24,9 @@ public class Doctor extends Persona{
 
     //Metodos clase doctor
 
+
+    //Muestra la agenda disponible de un doctor (citas que no tienen paciente asignado)
+
     public ArrayList<Cita> mostrarAgendaDisponible() {
         ArrayList<Cita> agendaDisponible = new ArrayList<>();
         for (int i = 1; i <= agendaDoctor.size(); i++) {
@@ -31,6 +35,8 @@ public class Doctor extends Persona{
         }
         return agendaDisponible;
     }
+
+    //Metodo que asigna el paciente a una determinada cita de un doctor
 
     public Cita actualizarAgenda(Paciente pacienteAsignado, byte numeroCita, ArrayList<Cita> agendaDisponible) {
         Cita citaAsignada = null;

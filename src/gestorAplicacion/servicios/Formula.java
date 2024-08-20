@@ -6,6 +6,7 @@ import gestorAplicacion.personas.Paciente;
 
 import java.util.ArrayList;
 
+//Clase encargada ed crear las Formulas Medicas
 public class Formula extends Servicio{
     //Atributos
     private ArrayList<Medicamento> listaMedicamentos=new ArrayList<Medicamento>();

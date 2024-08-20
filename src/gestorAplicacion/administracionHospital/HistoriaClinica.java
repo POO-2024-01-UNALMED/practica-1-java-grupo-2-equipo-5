@@ -25,6 +25,8 @@ public class HistoriaClinica implements Serializable {
         this.paciente = paciente;
     }
 
+    /* Metodo que busca los doctores que estén disponibles y también los doctores con los que el paciente
+    asociado a esta historia haya tenido alguna cita */
 
     public ArrayList<Doctor> buscarCitaDoc(String especialidad, Hospital hospital) {
         ArrayList<Doctor> doctoresDisp = hospital.buscarTipoDoctor(especialidad);
@@ -38,6 +40,9 @@ public class HistoriaClinica implements Serializable {
         }
         return docCita;
     }
+
+
+    // Metodo que agrega las fórmulas médicas ingresadas como parámetro a listaFormulas
 
     public void agregarFormula(Formula formulaPaciente) {
         listaFormulas.add(formulaPaciente);

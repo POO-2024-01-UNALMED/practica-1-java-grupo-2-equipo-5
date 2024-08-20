@@ -7,6 +7,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
+
+//Clase destinada a los objetos vacuna
 public class Vacuna implements Serializable{
 
     //Atributos
@@ -24,7 +26,7 @@ public class Vacuna implements Serializable{
         this.nombre = nombre;
         this.precio = precio;
         this.tipoEps = tipoEps;
-
+        //Se crea una agenda por defecto para cada vacuna
         agenda.add(new CitaVacuna("23 de Agosto de 2024. Hora 7:45 am", null, this));
         agenda.add(new CitaVacuna("26 de Agosto de 2024. Hora 11:20 am", null, this));
         agenda.add(new CitaVacuna("27 de Agosto de 2024. Hora 8:45 am", null, this));
@@ -34,6 +36,8 @@ public class Vacuna implements Serializable{
     }
     //Metodos
 
+
+    //Metodo que muestra las citas que no tienen paciente asignado de una vacuna
     public ArrayList<CitaVacuna> mostrarAgendaDisponible(){
         ArrayList<CitaVacuna> agendaDisponible=new ArrayList<CitaVacuna>();
         for (int i =1; i<=agenda.size(); i++){
@@ -44,7 +48,7 @@ public class Vacuna implements Serializable{
         return agendaDisponible;
     }
 
-    
+    //Este metodo asigna un paciente a una cita de una vacuna
     public CitaVacuna actualizarAgenda(Paciente pacienteAsignado, byte numeroCita, ArrayList<CitaVacuna> agendaDisponible){
         CitaVacuna citaAsignada= null;
         for (int i=1 ; i<=agenda.size();i++){

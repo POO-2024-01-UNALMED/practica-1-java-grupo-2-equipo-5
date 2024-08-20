@@ -3,6 +3,7 @@ package gestorAplicacion.servicios;
 import gestorAplicacion.administracionHospital.Vacuna;
 import gestorAplicacion.personas.Paciente;
 
+//Clase destinada a las citas que son de vacunas
 public class CitaVacuna extends Cita {
 
     //ATRIBUTOS
@@ -19,6 +20,7 @@ public class CitaVacuna extends Cita {
 
     //METODOS
 
+    //Metodo para buscar id del servicio y cambiar estado de pago
     @Override
     public void validarPago(Paciente paciente, long idServicio){
         for (CitaVacuna citaVacuna:  paciente.getHistoriaClinica().getHistorialVacunas()){
@@ -27,6 +29,8 @@ public class CitaVacuna extends Cita {
             }
         }
     }
+
+    // Metodo que imprime una descripcion del servicio
     @Override
     public String descripcionServicio() {
         return idServicio + " - Vacuna " + vacuna.getNombre() + " (" + fecha + ")";

@@ -28,10 +28,18 @@ public abstract class Servicio implements Serializable {
 
     //METODOS
 
+
+    // Metodo abstracto que debe implementarse en las clases hijas para validar el pago
     public abstract void validarPago(Paciente paciente, long idServicio);
 
+
+    /* Metodo abstracto para imprimir la descripcion del servicio.
+    Se usa este metodo porque el toString se utiliza en otra funcionalidad.
+     */
     public abstract String descripcionServicio();
 
+
+    //Metodo estático para obtener servicios sin pagar
     public static ArrayList<Servicio> obtenerServiciosSinPagar(Paciente paciente) {
         HistoriaClinica historiaClinicaPaciente = paciente.getHistoriaClinica();
         ArrayList<Servicio> listaServicios = new ArrayList<Servicio>();

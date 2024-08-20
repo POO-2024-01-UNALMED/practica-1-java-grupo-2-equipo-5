@@ -2,6 +2,8 @@ package gestorAplicacion.servicios;
 import gestorAplicacion.personas.Doctor;
 import gestorAplicacion.personas.Paciente;
 
+
+//Clase destinada a crear citas médicas
 public class Cita extends Servicio {
     private Doctor doctor;
     protected String fecha;
@@ -14,6 +16,9 @@ public class Cita extends Servicio {
     }
     //CONSTRUCTOR
 
+
+    //Métodos que busca el estado de pago de una cita médica y lo cambia
+
     @Override
     public void validarPago(Paciente paciente, long idServicio){
         for (Cita cita:  paciente.getHistoriaClinica().getHistorialCitas()){
@@ -22,6 +27,8 @@ public class Cita extends Servicio {
             }
         }
     }
+
+    // Metodo que imprime una descripcion del servicio
     @Override
     public String descripcionServicio() {
         return idServicio + " - Cita medica con " + doctor.getNombre() + " (" + fecha + ")";

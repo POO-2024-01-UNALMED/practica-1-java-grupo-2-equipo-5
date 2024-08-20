@@ -6,6 +6,7 @@ import gestorAplicacion.personas.Paciente;
 
 import java.util.ArrayList;
 
+//Clase encargada de crear las habitaciones del Hospital
 
 public class Habitacion extends Servicio{
     
@@ -24,6 +25,8 @@ public class Habitacion extends Servicio{
         
     }
 
+    //Se crea el metodo estatico, el cual se encarga de filtrar y retornar un ArrayList de las habitaciones vacias de la categoria que se selecciono
+
     public static ArrayList<Habitacion> BuscarHabitacionDisponible(CategoriaHabitacion categoria){
         ArrayList<Habitacion>habitacionesDisponibles=new ArrayList<>();
         for (Habitacion habitacion: Hospital.getListaHabitaciones()){
@@ -39,6 +42,7 @@ public class Habitacion extends Servicio{
         return habitacionesDisponibles;
     }
 
+    //Este metodo se encarga de cambiar la categoria a una inferior
     public static CategoriaHabitacion BuscarOtraCategoria(CategoriaHabitacion categoria){
 
         switch (categoria) {

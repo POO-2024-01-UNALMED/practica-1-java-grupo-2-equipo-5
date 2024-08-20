@@ -6,6 +6,7 @@ import gestorAplicacion.servicios.*;
 import java.util.ArrayList;
 import java.util.Objects;
 
+//CLASE DESTINADA A CREAR PACIENTES
 public class Paciente extends Persona implements Pago{
 
     //Atributos
@@ -58,6 +59,7 @@ public class Paciente extends Persona implements Pago{
         historiaClinica.getHistorialCitas().add(citaAsignada);
     }
 
+//Sobre carga de métodos con calcular precio de los distintos servicios
 
     public double calcularPrecio(Formula formula) {
         double precio = 0;
@@ -146,6 +148,10 @@ public class Paciente extends Persona implements Pago{
         }
     }
 
+
+    /* Metodo que busca las vacunas por tipo ingresada en el parámetro, invocando el método
+     de hospital, y con el for filtrandolas por eps del paciente */
+
     public ArrayList<Vacuna> buscarVacunaPorEps(String tipo, Hospital hospital){
         ArrayList<Vacuna> vacunasPorTipo= hospital.buscarTipoVacuna(tipo);
         ArrayList<Vacuna> vacunasDisponibles= new ArrayList<Vacuna>();
@@ -160,10 +166,16 @@ public class Paciente extends Persona implements Pago{
         }
         return vacunasDisponibles;
     }
+
+    //Metodo de bienvenida del Doctor
+
     public String mensajeDoctor(Persona doctor){
         //Hay ligadura dinámica
         return doctor.bienvenida()+ "\nPor favor selecciona los medicamentos que vas a formularle a: "+getNombre();
     }
+
+    /* Metodo que agrega una cita a la lista de citas de la historia clínica del paciente */
+
     public void actualizarHistorialVacunas(CitaVacuna citaAsignada){
         historiaClinica.getHistorialVacunas().add(citaAsignada);
     }

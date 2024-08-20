@@ -2,6 +2,7 @@ package gestorAplicacion.personas;
 
 import java.io.Serializable;
 
+//Clase destinada para que hereden doctor y persona
 public class Persona implements Serializable {
 
     //Atributos

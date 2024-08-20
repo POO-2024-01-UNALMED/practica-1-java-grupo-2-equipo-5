@@ -28,6 +28,8 @@ public class Hospital implements Serializable {
     }
 
     //Métodos
+
+    //Metodo que busca doctores por especialidad
     public ArrayList<Doctor> buscarTipoDoctor(String especialidad) {
         ArrayList<Doctor> doctoresDisponibles = new ArrayList<Doctor>();
         for (int i = 1; i <= listaDoctores.size(); i++) {
@@ -59,8 +61,10 @@ public class Hospital implements Serializable {
             return null;
         }
 
+    //Metodo que busca una vacuna por su nombre
 
-        public Vacuna buscarVacuna(String nombre){
+
+    public Vacuna buscarVacuna(String nombre){
             for (Vacuna vacuna : listaVacunas) {
                 if (Objects.equals(vacuna.getNombre(), nombre)) {
                     return vacuna;
@@ -68,8 +72,7 @@ public class Hospital implements Serializable {
             }
             return null;
         }
-
-
+    //Metodo que busca medicamentos disponibles en el hospital
         public ArrayList<Medicamento> medicamentosDisponibles(){
             ArrayList<Medicamento> medicamentos = new ArrayList<>();
             for (int i = 0; i < listaMedicamentos.size(); i++) {
@@ -79,7 +82,7 @@ public class Hospital implements Serializable {
             }
             return medicamentos;
         }
-
+    //Metodo que busca vacunas por su tipo
         public ArrayList<Vacuna> buscarTipoVacuna(String tipo){
             ArrayList<Vacuna> vacunas = new ArrayList<>();
             for (int i = 1; i < listaVacunas.size(); i++) {
@@ -89,8 +92,6 @@ public class Hospital implements Serializable {
             }
             return vacunas;
         }
-
-        //Faltan métodos para vacunas
 
         //Getters y setters
         public ArrayList<Doctor> getListaDoctores() {return listaDoctores;}

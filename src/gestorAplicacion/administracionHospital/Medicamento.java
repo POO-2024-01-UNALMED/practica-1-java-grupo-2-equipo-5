@@ -2,6 +2,9 @@ package gestorAplicacion.administracionHospital;
 
 import java.io.Serializable;
 
+
+/* Clase usada en FormulaMedica, practicamente es el pilar de esta funcionalidad porque son los
+medicamentos que se eligen allí */
 public class Medicamento implements Serializable {
 
 
@@ -14,6 +17,8 @@ public class Medicamento implements Serializable {
 
 
     //METODOS
+
+    //Metodo que elimina una unidad de la cantidad total de medicamentos
     public Medicamento(String nombre, Enfermedad enfermedad, String descripcion, int cantidad, float precio){
         this.nombre = nombre;
         this.enfermedad = enfermedad;

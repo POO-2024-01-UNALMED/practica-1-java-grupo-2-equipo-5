@@ -2,7 +2,8 @@ package gestorAplicacion.administracionHospital;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-
+/* Clase que crea enfermedades, las cuales son usadas para recomendarle al paciente
+distintos servicios que estén relacionados con su enfermedad */
 public class Enfermedad implements Serializable {
     //Atributos
 
@@ -14,6 +15,8 @@ public class Enfermedad implements Serializable {
 
     private int enfermos = 1;
 
+
+    // Lista de las enfermedades registradas en el hospital
     private static ArrayList<Enfermedad> enfermedadesRegistradas = new ArrayList<Enfermedad>();
 
 
@@ -25,6 +28,9 @@ public class Enfermedad implements Serializable {
         enfermedadesRegistradas.add(this);
     }
     //Metodos clase Enfermedad
+
+
+    //Metodo que aumenta los enfermos en una unidad
 
     public void nuevoEnfermo(){
         enfermos = enfermos + 1;
